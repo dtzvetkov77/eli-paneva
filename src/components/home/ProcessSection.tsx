@@ -2,72 +2,88 @@ import Button from '@/components/ui/Button'
 
 const steps = [
   {
-    num: '01',
-    title: 'Начало и фокус на сесията',
-    text: 'Сесията започва с кратък разговор, в който изясняваме твоята заявка — тема, въпрос или ситуация, с която искаш да работим. Фокусът се определя заедно, без натиск и без предварителни очаквания.',
+    num: '1',
+    title: 'Начален разговор',
+    text: 'Запазваш безплатна 20-минутна консултация. Изясняваме твоята тема и виждаме дали подходът ми е подходящ за теб — без ангажимент.',
   },
   {
-    num: '02',
-    title: 'Работа по темата',
-    text: 'В зависимост от заявката използвам подходящи методи — системни констелации, МАК карти, PSYCH-K®, енергийна психология или коучинг. Работата се води внимателно, с уважение към личните граници и вътрешния ритъм на човека.',
+    num: '2',
+    title: 'Персонализиран план',
+    text: 'Заедно изграждаме подход, съобразен с твоите конкретни нужди и цели — независимо дали работиш с тревожност, отношения, кариера или себепознание.',
   },
   {
-    num: '03',
-    title: 'Осъзнаване и интеграция',
-    text: 'По време на процеса се създава пространство за осъзнаване, яснота и нов поглед към ситуацията. Целта не е „бързо решение", а дълбоко разбиране и вътрешно подреждане.',
-  },
-  {
-    num: '04',
-    title: 'Практични насоки',
-    text: 'В края на сесията получаваш конкретни насоки, упражнения или въпроси за интеграция в ежедневието, така че промяната да бъде устойчива.',
+    num: '3',
+    title: 'Онлайн или на живо сесии',
+    text: 'Работим заедно в атмосфера на безопасност и уважение. Всяка сесия завършва с конкретни насоки за интеграция в ежедневието.',
   },
 ]
 
 export default function ProcessSection() {
   return (
-    <section className="bg-(--bg-warm) py-24">
+    <section className="bg-(--bg) py-28">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Header row */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-          <div className="max-w-xl">
-            <span className="text-xs uppercase tracking-[0.25em] text-(--gold) font-medium block mb-4">Как работя</span>
-            <h2 className="font-serif text-4xl md:text-5xl text-(--text-dark) font-normal leading-tight">
-              Как протича<br />една сесия?
-            </h2>
-          </div>
-          <blockquote className="max-w-sm text-(--text-muted) text-base leading-relaxed border-l-2 border-(--gold) pl-5 italic font-serif">
-            Всяка сесия протича в спокойно, безопасно и поверително пространство, съобразено с твоята тема и вътрешна готовност.
-          </blockquote>
+        {/* Header */}
+        <div className="text-center mb-20">
+          <span className="text-xs uppercase tracking-[0.28em] text-(--gold) font-medium block mb-5">
+            Как работя
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl text-(--text-dark) font-normal leading-tight">
+            Просто, удобно, ефективно
+          </h2>
         </div>
 
-        {/* Steps grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {/* Steps */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative">
           {steps.map((step, i) => (
-            <div
-              key={step.num}
-              className="bg-white rounded-2xl p-7 border border-(--border) hover:border-(--sage) hover:shadow-md transition-all duration-300"
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
-              <div className="w-11 h-11 rounded-xl bg-(--sage) flex items-center justify-center mb-5">
-                <span className="text-white font-medium text-sm">{step.num}</span>
+            <div key={step.num} className="relative flex flex-col items-center text-center px-6">
+
+              {/* Connector arrow — hidden on last step and on mobile */}
+              {i < steps.length - 1 && (
+                <div className="hidden md:block absolute top-8 left-[calc(50%+52px)] right-0 pointer-events-none">
+                  <svg viewBox="0 0 80 24" fill="none" className="w-full max-w-20 mx-auto text-(--border)">
+                    <path
+                      d="M4 12 Q40 2 76 12"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeDasharray="4 3"
+                      fill="none"
+                    />
+                    <path
+                      d="M70 8 L76 12 L70 16"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+              )}
+
+              {/* Large number */}
+              <div className="font-serif text-8xl md:text-9xl font-normal text-(--gold)/30 leading-none mb-6 select-none">
+                {step.num}
               </div>
-              <h3 className="font-serif text-lg text-(--text-dark) mb-3 font-normal leading-snug">
+
+              <h3 className="font-serif text-xl md:text-2xl text-(--text-dark) font-normal mb-4 leading-snug">
                 {step.title}
               </h3>
-              <p className="text-sm text-(--text-muted) leading-relaxed">
+              <p className="text-sm text-(--text-muted) leading-relaxed max-w-[28ch] mx-auto">
                 {step.text}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="text-xs text-(--text-muted) text-center mb-8 italic">
-          Сесиите са подкрепящи и развиващи и не заместват медицинска или психотерапевтична грижа.
-        </p>
-
-        <div className="text-center">
-          <Button href="/kontakti" variant="primary" size="lg">Свържи се с мен</Button>
+        {/* Disclaimer + CTA */}
+        <div className="mt-20 text-center">
+          <p className="text-xs text-(--text-muted) italic mb-8 max-w-lg mx-auto">
+            Сесиите са подкрепящи и развиващи и не заместват медицинска или психотерапевтична грижа.
+          </p>
+          <Button href="/kontakti" variant="primary" size="lg">
+            Запази безплатна консултация
+          </Button>
         </div>
       </div>
     </section>

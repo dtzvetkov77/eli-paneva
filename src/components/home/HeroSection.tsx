@@ -1,94 +1,80 @@
 import Button from '@/components/ui/Button'
+import Link from 'next/link'
 
-const stats = [
-  { value: '10+', label: 'години опит' },
-  { value: '500+', label: 'трансформирани животи' },
-  { value: '4', label: 'метода' },
+const pills = [
+  { label: 'Констелации', href: '/uslugi/sistemni-konstelatsi' },
+  { label: 'МАК карти', href: '/shop/category/карти-и-талисмани' },
+  { label: 'PSYCH-K®', href: '/uslugi/trevozhnost-i-paniki' },
+  { label: 'Игра Лийла', href: '/uslugi/igra-liyla' },
+]
+
+const floatingLabels = [
+  { label: 'Поверително', color: 'bg-(--gold)', position: 'top-12 -right-6' },
+  { label: 'Безопасно', color: 'bg-(--sage)', position: 'top-2/5 -left-7' },
+  { label: 'Трансформиращо', color: 'bg-(--text-dark)', position: 'bottom-16 -right-6' },
 ]
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[100dvh] flex flex-col overflow-hidden bg-(--bg)">
+    <section className="relative min-h-dvh flex items-center overflow-hidden bg-(--bg) pt-16">
+      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center w-full">
 
-      {/* Soft background gradient — no clip-path, no overlap */}
-      <div className="absolute inset-0 bg-gradient-to-br from-(--bg-warm)/60 via-(--bg) to-(--bg) pointer-events-none" aria-hidden />
-      <div className="absolute top-1/3 right-[8%] w-80 h-80 rounded-full bg-(--sage-light) opacity-50 blur-3xl pointer-events-none" aria-hidden />
-      <div className="absolute bottom-1/3 left-[5%] w-48 h-48 rounded-full bg-(--gold-light) opacity-70 blur-2xl pointer-events-none" aria-hidden />
+        {/* Left: Text */}
+        <div className="animate-fade-up">
+          <p className="text-xs uppercase tracking-[0.28em] text-(--gold) font-medium mb-8">
+            Холистичен консултант · Трансформационен коуч
+          </p>
 
-      {/* Main content — grows to fill space */}
-      <div className="relative flex-1 flex items-center max-w-7xl mx-auto w-full px-6 pt-28 pb-16">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
+          <h1
+            className="font-serif text-(--text-dark) font-normal leading-[1.08] mb-8"
+            style={{ fontSize: 'clamp(2.6rem, 5vw, 4.5rem)' }}
+          >
+            Намерете мира.<br />Намерете себе си.
+          </h1>
 
-          {/* Left: Text */}
-          <div className="animate-fade-up">
-            <div className="flex items-center gap-3 mb-8">
-              <span className="block w-8 h-px bg-(--gold)" />
-              <span className="text-xs uppercase tracking-[0.25em] text-(--gold) font-medium">
-                Холистичен консултант · Коуч · Автор
-              </span>
-            </div>
+          <p className="text-(--text-muted) text-lg leading-relaxed mb-10 max-w-[44ch]">
+            Подкрепям хората в процеса на вътрешна промяна чрез системни констелации, PSYCH-K®, енергийна психология и МАК карти.
+          </p>
 
-            <h1
-              className="font-serif text-(--text-dark) mb-6 font-normal"
-              style={{ fontSize: 'clamp(2.8rem, 6.5vw, 5rem)', lineHeight: 1.1 }}
-            >
-              Трансформация<br />
-              <em className="text-(--sage)">отвътре</em>
-            </h1>
-
-            <p className="text-(--text-muted) text-lg leading-relaxed max-w-[44ch] mb-10">
-              Подкрепям хората в процеса на вътрешна промяна чрез системни констелации, PSYCH-K®, енергийна психология и МАК карти.
-            </p>
-
-            <div className="flex flex-wrap gap-3">
-              <Button href="/kontakti" variant="primary" size="lg">
-                Запази час
-              </Button>
-              <Button href="/uslugi" variant="outline" size="lg">
-                Услуги
-              </Button>
-            </div>
+          {/* Service pills */}
+          <div className="flex flex-wrap gap-2 mb-10">
+            {pills.map(p => (
+              <Link
+                key={p.href}
+                href={p.href}
+                className="text-xs text-(--text-muted) border border-(--border) hover:border-(--sage) hover:text-(--sage) px-4 py-2 rounded-full transition-all duration-200"
+              >
+                {p.label}
+              </Link>
+            ))}
           </div>
 
-          {/* Right: Image + quote — no negative margins */}
-          <div className="hidden md:flex flex-col gap-5 animate-fade-up delay-200">
-            <div className="relative aspect-4/5 bg-(--sage-light) rounded-2xl overflow-hidden">
-              {/* Decorative inner frame */}
-              <div className="absolute inset-4 border border-(--sage-muted)/40 rounded-xl pointer-events-none z-10" />
-              {/* Quote overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-(--text-dark)/75 to-transparent p-8 z-20 rounded-b-2xl">
-                <blockquote className="font-serif text-white text-xl font-normal italic leading-snug">
-                  „Всяка трансформация<br />започва с осъзнаването."
-                </blockquote>
-              </div>
-              {/* Monogram placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-serif text-(--sage-muted)/30 select-none leading-none" style={{ fontSize: '12rem' }}>Е</span>
-              </div>
-            </div>
-
-            {/* Method tags */}
-            <div className="grid grid-cols-3 gap-2">
-              {['Системни констелации', 'PSYCH-K®', 'МАК карти'].map(tag => (
-                <div
-                  key={tag}
-                  className="bg-white border border-(--border) rounded-full px-3 py-2.5 text-[10px] uppercase tracking-wider text-(--text-muted) text-center font-medium"
-                >
-                  {tag}
-                </div>
-              ))}
-            </div>
+          <div className="flex flex-wrap gap-3 items-center">
+            <Button href="/kontakti" variant="primary" size="lg">Запази час</Button>
+            <Button href="/uslugi" variant="outline" size="lg">Разгледай услугите</Button>
           </div>
         </div>
-      </div>
 
-      {/* Stats bar — sits naturally at bottom, no absolute overlap */}
-      <div className="relative border-t border-(--border) bg-white/70 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-6 py-5 grid grid-cols-3 divide-x divide-(--border)">
-          {stats.map(s => (
-            <div key={s.label} className="text-center px-4">
-              <div className="font-serif text-2xl md:text-3xl text-(--text-dark) font-medium">{s.value}</div>
-              <div className="text-[10px] uppercase tracking-[0.15em] text-(--text-muted) mt-1">{s.label}</div>
+        {/* Right: Photo with floating labels */}
+        <div className="relative hidden md:block animate-fade-in delay-200">
+          <div className="w-full aspect-4/5 bg-(--bg-warm) rounded-3xl overflow-hidden relative">
+            {/* Decorative corner frames */}
+            <div className="absolute top-6 left-6 w-10 h-10 border-t-2 border-l-2 border-(--gold)/60 rounded-tl-sm" />
+            <div className="absolute bottom-6 right-6 w-10 h-10 border-b-2 border-r-2 border-(--gold)/60 rounded-br-sm" />
+            {/* Monogram placeholder — replace with <Image> once photo is available */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-serif text-[170px] text-(--sage)/10 select-none leading-none">Е</span>
+            </div>
+          </div>
+
+          {/* Floating labels */}
+          {floatingLabels.map(l => (
+            <div
+              key={l.label}
+              className={`absolute ${l.position} bg-white rounded-full px-5 py-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center gap-2.5 border border-(--border-light)`}
+            >
+              <span className={`w-2 h-2 rounded-full ${l.color} inline-block shrink-0`} />
+              <span className="text-sm font-medium text-(--text-dark) whitespace-nowrap">{l.label}</span>
             </div>
           ))}
         </div>
