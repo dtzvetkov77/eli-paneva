@@ -1,6 +1,7 @@
 import HeroSection from '@/components/home/HeroSection'
 import AboutTeaser from '@/components/home/AboutTeaser'
 import ServicesGrid from '@/components/home/ServicesGrid'
+import ProcessSection from '@/components/home/ProcessSection'
 import TestimonialsSection from '@/components/home/TestimonialsSection'
 import BlogPreview from '@/components/home/BlogPreview'
 import CtaSection from '@/components/home/CtaSection'
@@ -32,6 +33,7 @@ export default function HomePage() {
       <StructuredData data={personSchema} />
       <HeroSection />
       <ServicesGrid />
+      <ProcessSection />
       <AboutTeaser />
       <TestimonialsSection />
       <BlogPreview />

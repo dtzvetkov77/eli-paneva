@@ -65,8 +65,12 @@ export default async function ServicePage({ params }: Props) {
           <div className="md:col-span-2">
             <span className="text-5xl text-(--sage) block mb-6">{service.icon}</span>
             <h1 className="font-serif text-4xl md:text-5xl text-(--text-dark) mb-8 leading-tight">{service.title}</h1>
-            <div className="text-lg text-(--text-muted) leading-relaxed mb-10">{service.longDescription}</div>
-            <Button href="/kontakti" variant="primary">Запази час за {service.shortTitle}</Button>
+            <div className="mb-10 space-y-4">
+              {service.longDescription.split('\n\n').map((para, i) => (
+                <p key={i} className="text-base md:text-lg text-(--text-muted) leading-relaxed">{para}</p>
+              ))}
+            </div>
+            <Button href="/kontakti" variant="primary" size="lg">Запази час за {service.shortTitle}</Button>
           </div>
           <aside className="space-y-6">
             <div className="bg-(--sage-light) p-6">

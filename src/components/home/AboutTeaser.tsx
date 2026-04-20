@@ -5,6 +5,7 @@ const credentials = [
   'PSYCH-K®',
   'Енергийна психология',
   'МАК карти',
+  'Игра Лийла',
 ]
 
 const stats = [
@@ -18,19 +19,17 @@ export default function AboutTeaser() {
     <section className="bg-(--bg-warm) py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
-        {/* Image column — no negative-margin floating cards */}
+        {/* Image column */}
         <div className="flex flex-col gap-5">
           <div className="aspect-4/5 bg-(--sage-light) relative overflow-hidden rounded-2xl">
-            {/* Corner frame decoration */}
-            <div className="absolute top-5 left-5 w-14 h-14 border-t-2 border-l-2 border-(--gold) z-10 rounded-tl-sm" />
-            <div className="absolute bottom-5 right-5 w-14 h-14 border-b-2 border-r-2 border-(--gold) z-10 rounded-br-sm" />
-            {/* Monogram placeholder */}
+            <div className="absolute top-5 left-5 w-12 h-12 border-t-2 border-l-2 border-(--gold) z-10 rounded-tl-sm" />
+            <div className="absolute bottom-5 right-5 w-12 h-12 border-b-2 border-r-2 border-(--gold) z-10 rounded-br-sm" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-serif text-8xl text-(--sage)/25 select-none">Е</span>
+              <span className="font-serif text-9xl text-(--sage)/20 select-none">Е</span>
             </div>
           </div>
 
-          {/* Stats row — inline, no overflow */}
+          {/* Stats row */}
           <div className="grid grid-cols-3 gap-3">
             {stats.map(s => (
               <div key={s.label} className="bg-white rounded-xl p-4 text-center border border-(--border)">
@@ -47,11 +46,11 @@ export default function AboutTeaser() {
           <h2 className="font-serif text-4xl md:text-5xl text-(--text-dark) leading-tight mb-6 font-normal">
             Ели Панева
           </h2>
-          <p className="text-(--text-muted) leading-relaxed mb-4">
-            Холистичен консултант, трансформационен коуч и автор с дългогодишен опит в работата с индивидуални клиенти, семейства и бизнес организации.
+          <p className="text-(--text-mid) leading-relaxed mb-4">
+            Аз съм холистичен консултант, трансформационен коуч и автор. Подкрепям хората да разпознаят и освободят семейните сценарии и подсъзнателни модели, които ги задържат назад.
           </p>
           <p className="text-(--text-muted) leading-relaxed mb-8">
-            Специализирам в методи, работещи на дълбинно ниво — за трайна трансформация, а не временни промени.
+            С над 10 години опит и стотици клиенти зад гърба си, вярвам, че истинската промяна е винаги възможна — и че тя идва отвътре.
           </p>
 
           {/* Credential tags */}
@@ -59,7 +58,7 @@ export default function AboutTeaser() {
             {credentials.map(c => (
               <span
                 key={c}
-                className="text-xs border border-(--sage-muted) text-(--sage) px-3 py-1.5 rounded-full font-medium"
+                className="text-xs border border-(--border) text-(--text-muted) px-3 py-1.5 rounded-full"
               >
                 {c}
               </span>

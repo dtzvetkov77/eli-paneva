@@ -36,21 +36,28 @@ export default function ServicesPage() {
           title="Как мога да те подкрепя"
           subtitle="Избери услугата, която резонира с теб, и направи първата стъпка към трансформацията."
         />
-        <div className="space-y-px bg-(--border)">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {services.map(service => (
             <Link
               key={service.slug}
               href={`/uslugi/${service.slug}`}
-              className="group bg-(--bg) hover:bg-white flex items-start gap-8 p-8 transition-colors"
+              className="group bg-white rounded-2xl border border-(--border) p-8 hover:border-(--sage) hover:shadow-md transition-all duration-300"
             >
-              <span className="text-4xl text-(--sage) shrink-0 mt-1">{service.icon}</span>
-              <div className="flex-1 min-w-0">
-                <h2 className="font-serif text-2xl text-(--text-dark) mb-2 group-hover:text-(--sage) transition-colors">
+              <div className="flex items-start gap-5 mb-5">
+                <div className="w-11 h-11 rounded-xl bg-(--sage-light) flex items-center justify-center shrink-0">
+                  <span className="text-(--sage) text-xl">{service.icon}</span>
+                </div>
+                <h2 className="font-serif text-xl text-(--text-dark) leading-snug font-normal group-hover:text-(--sage) transition-colors pt-1">
                   {service.title}
                 </h2>
-                <p className="text-(--text-muted) leading-relaxed">{service.description}</p>
               </div>
-              <span className="shrink-0 text-(--sage) text-2xl mt-2 group-hover:translate-x-2 transition-transform hidden sm:block">→</span>
+              <p className="text-sm text-(--text-muted) leading-relaxed mb-5">{service.description}</p>
+              <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-(--sage) font-medium">
+                Научи повече
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="group-hover:translate-x-1 transition-transform duration-300" aria-hidden>
+                  <path d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
             </Link>
           ))}
         </div>
