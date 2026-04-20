@@ -59,15 +59,18 @@ export default function HeroSection() {
 
           {/* Right: Photo — visible on both mobile and desktop */}
           <div className="relative order-1 md:order-2 animate-fade-in delay-200">
-            <div className="w-full aspect-4/5 rounded-3xl overflow-hidden relative bg-(--bg-warm)">
-              <Image
-                src="/eli-photo.webp"
-                alt="Ели Панева — холистичен консултант и трансформационен коуч"
-                fill
-                className="object-cover object-top"
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+            {/* max-w-xs on mobile keeps the photo small enough to look sharp */}
+            <div className="max-w-xs sm:max-w-sm md:max-w-none mx-auto">
+              <div className="aspect-square md:aspect-4/5 rounded-3xl overflow-hidden relative bg-(--bg-warm)">
+                <Image
+                  src="/eli-photo.webp"
+                  alt="Ели Панева — холистичен консултант и трансформационен коуч"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                  sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, 50vw"
+                />
+              </div>
             </div>
 
             {/* Floating labels — hidden on small mobile, shown from sm up */}

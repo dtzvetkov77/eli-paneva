@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { services } from '@/data/services'
 
@@ -109,11 +110,15 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-serif text-xl tracking-wide text-(--text-dark) hover:text-(--sage) transition-colors duration-300"
-        >
-          Ели Панева
+        <Link href="/" className="hover:opacity-75 transition-opacity duration-300 shrink-0">
+          <Image
+            src="/logo.webp"
+            alt="Ели Панева"
+            width={44}
+            height={44}
+            className="h-11 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
