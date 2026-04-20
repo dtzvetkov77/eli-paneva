@@ -1,0 +1,110 @@
+import { getPost, getPosts } from '@/lib/wordpress'
+import { notFound } from 'next/navigation'
+import Image from 'next/image'
+import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import StructuredData from '@/components/ui/StructuredData'
+import Button from '@/components/ui/Button'
+import Link from 'next/link'
+import type { Metadata } from 'next'
+
+interface Props { params: Promise<{ slug: string }> }
+
+export async function generateStaticParams() {
+  try {
+    const posts = await getPosts(1, 20)
+    return posts.map(p => ({ slug: p.slug }))
+  } catch {
+    return []
+  }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getPost(slug)
+  if (!post) return {}
+  const desc = post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 160)
+  const image = post._embedded?.['wp:featuredmedia']?.[0]
+  return {
+    title: post.title.rendered.replace(/<[^>]+>/g, ''),
+    description: desc,
+    alternates: { canonical: `https://elipaneva.com/blog/${slug}` },
+    openGraph: {
+      type: 'article',
+      publishedTime: post.date,
+      images: image ? [{ url: image.source_url }] : [],
+    },
+  }
+}
+
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = await getPost(slug)
+  if (!post) notFound()
+
+  const image = post._embedded?.['wp:featuredmedia']?.[0]
+  const date = new Date(post.date).toLocaleDateString('bg-BG', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+  const title = post.title.rendered.replace(/<[^>]+>/g, '')
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    datePublished: post.date,
+    author: { '@type': 'Person', name: 'Ели Панева', url: 'https://elipaneva.com' },
+    publisher: { '@type': 'Person', name: 'Ели Панева' },
+    image: image ? image.source_url : undefined,
+    url: `https://elipaneva.com/blog/${post.slug}`,
+    mainEntityOfPage: `https://elipaneva.com/blog/${post.slug}`,
+  }
+
+  return (
+    <div className="pt-16">
+      <StructuredData data={articleSchema} />
+      <div className="max-w-4xl mx-auto px-6 py-12">
+        <Breadcrumbs crumbs={[
+          { label: 'Начало', href: '/' },
+          { label: 'Блог', href: '/blog' },
+          { label: title },
+        ]} />
+        <time className="text-xs text-[var(--gold)] uppercase tracking-widest block mb-4">{date}</time>
+        <h1
+          className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] leading-tight mb-8"
+          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+        />
+        {image && (
+          <div className="aspect-video relative overflow-hidden mb-10 bg-[var(--sage-light)]">
+            <Image
+              src={image.source_url}
+              alt={image.alt_text || title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
+        <div
+          className="prose prose-lg max-w-none text-[var(--text-dark)] prose-headings:font-serif prose-a:text-[var(--sage)] prose-a:no-underline hover:prose-a:underline prose-img:rounded-sm"
+          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+        />
+
+        <div className="mt-16 pt-8 border-t border-[var(--border)]">
+          <div className="bg-[var(--sage-light)] p-8 flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
+            <div>
+              <p className="font-serif text-2xl text-[var(--text-dark)] mb-1">Искаш да работим заедно?</p>
+              <p className="text-sm text-[var(--text-muted)]">Запази час за консултация с Ели.</p>
+            </div>
+            <Button href="/kontakti" variant="primary">Запази час</Button>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <Link href="/blog" className="text-sm text-[var(--sage)] hover:underline">← Обратно към блога</Link>
+        </div>
+      </div>
+    </div>
+  )
+}

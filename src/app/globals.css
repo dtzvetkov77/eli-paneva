@@ -1,26 +1,36 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #FAFAF8;
+  --card: #FFFFFF;
+  --sage: #6B8F71;
+  --sage-light: #E8F0E9;
+  --gold: #C8A96E;
+  --text-dark: #1C1C1A;
+  --text-muted: #6B6B63;
+  --border: #E8E4DF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-dark);
+  font-family: var(--font-jost), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-cormorant), serif;
+}
+
+.prose a {
+  color: var(--sage);
+  text-decoration: none;
+}
+.prose a:hover {
+  text-decoration: underline;
 }
