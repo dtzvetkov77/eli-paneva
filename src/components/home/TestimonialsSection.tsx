@@ -14,33 +14,27 @@ function Stars() {
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-(--bg-warm) py-28">
+    <section className="bg-white py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-xs uppercase tracking-[0.28em] text-(--gold) font-medium block mb-5">
-            Отзиви
+            Какво казват клиентите
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-(--text-dark) font-normal">
-            Истории от клиенти
+            Истински истории, истинско въздействие
           </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/* Horizontal scroll carousel — no JS needed */}
+        <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-6 -mx-6 px-6 md:mx-0 md:px-0 scrollbar-hide">
           {testimonials.map((t, i) => (
             <blockquote
               key={i}
-              className="bg-white rounded-2xl p-8 border border-(--border) hover:shadow-md transition-shadow duration-300"
+              className="shrink-0 w-80 md:w-96 snap-start bg-(--bg) rounded-2xl border border-(--border) p-8"
             >
               <Stars />
-
-              {t.service && (
-                <span className="inline-block text-xs uppercase tracking-[0.15em] text-(--gold) bg-(--gold-light) px-3 py-1 rounded-full mb-5 font-medium">
-                  {t.service}
-                </span>
-              )}
 
               <p className="text-(--text-mid) leading-relaxed mb-6 text-base">
                 „{t.text}"
@@ -50,11 +44,27 @@ export default function TestimonialsSection() {
                 <div className="w-9 h-9 rounded-full bg-(--sage-light) flex items-center justify-center shrink-0">
                   <span className="font-serif text-sm text-(--sage) font-medium">{t.name[0]}</span>
                 </div>
-                <span className="text-sm font-medium text-(--text-dark)">{t.name}</span>
+                <div>
+                  <p className="text-sm font-medium text-(--text-dark) leading-none">{t.name}</p>
+                  {t.service && (
+                    <p className="text-xs text-(--text-muted) mt-1">{t.service}</p>
+                  )}
+                </div>
               </footer>
             </blockquote>
           ))}
         </div>
+
+        {/* Scroll indicator dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {testimonials.map((_, i) => (
+            <span
+              key={i}
+              className={`rounded-full transition-all duration-300 ${i === 0 ? 'w-6 h-2 bg-(--gold)' : 'w-2 h-2 bg-(--border)'}`}
+            />
+          ))}
+        </div>
+
       </div>
     </section>
   )

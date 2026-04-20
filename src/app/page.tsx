@@ -1,4 +1,5 @@
 import HeroSection from '@/components/home/HeroSection'
+import StatementSection from '@/components/home/StatementSection'
 import AboutTeaser from '@/components/home/AboutTeaser'
 import ServicesGrid from '@/components/home/ServicesGrid'
 import ProcessSection from '@/components/home/ProcessSection'
@@ -32,9 +33,10 @@ export default function HomePage() {
     <>
       <StructuredData data={personSchema} />
       <HeroSection />
+      <StatementSection />
+      <AboutTeaser />
       <ServicesGrid />
       <ProcessSection />
-      <AboutTeaser />
       <TestimonialsSection />
       <BlogPreview />
       <CtaSection />

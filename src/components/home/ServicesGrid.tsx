@@ -1,63 +1,67 @@
 import Link from 'next/link'
-import SectionHeader from '@/components/ui/SectionHeader'
+import Button from '@/components/ui/Button'
 import { services } from '@/data/services'
 
 export default function ServicesGrid() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-28">
-      <SectionHeader
-        eyebrow="Услуги"
-        title="Как мога да те подкрепя"
-        subtitle="Работя с хора, готови за истинска промяна — в отношенията, кариерата, здравето и идентичността."
-      />
+    <section className="bg-(--bg) py-24">
+      <div className="max-w-7xl mx-auto px-6">
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {services.map((service, i) => (
+        {/* Header row — eyebrow + heading + CTA aligned like Mindify */}
+        <div className="mb-6">
+          <span className="text-xs uppercase tracking-[0.28em] text-(--gold) font-medium block mb-4">
+            Моите услуги
+          </span>
+        </div>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <h2 className="font-serif text-4xl md:text-5xl text-(--text-dark) font-normal leading-tight max-w-xl">
+            Как мога да ви помогна да процъфтите
+          </h2>
+          <div className="shrink-0">
+            <Button href="/kontakti" variant="primary">Запази час</Button>
+          </div>
+        </div>
+
+        {/* 2×3 horizontal card grid — each card: colored left strip + text right */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {services.map(service => (
+            <Link
+              key={service.slug}
+              href={`/uslugi/${service.slug}`}
+              className="group flex rounded-2xl bg-white border border-(--border) overflow-hidden hover:shadow-lg hover:border-(--sage)/40 transition-all duration-300"
+            >
+              {/* Image / icon side */}
+              <div className="w-32 md:w-40 shrink-0 bg-(--bg-warm) relative flex items-center justify-center overflow-hidden">
+                {/* Decorative gradient overlay */}
+                <div className="absolute inset-0 bg-linear-to-br from-(--gold-light)/60 to-(--sage-light)/80" />
+                <span className="relative z-10 font-serif text-4xl text-(--sage)/40 select-none group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </span>
+              </div>
+
+              {/* Text side */}
+              <div className="flex-1 p-6 flex flex-col justify-center">
+                <h3 className="font-serif text-lg md:text-xl text-(--text-dark) font-normal leading-snug mb-2 group-hover:text-(--sage) transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-(--text-muted) leading-relaxed line-clamp-2">
+                  {service.description}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile: link to all services */}
+        <div className="md:hidden mt-8 text-center">
           <Link
-            key={service.slug}
-            href={`/uslugi/${service.slug}`}
-            className={[
-              'group relative bg-white border border-(--border) rounded-2xl p-8',
-              'hover:border-(--sage) hover:shadow-lg',
-              'transition-all duration-400 ease-out',
-              'flex flex-col',
-            ].join(' ')}
+            href="/uslugi"
+            className="text-sm text-(--sage) border border-(--sage) px-6 py-3 rounded-full hover:bg-(--sage) hover:text-white transition-all duration-300 inline-flex items-center gap-2"
           >
-            {/* Index number */}
-            <span className="absolute top-6 right-7 font-serif text-5xl text-(--border) group-hover:text-(--sage-light) transition-colors duration-400 select-none leading-none">
-              {String(i + 1).padStart(2, '0')}
-            </span>
-
-            {/* Icon */}
-            <div className={[
-              'w-12 h-12 rounded-full flex items-center justify-center mb-6',
-              'bg-(--sage-light) text-(--sage) text-xl',
-              'group-hover:bg-(--sage) group-hover:text-white transition-all duration-300',
-            ].join(' ')}>
-              {service.icon}
-            </div>
-
-            {/* Content */}
-            <h3 className="font-serif text-xl text-(--text-dark) mb-3 group-hover:text-(--sage) transition-colors duration-300 font-normal">
-              {service.title}
-            </h3>
-            <p className="text-(--text-muted) text-sm leading-relaxed flex-1 mb-6">
-              {service.description}
-            </p>
-
-            {/* Arrow */}
-            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-(--sage) font-medium">
-              <span>Научи повече</span>
-              <svg
-                width="16" height="16" viewBox="0 0 16 16" fill="none"
-                className="transform group-hover:translate-x-1 transition-transform duration-300"
-                aria-hidden
-              >
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
+            Всички услуги
           </Link>
-        ))}
+        </div>
+
       </div>
     </section>
   )
