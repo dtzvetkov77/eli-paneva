@@ -9,18 +9,16 @@ import type { Metadata } from 'next'
 
 interface Props { params: Promise<{ slug: string }> }
 
-export async function generateStaticParams() {
-  try {
-    const posts = await getPosts(1, 20)
-    return posts.map(p => ({ slug: p.slug }))
-  } catch {
-    return []
-  }
+// Pages render on first request and are cached via ISR (revalidate: 3600)
+// Avoids hammering the WordPress API with 20 concurrent fetches at build time
+export function generateStaticParams() {
+  return []
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const post = await getPost(slug)
+  let post = null
+  try { post = await getPost(slug) } catch { /* API unavailable */ }
   if (!post) return {}
   const desc = post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 160)
   const image = post._embedded?.['wp:featuredmedia']?.[0]
@@ -38,7 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
-  const post = await getPost(slug)
+  let post = null
+  try { post = await getPost(slug) } catch { /* API unavailable */ }
   if (!post) notFound()
 
   const image = post._embedded?.['wp:featuredmedia']?.[0]
@@ -70,13 +69,13 @@ export default async function BlogPostPage({ params }: Props) {
           { label: 'Блог', href: '/blog' },
           { label: title },
         ]} />
-        <time className="text-xs text-[var(--gold)] uppercase tracking-widest block mb-4">{date}</time>
+        <time className="text-xs text-(--gold) uppercase tracking-widest block mb-4">{date}</time>
         <h1
-          className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] leading-tight mb-8"
+          className="font-serif text-4xl md:text-5xl text-(--text-dark) leading-tight mb-8"
           dangerouslySetInnerHTML={{ __html: post.title.rendered }}
         />
         {image && (
-          <div className="aspect-video relative overflow-hidden mb-10 bg-[var(--sage-light)]">
+          <div className="aspect-video relative overflow-hidden mb-10 bg-(--sage-light)">
             <Image
               src={image.source_url}
               alt={image.alt_text || title}
@@ -87,22 +86,22 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
         <div
-          className="prose prose-lg max-w-none text-[var(--text-dark)] prose-headings:font-serif prose-a:text-[var(--sage)] prose-a:no-underline hover:prose-a:underline prose-img:rounded-sm"
+          className="prose prose-lg max-w-none text-(--text-dark) prose-headings:font-serif prose-a:text-(--sage) prose-a:no-underline hover:prose-a:underline prose-img:rounded-sm"
           dangerouslySetInnerHTML={{ __html: post.content.rendered }}
         />
 
-        <div className="mt-16 pt-8 border-t border-[var(--border)]">
-          <div className="bg-[var(--sage-light)] p-8 flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
+        <div className="mt-16 pt-8 border-t border-(--border)">
+          <div className="bg-(--sage-light) p-8 flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
             <div>
-              <p className="font-serif text-2xl text-[var(--text-dark)] mb-1">Искаш да работим заедно?</p>
-              <p className="text-sm text-[var(--text-muted)]">Запази час за консултация с Ели.</p>
+              <p className="font-serif text-2xl text-(--text-dark) mb-1">Искаш да работим заедно?</p>
+              <p className="text-sm text-(--text-muted)">Запази час за консултация с Ели.</p>
             </div>
             <Button href="/kontakti" variant="primary">Запази час</Button>
           </div>
         </div>
 
         <div className="mt-8">
-          <Link href="/blog" className="text-sm text-[var(--sage)] hover:underline">← Обратно към блога</Link>
+          <Link href="/blog" className="text-sm text-(--sage) hover:underline">← Обратно към блога</Link>
         </div>
       </div>
     </div>

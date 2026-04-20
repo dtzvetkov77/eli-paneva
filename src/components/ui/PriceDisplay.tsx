@@ -8,9 +8,9 @@ interface PriceDisplayProps {
 export default function PriceDisplay({ priceBgn, className = '' }: PriceDisplayProps) {
   const eur = bgnToEur(priceBgn)
   return (
-    <span className={`font-semibold text-[var(--text-dark)] ${className}`}>
+    <span className={`font-semibold text-(--text-dark) ${className}`}>
       {formatBgn(priceBgn)}{' '}
-      <span className="text-[var(--text-muted)] font-normal text-sm">/ {formatEur(eur)}</span>
+      <span className="text-(--text-muted) font-normal text-sm">/ {formatEur(eur)}</span>
     </span>
   )
 }

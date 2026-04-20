@@ -3,18 +3,36 @@ interface SectionHeaderProps {
   title: string
   subtitle?: string
   centered?: boolean
+  light?: boolean
 }
 
-export default function SectionHeader({ eyebrow, title, subtitle, centered = false }: SectionHeaderProps) {
+export default function SectionHeader({
+  eyebrow,
+  title,
+  subtitle,
+  centered = false,
+  light = false,
+}: SectionHeaderProps) {
   const align = centered ? 'text-center items-center' : 'text-left items-start'
+  const textColor = light ? 'text-white' : 'text-(--text-dark)'
+  const subColor = light ? 'text-white/60' : 'text-(--text-muted)'
+
   return (
-    <div className={`flex flex-col gap-3 mb-12 ${align}`}>
+    <div className={`flex flex-col gap-4 mb-14 ${align}`}>
       {eyebrow && (
-        <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)] font-medium">{eyebrow}</span>
+        <div className={`flex items-center gap-3 ${centered ? 'justify-center' : ''}`}>
+          <span className="block w-6 h-px bg-(--gold)" />
+          <span className="text-[10px] uppercase tracking-[0.25em] text-(--gold) font-medium">
+            {eyebrow}
+          </span>
+          <span className="block w-6 h-px bg-(--gold)" />
+        </div>
       )}
-      <h2 className="text-4xl md:text-5xl font-light text-[var(--text-dark)] leading-tight">{title}</h2>
+      <h2 className={`text-4xl md:text-5xl lg:text-6xl font-light ${textColor} leading-[1.05]`}>
+        {title}
+      </h2>
       {subtitle && (
-        <p className="text-[var(--text-muted)] text-lg max-w-2xl leading-relaxed">{subtitle}</p>
+        <p className={`${subColor} text-lg leading-relaxed max-w-2xl`}>{subtitle}</p>
       )}
     </div>
   )

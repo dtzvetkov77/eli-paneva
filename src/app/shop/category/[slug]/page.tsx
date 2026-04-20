@@ -7,13 +7,8 @@ import type { Metadata } from 'next'
 
 interface Props { params: Promise<{ slug: string }> }
 
-export async function generateStaticParams() {
-  try {
-    const cats = await getCategories()
-    return cats.map(c => ({ slug: c.slug }))
-  } catch {
-    return []
-  }
+export function generateStaticParams() {
+  return []
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -52,7 +47,7 @@ export default async function CategoryPage({ params }: Props) {
         ]} />
         <SectionHeader eyebrow="Категория" title={category.name} />
         {products.length === 0 ? (
-          <p className="text-[var(--text-muted)]">Няма продукти в тази категория.</p>
+          <p className="text-(--text-muted)">Няма продукти в тази категория.</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product: import('@/lib/woocommerce').WCProduct) => (

@@ -14,7 +14,7 @@ export default async function BlogPreview() {
   if (!posts.length) return null
 
   return (
-    <section className="bg-[var(--sage-light)] py-24">
+    <section className="bg-(--sage-light) py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-end mb-12">
           <SectionHeader eyebrow="Блог" title="Статии и вдъхновения" />
@@ -25,7 +25,7 @@ export default async function BlogPreview() {
             const image = post._embedded?.['wp:featuredmedia']?.[0]
             return (
               <Link key={post.id} href={`/blog/${post.slug}`} className="group bg-white block">
-                <div className="aspect-video bg-[var(--sage)]/20 relative overflow-hidden">
+                <div className="aspect-video bg-(--sage)/20 relative overflow-hidden">
                   {image && (
                     <Image
                       src={image.source_url}
@@ -38,11 +38,11 @@ export default async function BlogPreview() {
                 </div>
                 <div className="p-6">
                   <h3
-                    className="font-serif text-xl text-[var(--text-dark)] mb-3 group-hover:text-[var(--sage)] transition-colors line-clamp-2"
+                    className="font-serif text-xl text-(--text-dark) mb-3 group-hover:text-(--sage) transition-colors line-clamp-2"
                     dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                   />
                   <div
-                    className="text-sm text-[var(--text-muted)] line-clamp-3"
+                    className="text-sm text-(--text-muted) line-clamp-3"
                     dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
                   />
                 </div>

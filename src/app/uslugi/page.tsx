@@ -36,27 +36,27 @@ export default function ServicesPage() {
           title="Как мога да те подкрепя"
           subtitle="Избери услугата, която резонира с теб, и направи първата стъпка към трансформацията."
         />
-        <div className="space-y-px bg-[var(--border)]">
+        <div className="space-y-px bg-(--border)">
           {services.map(service => (
             <Link
               key={service.slug}
               href={`/uslugi/${service.slug}`}
-              className="group bg-[var(--bg)] hover:bg-white flex items-start gap-8 p-8 transition-colors"
+              className="group bg-(--bg) hover:bg-white flex items-start gap-8 p-8 transition-colors"
             >
-              <span className="text-4xl text-[var(--sage)] shrink-0 mt-1">{service.icon}</span>
+              <span className="text-4xl text-(--sage) shrink-0 mt-1">{service.icon}</span>
               <div className="flex-1 min-w-0">
-                <h2 className="font-serif text-2xl text-[var(--text-dark)] mb-2 group-hover:text-[var(--sage)] transition-colors">
+                <h2 className="font-serif text-2xl text-(--text-dark) mb-2 group-hover:text-(--sage) transition-colors">
                   {service.title}
                 </h2>
-                <p className="text-[var(--text-muted)] leading-relaxed">{service.description}</p>
+                <p className="text-(--text-muted) leading-relaxed">{service.description}</p>
               </div>
-              <span className="shrink-0 text-[var(--sage)] text-2xl mt-2 group-hover:translate-x-2 transition-transform hidden sm:block">→</span>
+              <span className="shrink-0 text-(--sage) text-2xl mt-2 group-hover:translate-x-2 transition-transform hidden sm:block">→</span>
             </Link>
           ))}
         </div>
-        <div className="mt-16 bg-[var(--sage-light)] p-12 text-center">
-          <h3 className="font-serif text-3xl text-[var(--text-dark)] mb-4">Не знаеш откъде да започнеш?</h3>
-          <p className="text-[var(--text-muted)] mb-8 max-w-xl mx-auto">Запази безплатна 20-минутна консултация и ще намерим заедно най-подходящия метод за теб.</p>
+        <div className="mt-16 bg-(--sage-light) p-12 text-center">
+          <h3 className="font-serif text-3xl text-(--text-dark) mb-4">Не знаеш откъде да започнеш?</h3>
+          <p className="text-(--text-muted) mb-8 max-w-xl mx-auto">Запази безплатна 20-минутна консултация и ще намерим заедно най-подходящия метод за теб.</p>
           <Button href="/kontakti" variant="primary">Запази безплатна консултация</Button>
         </div>
       </div>

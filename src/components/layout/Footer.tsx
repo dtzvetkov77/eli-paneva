@@ -10,7 +10,7 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--text-dark)] text-white/70 mt-24">
+    <footer className="bg-(--text-dark) text-white/70 mt-24">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
           <span className="font-serif text-2xl text-white block mb-4">Ели Панева</span>
@@ -18,9 +18,9 @@ export default function Footer() {
             Холистичен консултант, трансформационен коуч и автор. Подкрепям хората в процеса на вътрешна промяна чрез системни констелации, PSYCH-K® и МАК карти.
           </p>
           <div className="flex gap-4 mt-6">
-            <a href="https://www.facebook.com/elipaneva" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[var(--gold)] transition-colors text-sm">Facebook</a>
-            <a href="https://www.instagram.com/elipaneva" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[var(--gold)] transition-colors text-sm">Instagram</a>
-            <a href="https://www.youtube.com/@elipaneva" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[var(--gold)] transition-colors text-sm">YouTube</a>
+            <a href="https://www.facebook.com/elipaneva" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-(--gold) transition-colors text-sm">Facebook</a>
+            <a href="https://www.instagram.com/elipaneva" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-(--gold) transition-colors text-sm">Instagram</a>
+            <a href="https://www.youtube.com/@elipaneva" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-(--gold) transition-colors text-sm">YouTube</a>
           </div>
         </div>
         <div>
@@ -28,7 +28,7 @@ export default function Footer() {
           <ul className="space-y-2">
             {serviceLinks.map(s => (
               <li key={s.href}>
-                <Link href={s.href} className="text-sm hover:text-[var(--gold)] transition-colors">{s.label}</Link>
+                <Link href={s.href} className="text-sm hover:text-(--gold) transition-colors">{s.label}</Link>
               </li>
             ))}
           </ul>
@@ -37,8 +37,8 @@ export default function Footer() {
           <h3 className="text-white text-sm uppercase tracking-widest mb-4">Контакт</h3>
           <address className="not-italic text-sm space-y-2">
             <p>бул. „Дондуков" 65, ет. 1, офис 2<br />София, България</p>
-            <a href="tel:+359882420894" className="hover:text-[var(--gold)] transition-colors block">+359 882 420 894</a>
-            <a href="mailto:elipaneva2023@gmail.com" className="hover:text-[var(--gold)] transition-colors block">elipaneva2023@gmail.com</a>
+            <a href="tel:+359882420894" className="hover:text-(--gold) transition-colors block">+359 882 420 894</a>
+            <a href="mailto:elipaneva2023@gmail.com" className="hover:text-(--gold) transition-colors block">elipaneva2023@gmail.com</a>
           </address>
         </div>
       </div>

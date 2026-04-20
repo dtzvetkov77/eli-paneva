@@ -35,38 +35,38 @@ export default function ContactPage() {
       <StructuredData data={localBusinessSchema} />
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-12">
-          <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)] font-medium block mb-4">Контакти</span>
-          <h1 className="font-serif text-5xl text-[var(--text-dark)] font-light">Свържи се с мен</h1>
+          <span className="text-xs uppercase tracking-[0.2em] text-(--gold) font-medium block mb-4">Контакти</span>
+          <h1 className="font-serif text-5xl text-(--text-dark) font-light">Свържи се с мен</h1>
         </div>
         <div className="grid md:grid-cols-2 gap-16">
           {/* Contact info */}
           <div>
-            <p className="text-[var(--text-muted)] leading-relaxed mb-10">
+            <p className="text-(--text-muted) leading-relaxed mb-10">
               Запази своята консултация или задай въпрос. Отговарям в рамките на 24 часа в работни дни.
             </p>
             <div className="space-y-8">
               <div>
-                <h3 className="text-xs uppercase tracking-widest text-[var(--text-muted)] mb-3">Адрес</h3>
-                <address className="not-italic text-[var(--text-dark)]">
+                <h3 className="text-xs uppercase tracking-widest text-(--text-muted) mb-3">Адрес</h3>
+                <address className="not-italic text-(--text-dark)">
                   бул. „Дондуков" 65, ет. 1, офис 2<br />
                   1504 София, България
                 </address>
               </div>
               <div>
-                <h3 className="text-xs uppercase tracking-widest text-[var(--text-muted)] mb-3">Телефон</h3>
-                <a href="tel:+359882420894" className="text-[var(--text-dark)] hover:text-[var(--sage)] transition-colors font-medium">
+                <h3 className="text-xs uppercase tracking-widest text-(--text-muted) mb-3">Телефон</h3>
+                <a href="tel:+359882420894" className="text-(--text-dark) hover:text-(--sage) transition-colors font-medium">
                   +359 882 420 894
                 </a>
-                <p className="text-xs text-[var(--text-muted)] mt-1">Viber и WhatsApp: +359 898 436 850</p>
+                <p className="text-xs text-(--text-muted) mt-1">Viber и WhatsApp: +359 898 436 850</p>
               </div>
               <div>
-                <h3 className="text-xs uppercase tracking-widest text-[var(--text-muted)] mb-3">Имейл</h3>
-                <a href="mailto:elipaneva2023@gmail.com" className="text-[var(--text-dark)] hover:text-[var(--sage)] transition-colors">
+                <h3 className="text-xs uppercase tracking-widest text-(--text-muted) mb-3">Имейл</h3>
+                <a href="mailto:elipaneva2023@gmail.com" className="text-(--text-dark) hover:text-(--sage) transition-colors">
                   elipaneva2023@gmail.com
                 </a>
               </div>
               <div>
-                <h3 className="text-xs uppercase tracking-widest text-[var(--text-muted)] mb-3">Социални мрежи</h3>
+                <h3 className="text-xs uppercase tracking-widest text-(--text-muted) mb-3">Социални мрежи</h3>
                 <div className="flex flex-wrap gap-4">
                   {[
                     { label: 'Facebook', href: 'https://www.facebook.com/elipaneva' },
@@ -79,7 +79,7 @@ export default function ContactPage() {
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-[var(--text-muted)] hover:text-[var(--sage)] transition-colors border border-[var(--border)] px-4 py-2 hover:border-[var(--sage)]"
+                      className="text-sm text-(--text-muted) hover:text-(--sage) transition-colors border border-(--border) px-4 py-2 hover:border-(--sage)"
                     >
                       {s.label}
                     </a>
@@ -90,11 +90,11 @@ export default function ContactPage() {
           </div>
 
           {/* Form */}
-          <div className="bg-white border border-[var(--border)] p-8">
-            <h2 className="font-serif text-2xl text-[var(--text-dark)] mb-6">Изпрати съобщение</h2>
+          <div className="bg-white border border-(--border) p-8">
+            <h2 className="font-serif text-2xl text-(--text-dark) mb-6">Изпрати съобщение</h2>
             <form action="/api/contact" method="POST" className="space-y-5">
               <div>
-                <label htmlFor="name" className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                <label htmlFor="name" className="block text-xs uppercase tracking-widest text-(--text-muted) mb-2">
                   Вашето име *
                 </label>
                 <input
@@ -103,11 +103,11 @@ export default function ContactPage() {
                   type="text"
                   required
                   autoComplete="name"
-                  className="w-full border border-[var(--border)] px-4 py-3 text-sm bg-[var(--bg)] focus:outline-none focus:border-[var(--sage)] transition-colors"
+                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                <label htmlFor="email" className="block text-xs uppercase tracking-widest text-(--text-muted) mb-2">
                   Имейл адрес *
                 </label>
                 <input
@@ -116,11 +116,11 @@ export default function ContactPage() {
                   type="email"
                   required
                   autoComplete="email"
-                  className="w-full border border-[var(--border)] px-4 py-3 text-sm bg-[var(--bg)] focus:outline-none focus:border-[var(--sage)] transition-colors"
+                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                <label htmlFor="phone" className="block text-xs uppercase tracking-widest text-(--text-muted) mb-2">
                   Телефон
                 </label>
                 <input
@@ -128,17 +128,17 @@ export default function ContactPage() {
                   name="phone"
                   type="tel"
                   autoComplete="tel"
-                  className="w-full border border-[var(--border)] px-4 py-3 text-sm bg-[var(--bg)] focus:outline-none focus:border-[var(--sage)] transition-colors"
+                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
                 />
               </div>
               <div>
-                <label htmlFor="service" className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                <label htmlFor="service" className="block text-xs uppercase tracking-widest text-(--text-muted) mb-2">
                   Услуга
                 </label>
                 <select
                   id="service"
                   name="service"
-                  className="w-full border border-[var(--border)] px-4 py-3 text-sm bg-[var(--bg)] focus:outline-none focus:border-[var(--sage)] transition-colors"
+                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
                 >
                   <option value="">— Изберете услуга —</option>
                   <option>Лични консултации</option>
@@ -152,7 +152,7 @@ export default function ContactPage() {
                 </select>
               </div>
               <div>
-                <label htmlFor="message" className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                <label htmlFor="message" className="block text-xs uppercase tracking-widest text-(--text-muted) mb-2">
                   Съобщение *
                 </label>
                 <textarea
@@ -160,12 +160,12 @@ export default function ContactPage() {
                   name="message"
                   rows={5}
                   required
-                  className="w-full border border-[var(--border)] px-4 py-3 text-sm bg-[var(--bg)] focus:outline-none focus:border-[var(--sage)] transition-colors resize-none"
+                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors resize-none"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-[var(--sage)] text-white py-3 text-sm font-medium hover:bg-[var(--text-dark)] transition-colors tracking-wide"
+                className="w-full bg-(--sage) text-white py-3 text-sm font-medium hover:bg-(--text-dark) transition-colors tracking-wide"
               >
                 Изпрати съобщение
               </button>

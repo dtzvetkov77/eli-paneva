@@ -29,14 +29,14 @@ export default async function ShopPage() {
         />
         {categories.length > 0 && (
           <div className="flex flex-wrap gap-3 mb-12">
-            <Link href="/shop" className="px-4 py-2 text-sm border border-[var(--sage)] bg-[var(--sage)] text-white">
+            <Link href="/shop" className="px-4 py-2 text-sm border border-(--sage) bg-(--sage) text-white">
               Всички
             </Link>
             {categories.map((cat: WCCategory) => (
               <Link
                 key={cat.id}
                 href={`/shop/category/${cat.slug}`}
-                className="px-4 py-2 text-sm border border-[var(--border)] text-[var(--text-muted)] hover:border-[var(--sage)] hover:text-[var(--sage)] transition-colors"
+                className="px-4 py-2 text-sm border border-(--border) text-(--text-muted) hover:border-(--sage) hover:text-(--sage) transition-colors"
               >
                 {cat.name}
               </Link>
@@ -50,7 +50,7 @@ export default async function ShopPage() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-24 text-[var(--text-muted)]">
+          <div className="text-center py-24 text-(--text-muted)">
             <p className="font-serif text-2xl mb-4">Магазинът се зарежда...</p>
             <p className="text-sm">Добави WooCommerce API ключове в .env.local</p>
           </div>

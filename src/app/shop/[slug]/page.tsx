@@ -10,13 +10,9 @@ import type { Metadata } from 'next'
 
 interface Props { params: Promise<{ slug: string }> }
 
-export async function generateStaticParams() {
-  try {
-    const products = await getProducts()
-    return products.map(p => ({ slug: p.slug }))
-  } catch {
-    return []
-  }
+// Pages render on first request and are cached via ISR (revalidate: 3600)
+export function generateStaticParams() {
+  return []
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -78,7 +74,7 @@ export default async function ProductPage({ params }: Props) {
         <div className="grid md:grid-cols-2 gap-16">
           <div>
             {product.images[0] ? (
-              <div className="aspect-square relative overflow-hidden bg-[var(--sage-light)]">
+              <div className="aspect-square relative overflow-hidden bg-(--sage-light)">
                 <Image
                   src={product.images[0].src}
                   alt={product.images[0].alt || product.name}
@@ -88,14 +84,14 @@ export default async function ProductPage({ params }: Props) {
                 />
               </div>
             ) : (
-              <div className="aspect-square bg-[var(--sage-light)] flex items-center justify-center">
-                <span className="font-serif text-4xl text-[var(--sage)]/40">Е</span>
+              <div className="aspect-square bg-(--sage-light) flex items-center justify-center">
+                <span className="font-serif text-4xl text-(--sage)/40">Е</span>
               </div>
             )}
             {product.images.length > 1 && (
               <div className="grid grid-cols-4 gap-2 mt-2">
                 {product.images.slice(1, 5).map(img => (
-                  <div key={img.id} className="aspect-square relative overflow-hidden bg-[var(--sage-light)]">
+                  <div key={img.id} className="aspect-square relative overflow-hidden bg-(--sage-light)">
                     <Image src={img.src} alt={img.alt} fill className="object-cover" />
                   </div>
                 ))}
@@ -103,24 +99,24 @@ export default async function ProductPage({ params }: Props) {
             )}
           </div>
           <div>
-            <h1 className="font-serif text-3xl md:text-4xl text-[var(--text-dark)] mb-4">{product.name}</h1>
+            <h1 className="font-serif text-3xl md:text-4xl text-(--text-dark) mb-4">{product.name}</h1>
             {price > 0 && (
               <div className="mb-6">
-                <div className="text-3xl font-light text-[var(--text-dark)]">
+                <div className="text-3xl font-light text-(--text-dark)">
                   {price.toFixed(2)} лв
                 </div>
-                <div className="text-[var(--text-muted)] text-sm mt-1">{eur.toFixed(2)} €</div>
+                <div className="text-(--text-muted) text-sm mt-1">{eur.toFixed(2)} €</div>
               </div>
             )}
             <div
-              className="text-[var(--text-muted)] leading-relaxed mb-8"
+              className="text-(--text-muted) leading-relaxed mb-8"
               dangerouslySetInnerHTML={{ __html: product.short_description }}
             />
             <Button href={product.permalink} variant="primary" external className="w-full justify-center mb-4">
               Купи сега
             </Button>
             <div
-              className="prose prose-sm max-w-none text-[var(--text-muted)] mt-8"
+              className="prose prose-sm max-w-none text-(--text-muted) mt-8"
               dangerouslySetInnerHTML={{ __html: product.description }}
             />
           </div>

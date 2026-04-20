@@ -63,34 +63,34 @@ export default async function ServicePage({ params }: Props) {
         ]} />
         <div className="grid md:grid-cols-3 gap-16">
           <div className="md:col-span-2">
-            <span className="text-5xl text-[var(--sage)] block mb-6">{service.icon}</span>
-            <h1 className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mb-8 leading-tight">{service.title}</h1>
-            <div className="text-lg text-[var(--text-muted)] leading-relaxed mb-10">{service.longDescription}</div>
+            <span className="text-5xl text-(--sage) block mb-6">{service.icon}</span>
+            <h1 className="font-serif text-4xl md:text-5xl text-(--text-dark) mb-8 leading-tight">{service.title}</h1>
+            <div className="text-lg text-(--text-muted) leading-relaxed mb-10">{service.longDescription}</div>
             <Button href="/kontakti" variant="primary">Запази час за {service.shortTitle}</Button>
           </div>
           <aside className="space-y-6">
-            <div className="bg-[var(--sage-light)] p-6">
-              <h3 className="font-serif text-lg text-[var(--text-dark)] mb-4">Други услуги</h3>
+            <div className="bg-(--sage-light) p-6">
+              <h3 className="font-serif text-lg text-(--text-dark) mb-4">Други услуги</h3>
               <ul className="space-y-3">
                 {otherServices.map(s => (
                   <li key={s.slug}>
                     <Link
                       href={`/uslugi/${s.slug}`}
-                      className="text-sm text-[var(--text-muted)] hover:text-[var(--sage)] transition-colors flex items-center gap-2"
+                      className="text-sm text-(--text-muted) hover:text-(--sage) transition-colors flex items-center gap-2"
                     >
                       <span>{s.icon}</span>{s.shortTitle}
                     </Link>
                   </li>
                 ))}
                 <li>
-                  <Link href="/uslugi" className="text-sm text-[var(--sage)] hover:underline">Всички услуги →</Link>
+                  <Link href="/uslugi" className="text-sm text-(--sage) hover:underline">Всички услуги →</Link>
                 </li>
               </ul>
             </div>
-            <div className="bg-[var(--text-dark)] text-white p-6">
+            <div className="bg-(--text-dark) text-white p-6">
               <h3 className="font-serif text-lg mb-3">Запази час</h3>
               <p className="text-white/60 text-sm mb-4">Свържи се с Ели за безплатна консултация.</p>
-              <Button href="/kontakti" variant="outline" className="border-white/50 text-white hover:bg-white hover:text-[var(--text-dark)] w-full justify-center">
+              <Button href="/kontakti" variant="outline" className="border-white/50 text-white hover:bg-white hover:text-(--text-dark) w-full justify-center">
                 Свържи се
               </Button>
             </div>
@@ -98,7 +98,7 @@ export default async function ServicePage({ params }: Props) {
         </div>
         {related.length > 0 && (
           <div className="mt-16">
-            <h2 className="font-serif text-2xl text-[var(--text-dark)] mb-8">Свързани продукти</h2>
+            <h2 className="font-serif text-2xl text-(--text-dark) mb-8">Свързани продукти</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {related.map(p => <ProductCard key={p.id} product={p} />)}
             </div>

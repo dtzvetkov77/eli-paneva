@@ -27,7 +27,7 @@ export default async function CoursesPage() {
 
   return (
     <div className="pt-16">
-      <div className="bg-[var(--sage-light)] py-20">
+      <div className="bg-(--sage-light) py-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
             eyebrow="Курсове"
@@ -57,20 +57,20 @@ export default async function CoursesPage() {
                 badge: 'Уебинар',
               },
             ].map(c => (
-              <div key={c.title} className="border border-[var(--border)] p-8">
-                <span className="text-xs uppercase tracking-widest text-[var(--gold)] block mb-3">{c.badge}</span>
-                <h3 className="font-serif text-2xl text-[var(--text-dark)] mb-3">{c.title}</h3>
-                <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-6">{c.desc}</p>
+              <div key={c.title} className="border border-(--border) p-8">
+                <span className="text-xs uppercase tracking-widest text-(--gold) block mb-3">{c.badge}</span>
+                <h3 className="font-serif text-2xl text-(--text-dark) mb-3">{c.title}</h3>
+                <p className="text-(--text-muted) text-sm leading-relaxed mb-6">{c.desc}</p>
                 <Button href="/kontakti" variant="outline">Запитване</Button>
               </div>
             ))}
           </div>
         )}
 
-        <div className="mt-16 bg-[var(--text-dark)] p-12 text-center">
+        <div className="mt-16 bg-(--text-dark) p-12 text-center">
           <h2 className="font-serif text-3xl text-white mb-4">Търсиш нещо конкретно?</h2>
           <p className="text-white/60 mb-8">Свържи се с Ели и ще намерим най-подходящата програма за теб.</p>
-          <Button href="/kontakti" variant="outline" className="border-white text-white hover:bg-white hover:text-[var(--text-dark)]">
+          <Button href="/kontakti" variant="outline" className="border-white text-white hover:bg-white hover:text-(--text-dark)">
             Свържи се
           </Button>
         </div>

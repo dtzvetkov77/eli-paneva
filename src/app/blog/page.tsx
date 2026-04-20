@@ -20,7 +20,7 @@ export default async function BlogPage() {
           subtitle="Размисли за вътрешна промяна, отношения и личностно развитие."
         />
         {posts.length === 0 ? (
-          <p className="text-[var(--text-muted)]">Статиите се зареждат...</p>
+          <p className="text-(--text-muted)">Статиите се зареждат...</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map(post => (

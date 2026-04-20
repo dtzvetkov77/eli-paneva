@@ -43,19 +43,19 @@ export default async function MacKartiPage() {
       <StructuredData data={serviceSchema} />
 
       {/* Hero */}
-      <section className="bg-[var(--sage-light)] py-24">
+      <section className="bg-(--sage-light) py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-xs uppercase tracking-[0.25em] text-[var(--gold)] font-medium block mb-6">
+            <span className="text-xs uppercase tracking-[0.25em] text-(--gold) font-medium block mb-6">
               Метафорични асоциативни карти
             </span>
-            <h1 className="font-serif text-5xl md:text-6xl text-[var(--text-dark)] font-light leading-tight mb-8">
+            <h1 className="font-serif text-5xl md:text-6xl text-(--text-dark) font-light leading-tight mb-8">
               МАК карти
             </h1>
-            <p className="text-[var(--text-muted)] leading-relaxed mb-4">
+            <p className="text-(--text-muted) leading-relaxed mb-4">
               МАК картите са мощен проективен инструмент за работа с подсъзнателните послания, скрити желания и вътрешни ресурси. Работят на символично ниво, заобикаляйки защитните механизми на ума.
             </p>
-            <p className="text-[var(--text-muted)] leading-relaxed mb-8">
+            <p className="text-(--text-muted) leading-relaxed mb-8">
               Предлагам индивидуални сесии с МАК карти, обучения за специалисти и физически комплекти за самостоятелна практика.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -67,7 +67,7 @@ export default async function MacKartiPage() {
             {['Себепознание', 'Отношения', 'Цели', 'Ресурси'].map((tag, i) => (
               <div
                 key={tag}
-                className={`aspect-square flex items-center justify-center font-serif text-lg text-[var(--text-dark)] border border-[var(--border)] ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--sage)]/10'}`}
+                className={`aspect-square flex items-center justify-center font-serif text-lg text-(--text-dark) border border-(--border) ${i % 2 === 0 ? 'bg-white' : 'bg-(--sage)/10'}`}
               >
                 {tag}
               </div>
@@ -79,16 +79,16 @@ export default async function MacKartiPage() {
       {/* Benefits */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="mb-12">
-          <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)] font-medium block mb-4">Защо МАК карти</span>
-          <h2 className="font-serif text-4xl text-[var(--text-dark)]">Силата на образите</h2>
+          <span className="text-xs uppercase tracking-[0.2em] text-(--gold) font-medium block mb-4">Защо МАК карти</span>
+          <h2 className="font-serif text-4xl text-(--text-dark)">Силата на образите</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {benefits.map(b => (
-            <div key={b.title} className="flex gap-6 p-6 border border-[var(--border)]">
-              <span className="text-[var(--sage)] text-2xl mt-1">◎</span>
+            <div key={b.title} className="flex gap-6 p-6 border border-(--border)">
+              <span className="text-(--sage) text-2xl mt-1">◎</span>
               <div>
-                <h3 className="font-serif text-lg text-[var(--text-dark)] mb-2">{b.title}</h3>
-                <p className="text-[var(--text-muted)] text-sm leading-relaxed">{b.desc}</p>
+                <h3 className="font-serif text-lg text-(--text-dark) mb-2">{b.title}</h3>
+                <p className="text-(--text-muted) text-sm leading-relaxed">{b.desc}</p>
               </div>
             </div>
           ))}
@@ -96,11 +96,11 @@ export default async function MacKartiPage() {
       </section>
 
       {/* Formats */}
-      <section className="bg-[var(--sage-light)] py-24">
+      <section className="bg-(--sage-light) py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
-            <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)] font-medium block mb-4">Формати</span>
-            <h2 className="font-serif text-4xl text-[var(--text-dark)]">Как можем да работим</h2>
+            <span className="text-xs uppercase tracking-[0.2em] text-(--gold) font-medium block mb-4">Формати</span>
+            <h2 className="font-serif text-4xl text-(--text-dark)">Как можем да работим</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -109,8 +109,8 @@ export default async function MacKartiPage() {
               { title: 'Комплекти карти', desc: 'Физически комплекти с МАК карти за самостоятелна практика и работа с клиенти.', cta: 'Разгледай магазина', href: '/shop' },
             ].map(f => (
               <div key={f.title} className="bg-white p-8">
-                <h3 className="font-serif text-xl text-[var(--text-dark)] mb-3">{f.title}</h3>
-                <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-6">{f.desc}</p>
+                <h3 className="font-serif text-xl text-(--text-dark) mb-3">{f.title}</h3>
+                <p className="text-(--text-muted) text-sm leading-relaxed mb-6">{f.desc}</p>
                 <Button href={f.href} variant="outline">{f.cta}</Button>
               </div>
             ))}
@@ -122,8 +122,8 @@ export default async function MacKartiPage() {
       {macProducts.length > 0 && (
         <section className="max-w-7xl mx-auto px-6 py-24">
           <div className="mb-12">
-            <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)] font-medium block mb-4">Магазин</span>
-            <h2 className="font-serif text-4xl text-[var(--text-dark)]">Продукти с МАК карти</h2>
+            <span className="text-xs uppercase tracking-[0.2em] text-(--gold) font-medium block mb-4">Магазин</span>
+            <h2 className="font-serif text-4xl text-(--text-dark)">Продукти с МАК карти</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {macProducts.map(p => (
@@ -134,16 +134,16 @@ export default async function MacKartiPage() {
       )}
 
       {/* CTA */}
-      <section className="bg-[var(--text-dark)] py-24">
+      <section className="bg-(--text-dark) py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <span className="text-xs uppercase tracking-[0.25em] text-[var(--gold)] font-medium block mb-6">Готов/а?</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-(--gold) font-medium block mb-6">Готов/а?</span>
           <h2 className="font-serif text-4xl text-white font-light mb-6">
             Остави образите да говорят
           </h2>
           <p className="text-white/60 mb-10">
             Запази индивидуална сесия с МАК карти и открий посланията, които чакат да бъдат чути.
           </p>
-          <Button href="/kontakti" variant="primary" className="bg-[var(--sage)] hover:bg-white hover:text-[var(--text-dark)]">
+          <Button href="/kontakti" variant="primary" className="bg-(--sage) hover:bg-white hover:text-(--text-dark)">
             Запази сесия
           </Button>
         </div>
