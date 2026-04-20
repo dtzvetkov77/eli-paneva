@@ -14,11 +14,11 @@
   --bg-warm:      #F5EEE6;
   --card:         #FFFFFF;
 
-  /* Brand — deeper for better contrast */
-  --sage:         #4E7857;
-  --sage-hover:   #3D6245;
-  --sage-light:   #E6EFE8;
-  --sage-muted:   #A8C2AB;
+  /* Brand — neutral gray as primary */
+  --sage:         #838383;
+  --sage-hover:   #666666;
+  --sage-light:   #F2F2F2;
+  --sage-muted:   #BEBEBE;
 
   /* Accent */
   --gold:         #B5882E;
