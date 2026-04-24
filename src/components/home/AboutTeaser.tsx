@@ -1,4 +1,5 @@
 import Button from '@/components/ui/Button'
+import Image from 'next/image'
 
 const credentials = [
   'Системни констелации',
@@ -24,13 +25,14 @@ export default function AboutTeaser() {
 
           {/* Left: photo + caption */}
           <div>
-            <div className="aspect-4/5 bg-(--bg-warm) rounded-2xl overflow-hidden relative">
-              <div className="absolute top-6 left-6 w-10 h-10 border-t-2 border-l-2 border-(--gold)/50 rounded-tl-sm" />
-              <div className="absolute bottom-6 right-6 w-10 h-10 border-b-2 border-r-2 border-(--gold)/50 rounded-br-sm" />
-              {/* Replace with <Image> once photo is available */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-serif text-[160px] text-(--sage)/10 select-none leading-none">Е</span>
-              </div>
+            <div className="aspect-3/2 bg-(--bg-warm) rounded-2xl overflow-hidden relative">
+              <Image
+                src="/eli-photo.webp"
+                alt="Ели Панева"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 45vw"
+              />
             </div>
             <div className="mt-5 text-center">
               <p className="font-serif text-lg text-(--text-dark) font-normal">Ели Панева</p>

@@ -33,14 +33,12 @@ export default function ContactPage() {
   return (
     <div className="pt-16">
       <StructuredData data={localBusinessSchema} />
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="mb-12">
-          <span className="text-xs uppercase tracking-[0.2em] text-(--gold) font-medium block mb-4">Контакти</span>
-          <h1 className="font-serif text-5xl text-(--text-dark) font-light">Свържи се с мен</h1>
-        </div>
-        <div className="grid md:grid-cols-2 gap-16">
+      <div className="max-w-7xl mx-auto px-6 py-10">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Contact info */}
           <div>
+            <span className="text-xs uppercase tracking-[0.2em] text-(--gold) font-medium block mb-4">Контакти</span>
+            <h1 className="font-serif text-5xl text-(--text-dark) font-light mb-6">Свържи се с мен</h1>
             <p className="text-(--text-muted) leading-relaxed mb-10">
               Запази своята консултация или задай въпрос. Отговарям в рамките на 24 часа в работни дни.
             </p>
@@ -103,7 +101,7 @@ export default function ContactPage() {
                   type="text"
                   required
                   autoComplete="name"
-                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
+                  className="w-full border border-(--border) rounded-xl px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
                 />
               </div>
               <div>
@@ -116,7 +114,7 @@ export default function ContactPage() {
                   type="email"
                   required
                   autoComplete="email"
-                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
+                  className="w-full border border-(--border) rounded-xl px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
                 />
               </div>
               <div>
@@ -128,7 +126,7 @@ export default function ContactPage() {
                   name="phone"
                   type="tel"
                   autoComplete="tel"
-                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
+                  className="w-full border border-(--border) rounded-xl px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
                 />
               </div>
               <div>
@@ -138,7 +136,7 @@ export default function ContactPage() {
                 <select
                   id="service"
                   name="service"
-                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
+                  className="w-full border border-(--border) rounded-xl px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors"
                 >
                   <option value="">— Изберете услуга —</option>
                   <option>Лични консултации</option>
@@ -160,12 +158,12 @@ export default function ContactPage() {
                   name="message"
                   rows={5}
                   required
-                  className="w-full border border-(--border) px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors resize-none"
+                  className="w-full border border-(--border) rounded-xl px-4 py-3 text-sm bg-(--bg) focus:outline-none focus:border-(--sage) transition-colors resize-none"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-(--sage) text-white py-3 text-sm font-medium hover:bg-(--text-dark) transition-colors tracking-wide"
+                className="w-full bg-(--sage) text-white py-3 rounded-xl text-sm font-medium hover:bg-(--text-dark) transition-colors tracking-wide"
               >
                 Изпрати съобщение
               </button>

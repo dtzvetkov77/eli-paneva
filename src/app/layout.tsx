@@ -3,6 +3,8 @@ import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import { CartProvider } from '@/components/cart/CartContext'
+import CartDrawer from '@/components/cart/CartDrawer'
 
 const playfair = Playfair_Display({
   subsets: ['latin', 'cyrillic'],
@@ -44,9 +46,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="bg" className={`${playfair.variable} ${inter.variable}`}>
       <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          <CartDrawer />
+          <main>{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   )

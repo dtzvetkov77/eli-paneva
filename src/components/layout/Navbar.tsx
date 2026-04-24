@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { services } from '@/data/services'
+import CartIconButton from '@/components/cart/CartIconButton'
 
 type Dropdown = 'uslugi' | 'shop' | null
 
@@ -114,9 +115,9 @@ export default function Navbar() {
           <Image
             src="/logo.webp"
             alt="Ели Панева"
-            width={44}
-            height={44}
-            className="h-11 w-auto"
+            width={84}
+            height={84}
+            className="h-51 w-auto"
             priority
           />
         </Link>
@@ -177,17 +178,22 @@ export default function Navbar() {
           <li><Link href="/kontakti" className={linkCls}>Контакти</Link></li>
         </ul>
 
-        {/* Desktop CTA */}
-        <Link
-          href="/kontakti"
-          className="hidden md:inline-flex items-center rounded-full bg-(--text-dark) text-white text-xs uppercase tracking-[0.12em] font-medium px-6 py-2.5 hover:bg-(--sage) transition-all duration-300"
-        >
-          Запази час
-        </Link>
+        {/* Desktop CTA + Cart */}
+        <div className="hidden md:flex items-center gap-3">
+          <CartIconButton />
+          <Link
+            href="/kontakti"
+            className="inline-flex items-center rounded-full bg-(--text-dark) text-white text-xs uppercase tracking-[0.12em] font-medium px-6 py-2.5 hover:bg-(--sage) transition-all duration-300"
+          >
+            Запази час
+          </Link>
+        </div>
 
-        {/* Hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2 text-(--text-dark) cursor-pointer"
+        {/* Mobile: Cart + Hamburger */}
+        <div className="md:hidden flex items-center gap-1">
+          <CartIconButton />
+          <button
+            className="flex flex-col gap-1.5 p-2 text-(--text-dark) cursor-pointer"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? 'Затвори меню' : 'Отвори меню'}
           aria-expanded={mobileOpen}
@@ -195,7 +201,8 @@ export default function Navbar() {
           <span className={`block w-5 h-px bg-current transition-all duration-300 origin-center ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`block w-5 h-px bg-current transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
           <span className={`block w-5 h-px bg-current transition-all duration-300 origin-center ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-        </button>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}

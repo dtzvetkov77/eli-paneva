@@ -27,7 +27,7 @@ export default function HeroSection() {
             <div className="max-w-64 sm:max-w-xs md:max-w-none mx-auto relative">
 
               {/* Photo */}
-              <div className="aspect-square md:aspect-4/5 rounded-3xl overflow-hidden relative bg-(--bg-warm)">
+              <div className="aspect-square md:aspect-3/2 rounded-3xl overflow-hidden relative bg-(--bg-warm)">
                 <Image
                   src="/eli-photo.webp"
                   alt="Ели Панева"

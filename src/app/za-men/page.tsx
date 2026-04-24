@@ -1,6 +1,7 @@
 import Button from '@/components/ui/Button'
 import StructuredData from '@/components/ui/StructuredData'
 import Link from 'next/link'
+import Image from 'next/image'
 import { services } from '@/data/services'
 import type { Metadata } from 'next'
 
@@ -102,13 +103,16 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="hidden md:block">
-            <div className="aspect-4/5 bg-(--sage-light) relative overflow-hidden rounded-2xl">
-              <div className="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-(--gold) rounded-tl-sm" />
-              <div className="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-(--gold) rounded-br-sm" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-serif text-9xl text-(--sage)/20 select-none">Е</span>
-              </div>
+          <div>
+            <div className="aspect-3/2 bg-(--sage-light) relative overflow-hidden rounded-2xl">
+              <Image
+                src="/eli-photo.webp"
+                alt="Ели Панева"
+                fill
+                className="object-cover object-top"
+                priority
+                sizes="(max-width: 768px) 100vw, 45vw"
+              />
             </div>
           </div>
         </div>
