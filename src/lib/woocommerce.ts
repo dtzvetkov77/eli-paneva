@@ -18,9 +18,11 @@ export interface WCProduct {
 }
 
 async function wcFetch<T>(endpoint: string, params: Record<string, string> = {}): Promise<T> {
-  const key = process.env.WOOCOMMERCE_KEY!
-  const secret = process.env.WOOCOMMERCE_SECRET!
-  const baseUrl = process.env.WC_API_URL!
+  const key = process.env.WOOCOMMERCE_KEY
+  const secret = process.env.WOOCOMMERCE_SECRET
+  const baseUrl = process.env.WC_API_URL
+
+  if (!key || !secret || !baseUrl) throw new Error('WooCommerce env vars not set')
 
   const url = new URL(`${baseUrl}/${endpoint}`)
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v))

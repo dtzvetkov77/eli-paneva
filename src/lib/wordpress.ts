@@ -10,19 +10,29 @@ export interface WPPost {
   }
 }
 
-const WP_API = process.env.WP_API_URL!
+const WP_API = process.env.WP_API_URL
 
 export async function getPosts(page = 1, perPage = 10): Promise<WPPost[]> {
-  const url = `${WP_API}/posts?per_page=${perPage}&page=${page}&_embed=wp:featuredmedia`
-  const res = await fetch(url, { next: { revalidate: 3600 } })
-  if (!res.ok) return []
-  return res.json()
+  if (!WP_API) return []
+  try {
+    const url = `${WP_API}/posts?per_page=${perPage}&page=${page}&_embed=wp:featuredmedia`
+    const res = await fetch(url, { next: { revalidate: 3600 } })
+    if (!res.ok) return []
+    return res.json()
+  } catch {
+    return []
+  }
 }
 
 export async function getPost(slug: string): Promise<WPPost | null> {
-  const url = `${WP_API}/posts?slug=${slug}&_embed=wp:featuredmedia`
-  const res = await fetch(url, { next: { revalidate: 3600 } })
-  if (!res.ok) return null
-  const posts: WPPost[] = await res.json()
-  return posts[0] ?? null
+  if (!WP_API) return null
+  try {
+    const url = `${WP_API}/posts?slug=${slug}&_embed=wp:featuredmedia`
+    const res = await fetch(url, { next: { revalidate: 3600 } })
+    if (!res.ok) return null
+    const posts: WPPost[] = await res.json()
+    return posts[0] ?? null
+  } catch {
+    return null
+  }
 }
