@@ -9,6 +9,8 @@ import type { Metadata } from 'next'
 
 interface Props { params: Promise<{ slug: string }> }
 
+export const revalidate = 3600
+
 export function generateStaticParams() { return [] }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -35,8 +37,8 @@ export default async function CategoryPage({ params }: Props) {
       getProductsByCategory(decoded),
       getCategories(),
     ])
-  } catch {
-    // API error — show empty state instead of 404
+  } catch (err) {
+    console.error('[CategoryPage] fetch error:', err)
   }
 
   const category = categories.find(c => c.slug === decoded || c.slug === slug)
