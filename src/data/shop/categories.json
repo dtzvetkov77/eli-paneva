@@ -1,0 +1,2654 @@
+[
+  {
+    "id": 15,
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 1,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Uncategorized Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/uncategorized/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Uncategorized Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/uncategorized/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/uncategorized/\",\"url\":\"https://elipaneva.com/product-category/uncategorized/\",\"name\":\"Uncategorized Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/uncategorized/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/uncategorized/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Uncategorized\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Uncategorized Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/uncategorized/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Uncategorized Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/uncategorized/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/uncategorized/",
+            "url": "https://elipaneva.com/product-category/uncategorized/",
+            "name": "Uncategorized Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/uncategorized/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/uncategorized/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Uncategorized"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/15",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  },
+  {
+    "id": 78,
+    "name": "Безплатни курсове",
+    "slug": "%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5",
+    "parent": 70,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 0,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Безплатни курсове Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/електронни-курсове/безплатни-курсове/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Безплатни курсове Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/електронни-курсове/безплатни-курсове/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/\",\"name\":\"Безплатни курсове Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Електронни курсове и обучения\",\"item\":\"https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"Безплатни курсове\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Безплатни курсове Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/електронни-курсове/безплатни-курсове/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Безплатни курсове Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/shop/електронни-курсове/безплатни-курсове/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/",
+            "url": "https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/",
+            "name": "Безплатни курсове Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Електронни курсове и обучения",
+                "item": "https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Безплатни курсове"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/78",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/70"
+        }
+      ]
+    }
+  },
+  {
+    "id": 84,
+    "name": "Безплатно",
+    "slug": "%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 4,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Безплатно Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/безплатно/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Безплатно Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/безплатно/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/\",\"url\":\"https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/\",\"name\":\"Безплатно Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Безплатно\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Безплатно Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/безплатно/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Безплатно Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/безплатно/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/",
+            "url": "https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/",
+            "name": "Безплатно Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Безплатно"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/84",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  },
+  {
+    "id": 77,
+    "name": "Бизнес Констелации",
+    "slug": "biznes-konstelaci",
+    "parent": 72,
+    "description": "Бизнес констелациите са мощен метод за разкриване и трансформиране на невидимите пречки, които влияят на твоя бизнес, екип или проекти. Подходящи са за предприемачи, мениджъри и професионалисти, които искат яснота, хармония и устойчив растеж.",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 2,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Бизнес Констелации Архиви - Eli Paneva</title>\n<meta name=\"description\" content=\"Бизнес констелации – открий и премахни скритите блокажи в твоя бизнес. Подобри екипната работа, вземай по-добри решения и постигай устойчив растеж.\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/контстелации/biznes-konstelaci/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Бизнес Констелации Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:description\" content=\"Бизнес констелации – открий и премахни скритите блокажи в твоя бизнес. Подобри екипната работа, вземай по-добри решения и постигай устойчив растеж.\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/контстелации/biznes-konstelaci/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/biznes-konstelaci/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/biznes-konstelaci/\",\"name\":\"Бизнес Констелации Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"description\":\"Бизнес констелации – открий и премахни скритите блокажи в твоя бизнес. Подобри екипната работа, вземай по-добри решения и постигай устойчив растеж.\",\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/biznes-konstelaci/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/biznes-konstelaci/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Констелации\",\"item\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"Бизнес Констелации\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Бизнес Констелации Архиви - Eli Paneva",
+      "description": "Бизнес констелации – открий и премахни скритите блокажи в твоя бизнес. Подобри екипната работа, вземай по-добри решения и постигай устойчив растеж.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/контстелации/biznes-konstelaci/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Бизнес Констелации Архиви - Eli Paneva",
+      "og_description": "Бизнес констелации – открий и премахни скритите блокажи в твоя бизнес. Подобри екипната работа, вземай по-добри решения и постигай устойчив растеж.",
+      "og_url": "https://elipaneva.com/product-category/shop/контстелации/biznes-konstelaci/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/biznes-konstelaci/",
+            "url": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/biznes-konstelaci/",
+            "name": "Бизнес Констелации Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "description": "Бизнес констелации – открий и премахни скритите блокажи в твоя бизнес. Подобри екипната работа, вземай по-добри решения и постигай устойчив растеж.",
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/biznes-konstelaci/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/biznes-konstelaci/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Констелации",
+                "item": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Бизнес Констелации"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/77",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/72"
+        }
+      ]
+    }
+  },
+  {
+    "id": 70,
+    "name": "Електронни курсове и обучения",
+    "slug": "%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5",
+    "parent": 82,
+    "description": "<h1 data-start=\"1492\" data-end=\"1557\">🌸 <strong data-start=\"1497\" data-end=\"1557\">Електронните курсове и обучения от Ели Панева – промяна отвътре навън</strong></h1>\r\n<p data-start=\"1559\" data-end=\"1739\">Онлайн курсовете, които ще откриеш тук, са създадени специално за жени и хора в личностно развитие, които искат истинска и трайна промяна – без объркване, без бързане и без тежест.</p>\r\n<p data-start=\"1741\" data-end=\"1767\">Всички курсове комбинират:</p>\r\n\r\n<ul data-start=\"1768\" data-end=\"1993\">\r\n \t<li data-start=\"1768\" data-end=\"1782\">\r\n<p data-start=\"1770\" data-end=\"1782\">психология трансформационни техники работа с убеждения</p>\r\n</li>\r\n \t<li data-start=\"1908\" data-end=\"1937\">\r\n<p data-start=\"1910\" data-end=\"1937\">практики работа с  емоции медитации и положителни афирмаци</p>\r\n</li>\r\n</ul>\r\n<h2 data-start=\"4015\" data-end=\"4052\"><strong data-start=\"4017\" data-end=\"4052\"> </strong><span style=\"font-size: 16px\">Безплатни </span><a style=\"font-size: 16px\" href=\"https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/\">медитации, афирмации, аудио курсове</a></h2>\r\n<p data-start=\"1789\" data-end=\"1978\"></p>",
+    "display": "default",
+    "image": {
+      "id": 13426,
+      "date_created": "2025-07-28T17:02:59",
+      "date_created_gmt": "2025-07-28T14:02:59",
+      "date_modified": "2025-07-28T17:03:18",
+      "date_modified_gmt": "2025-07-28T14:03:18",
+      "src": "https://elipaneva.com/wp-content/uploads/2025/07/електронни-курсове.png",
+      "name": "електронни курсове",
+      "alt": "\"Курсове за работа с убеждения, негативни емоции, проблеми с тялото и лични граници\""
+    },
+    "menu_order": 0,
+    "count": 7,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Електронни курсове и обучения Архиви - Eli Paneva</title>\n<meta name=\"description\" content=\"Онлайн курсове за личностно развитие: трансформирай убежденията си, постави граници и изцели себе си с помощта на медитации и практики.\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/електронни-курсове/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Електронни курсове и обучения Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:description\" content=\"Онлайн курсове за личностно развитие: трансформирай убежденията си, постави граници и изцели себе си с помощта на медитации и практики.\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/електронни-курсове/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/\",\"name\":\"Електронни курсове и обучения Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"description\":\"Онлайн курсове за личностно развитие: трансформирай убежденията си, постави граници и изцели себе си с помощта на медитации и практики.\",\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Електронни курсове и обучения\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Електронни курсове и обучения Архиви - Eli Paneva",
+      "description": "Онлайн курсове за личностно развитие: трансформирай убежденията си, постави граници и изцели себе си с помощта на медитации и практики.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/електронни-курсове/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Електронни курсове и обучения Архиви - Eli Paneva",
+      "og_description": "Онлайн курсове за личностно развитие: трансформирай убежденията си, постави граници и изцели себе си с помощта на медитации и практики.",
+      "og_url": "https://elipaneva.com/product-category/shop/електронни-курсове/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/",
+            "url": "https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/",
+            "name": "Електронни курсове и обучения Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "description": "Онлайн курсове за личностно развитие: трансформирай убежденията си, постави граници и изцели себе си с помощта на медитации и практики.",
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Електронни курсове и обучения"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/70",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/82"
+        }
+      ]
+    }
+  },
+  {
+    "id": 74,
+    "name": "Индивидуални констелации",
+    "slug": "%d0%b8%d0%bd%d0%b4%d0%b8%d0%b2%d0%b8%d0%b4%d1%83%d0%b0%d0%bb%d0%bd%d0%b8-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8",
+    "parent": 72,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 1,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Индивидуални констелации Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/контстелации/индивидуални-констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Индивидуални констелации Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/контстелации/индивидуални-констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%b8%d0%bd%d0%b4%d0%b8%d0%b2%d0%b8%d0%b4%d1%83%d0%b0%d0%bb%d0%bd%d0%b8-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%b8%d0%bd%d0%b4%d0%b8%d0%b2%d0%b8%d0%b4%d1%83%d0%b0%d0%bb%d0%bd%d0%b8-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"name\":\"Индивидуални констелации Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%b8%d0%bd%d0%b4%d0%b8%d0%b2%d0%b8%d0%b4%d1%83%d0%b0%d0%bb%d0%bd%d0%b8-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%b8%d0%bd%d0%b4%d0%b8%d0%b2%d0%b8%d0%b4%d1%83%d0%b0%d0%bb%d0%bd%d0%b8-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Констелации\",\"item\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"Индивидуални констелации\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Индивидуални констелации Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/контстелации/индивидуални-констелации/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Индивидуални констелации Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/shop/контстелации/индивидуални-констелации/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%b8%d0%bd%d0%b4%d0%b8%d0%b2%d0%b8%d0%b4%d1%83%d0%b0%d0%bb%d0%bd%d0%b8-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "url": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%b8%d0%bd%d0%b4%d0%b8%d0%b2%d0%b8%d0%b4%d1%83%d0%b0%d0%bb%d0%bd%d0%b8-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "name": "Индивидуални констелации Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%b8%d0%bd%d0%b4%d0%b8%d0%b2%d0%b8%d0%b4%d1%83%d0%b0%d0%bb%d0%bd%d0%b8-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%b8%d0%bd%d0%b4%d0%b8%d0%b2%d0%b8%d0%b4%d1%83%d0%b0%d0%bb%d0%bd%d0%b8-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Констелации",
+                "item": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Индивидуални констелации"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/74",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/72"
+        }
+      ]
+    }
+  },
+  {
+    "id": 72,
+    "name": "Констелации",
+    "slug": "%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8",
+    "parent": 82,
+    "description": "<h1 data-start=\"170\" data-end=\"238\"><strong data-start=\"170\" data-end=\"236\">Констелации метод – семейни, бизнес и индивидуални констелации</strong></h1>\r\n<p data-start=\"341\" data-end=\"577\"><strong data-start=\"289\" data-end=\"310\">Констелации метод</strong> е дълбока терапевтична и трансформационна практика, която разкрива скритите връзки и модели в нашия живот. Този подход помага да разберем как родови сценарии, нерешени конфликти и подсъзнателни лоялности влияят на настоящето ни, както и как да се освободим от тях.</p>\r\n\r\n<h3 data-start=\"579\" data-end=\"622\">В категорията <strong data-start=\"593\" data-end=\"610\">„Констелации“</strong> ще откриеш:</h3>\r\n<ul data-start=\"623\" data-end=\"1049\">\r\n \t<li data-start=\"623\" data-end=\"726\">\r\n<h4 data-start=\"625\" data-end=\"726\"><strong data-start=\"625\" data-end=\"648\">Семейни констелации</strong> – за освобождаване от родови блокажи и възстановяване на хармонията в рода.</h4>\r\n</li>\r\n \t<li data-start=\"727\" data-end=\"832\">\r\n<p data-start=\"729\" data-end=\"832\"><strong data-start=\"729\" data-end=\"751\">Бизнес констелации</strong> – за подобряване на отношенията в екипа, успешни проекти и устойчиво развитие.</p>\r\n</li>\r\n \t<li data-start=\"833\" data-end=\"942\">\r\n<p data-start=\"835\" data-end=\"942\"><strong data-start=\"835\" data-end=\"863\">Индивидуални констелации</strong> – за лична работа по конкретни теми, когато предпочиташ индивидуален подход.</p>\r\n</li>\r\n \t<li data-start=\"943\" data-end=\"1049\">\r\n<p data-start=\"945\" data-end=\"1049\"><strong data-start=\"945\" data-end=\"972\">Констелации с МАК карти</strong> – за бърз достъп до скритите ресурси и осъзнаване на подсъзнателните модели.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1051\" data-end=\"1227\">Методът работи на дълбоко емоционално и енергийно ниво, като води до яснота, вътрешно спокойствие и нови решения. Подходящ е както за лични, така и за професионални ситуации.</p>\r\n<p data-start=\"1229\" data-end=\"1379\">💡 Независимо коя констелация избереш, ще получиш пространство за безопасно изследване на темите, които те вълнуват, и подкрепа по пътя към промяната.</p>",
+    "display": "default",
+    "image": {
+      "id": 13203,
+      "date_created": "2025-05-28T17:22:47",
+      "date_created_gmt": "2025-05-28T14:22:47",
+      "date_modified": "2025-05-28T17:23:14",
+      "date_modified_gmt": "2025-05-28T14:23:14",
+      "src": "https://elipaneva.com/wp-content/uploads/2023/11/ChatGPT-Image-28.05.2025-г.-17_21_34.png",
+      "name": "ChatGPT Image 28.05.2025 г., 17_21_34",
+      "alt": "„Индивидуални констелации – визуализация на лични и родови динамики"
+    },
+    "menu_order": 0,
+    "count": 4,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Констелации Архиви - Eli Paneva</title>\n<meta name=\"description\" content=\"Констелации за лична и професионална трансформация – семейни, бизнес и индивидуални. Открий и освободи блокажи, възстанови хармонията и намери нови решения.\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/контстелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Констелации Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:description\" content=\"Констелации за лична и професионална трансформация – семейни, бизнес и индивидуални. Открий и освободи блокажи, възстанови хармонията и намери нови решения.\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/контстелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"name\":\"Констелации Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"description\":\"Констелации за лична и професионална трансформация – семейни, бизнес и индивидуални. Открий и освободи блокажи, възстанови хармонията и намери нови решения.\",\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Констелации\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Констелации Архиви - Eli Paneva",
+      "description": "Констелации за лична и професионална трансформация – семейни, бизнес и индивидуални. Открий и освободи блокажи, възстанови хармонията и намери нови решения.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/контстелации/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Констелации Архиви - Eli Paneva",
+      "og_description": "Констелации за лична и професионална трансформация – семейни, бизнес и индивидуални. Открий и освободи блокажи, възстанови хармонията и намери нови решения.",
+      "og_url": "https://elipaneva.com/product-category/shop/контстелации/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "url": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "name": "Констелации Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "description": "Констелации за лична и професионална трансформация – семейни, бизнес и индивидуални. Открий и освободи блокажи, възстанови хармонията и намери нови решения.",
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Констелации"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/72",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/82"
+        }
+      ]
+    }
+  },
+  {
+    "id": 108,
+    "name": "Констелации",
+    "slug": "%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8",
+    "parent": 82,
+    "description": "",
+    "display": "default",
+    "image": {
+      "id": 13212,
+      "date_created": "2025-05-28T21:19:57",
+      "date_created_gmt": "2025-05-28T18:19:57",
+      "date_modified": "2025-05-28T21:20:17",
+      "date_modified_gmt": "2025-05-28T18:20:17",
+      "src": "https://elipaneva.com/wp-content/uploads/2023/11/семейни-конст-2.png",
+      "name": "семейни конст 2",
+      "alt": "Групова сесия по констелации с представители – системна терапия за разкриване на скрити семейни връзки"
+    },
+    "menu_order": 0,
+    "count": 0,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Констелации Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Констелации Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"name\":\"Констелации Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Констелации\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Констелации Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/констелации/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Констелации Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/shop/констелации/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "url": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "name": "Констелации Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Констелации"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/108",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/82"
+        }
+      ]
+    }
+  },
+  {
+    "id": 75,
+    "name": "Констелации с представители",
+    "slug": "%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d0%b8",
+    "parent": 72,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 1,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Констелации с представители Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/контстелации/констелации-с-представители/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Констелации с представители Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/контстелации/констелации-с-представители/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d0%b8/\",\"name\":\"Констелации с представители Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Констелации\",\"item\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"Констелации с представители\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Констелации с представители Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/контстелации/констелации-с-представители/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Констелации с представители Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/shop/контстелации/констелации-с-представители/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d0%b8/",
+            "url": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d0%b8/",
+            "name": "Констелации с представители Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Констелации",
+                "item": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Констелации с представители"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/75",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/72"
+        }
+      ]
+    }
+  },
+  {
+    "id": 86,
+    "name": "Лични сесии",
+    "slug": "%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d1%81%d0%b5%d1%81%d0%b8%d0%b8",
+    "parent": 0,
+    "description": "<h3 data-start=\"247\" data-end=\"562\"><strong data-start=\"247\" data-end=\"326\">Добре дошли в категорията „Лични сесии за личностно развитие“ на Ели Панева</strong></h3>\r\n<p data-start=\"247\" data-end=\"562\">– пространство за индивидуална работа, насочена към вашия вътрешен баланс, емоционално изцеление и постигане на лични цели.<br data-start=\"450\" data-end=\"453\" />Всяка среща е съобразена изцяло с вашите нужди и използва доказани методи за трансформация и осъзнат живот.</p>\r\n<p data-start=\"564\" data-end=\"602\">💠 <strong data-start=\"567\" data-end=\"600\">Какво включват личните сесии?</strong></p>\r\n\r\n<ul data-start=\"603\" data-end=\"1110\">\r\n \t<li data-start=\"603\" data-end=\"700\">\r\n<p data-start=\"605\" data-end=\"700\"><strong data-start=\"605\" data-end=\"639\">Системни и семейни констелации</strong> – за откриване и освобождаване от родови блокажи и модели.</p>\r\n</li>\r\n \t<li data-start=\"701\" data-end=\"808\">\r\n<p data-start=\"703\" data-end=\"808\"><strong data-start=\"703\" data-end=\"730\">Консултации с МАК карти</strong> – работа със съзнанието и подсъзнанието чрез метафорични асоциативни карти.</p>\r\n</li>\r\n \t<li data-start=\"809\" data-end=\"899\">\r\n<p data-start=\"811\" data-end=\"899\"><strong data-start=\"811\" data-end=\"829\">PSYCH-K® сесии</strong> – трансформация на ограничителни убеждения и подсъзнателни блокажи.</p>\r\n</li>\r\n \t<li data-start=\"900\" data-end=\"1015\">\r\n<p data-start=\"902\" data-end=\"1015\"><strong data-start=\"902\" data-end=\"965\">Енергийна психология и техники за емоционално освобождаване</strong> – за намаляване на стрес и вътрешно напрежение.</p>\r\n</li>\r\n \t<li data-start=\"1016\" data-end=\"1110\">\r\n<p data-start=\"1018\" data-end=\"1110\"><strong data-start=\"1018\" data-end=\"1055\">Коучинг и холистично консултиране</strong> – за яснота, насока и подкрепа в процеса на промяна.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1112\" data-end=\"1162\">✨ <strong data-start=\"1114\" data-end=\"1160\">Защо да изберете лична сесия с Ели Панева?</strong></p>\r\n\r\n<ul data-start=\"1163\" data-end=\"1340\">\r\n \t<li data-start=\"1163\" data-end=\"1223\">\r\n<p data-start=\"1165\" data-end=\"1223\">Индивидуален подход, напълно съобразен с вашата история.</p>\r\n</li>\r\n \t<li data-start=\"1224\" data-end=\"1278\">\r\n<p data-start=\"1226\" data-end=\"1278\">Дискретност и безопасно пространство за споделяне.</p>\r\n</li>\r\n \t<li data-start=\"1279\" data-end=\"1340\">\r\n<p data-start=\"1281\" data-end=\"1340\">Доказани методи за постигане на вътрешен мир и увереност.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1342\" data-end=\"1458\">🌿 Запишете своята <strong data-start=\"1361\" data-end=\"1398\">лична сесия за личностно развитие</strong> още днес и направете крачка към ново, по-осъзнато бъдеще.</p>\r\n\r\n\r\n<hr data-start=\"1460\" data-end=\"1463\" />",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 0,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Лични сесии Архиви - Eli Paneva</title>\n<meta name=\"description\" content=\"Лични сесии Открийте силата на личната трансформация с индивидуалните сесии на Ели Панева – констелации, PSYCH-K®, МАК карти и енергийна психология.\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/лични-сесии/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Лични сесии Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:description\" content=\"Лични сесии Открийте силата на личната трансформация с индивидуалните сесии на Ели Панева – констелации, PSYCH-K®, МАК карти и енергийна психология.\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/лични-сесии/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d1%81%d0%b5%d1%81%d0%b8%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d1%81%d0%b5%d1%81%d0%b8%d0%b8/\",\"name\":\"Лични сесии Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"description\":\"Лични сесии Открийте силата на личната трансформация с индивидуалните сесии на Ели Панева – констелации, PSYCH-K®, МАК карти и енергийна психология.\",\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d1%81%d0%b5%d1%81%d0%b8%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d1%81%d0%b5%d1%81%d0%b8%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лични сесии\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Лични сесии Архиви - Eli Paneva",
+      "description": "Лични сесии Открийте силата на личната трансформация с индивидуалните сесии на Ели Панева – констелации, PSYCH-K®, МАК карти и енергийна психология.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/лични-сесии/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Лични сесии Архиви - Eli Paneva",
+      "og_description": "Лични сесии Открийте силата на личната трансформация с индивидуалните сесии на Ели Панева – констелации, PSYCH-K®, МАК карти и енергийна психология.",
+      "og_url": "https://elipaneva.com/product-category/лични-сесии/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d1%81%d0%b5%d1%81%d0%b8%d0%b8/",
+            "url": "https://elipaneva.com/product-category/%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d1%81%d0%b5%d1%81%d0%b8%d0%b8/",
+            "name": "Лични сесии Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "description": "Лични сесии Открийте силата на личната трансформация с индивидуалните сесии на Ели Панева – констелации, PSYCH-K®, МАК карти и енергийна психология.",
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d1%81%d0%b5%d1%81%d0%b8%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d1%81%d0%b5%d1%81%d0%b8%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Лични сесии"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/86",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  },
+  {
+    "id": 82,
+    "name": "Магазин",
+    "slug": "shop",
+    "parent": 0,
+    "description": "<h2 data-start=\"313\" data-end=\"745\"><strong data-start=\"313\" data-end=\"381\">Добре дошли в онлайн магазин за личностно развитие на Ели Панева</strong></h2>\r\n<p data-start=\"313\" data-end=\"745\">– мястото, където ще откриете всичко необходимо за вашия път към емоционален баланс, вътрешна хармония и духовна трансформация.<br data-start=\"509\" data-end=\"512\" />В нашия <strong data-start=\"520\" data-end=\"538\">онлайн магазин</strong> ще намерите <strong data-start=\"551\" data-end=\"590\">метафорични асоциативни карти (МАК)</strong>, <strong data-start=\"592\" data-end=\"626\">онлайн курсове по самопознание</strong>, <strong data-start=\"628\" data-end=\"659\">книги за личностно развитие</strong> и <strong data-start=\"662\" data-end=\"685\">енергийни талисмани</strong>, създадени да ви подкрепят във всяка стъпка от промяната.</p>\r\n<p data-start=\"747\" data-end=\"782\">🦋 <strong data-start=\"750\" data-end=\"780\">Какво ще откриете при нас?</strong></p>\r\n\r\n<ul data-start=\"783\" data-end=\"1198\">\r\n \t<li data-start=\"783\" data-end=\"904\">\r\n<p data-start=\"785\" data-end=\"904\"><strong data-start=\"785\" data-end=\"798\">МАК карти</strong> – мощен инструмент за работа със съзнанието и подсъзнанието, подходящ за лична употреба и за терапевти.</p>\r\n</li>\r\n \t<li data-start=\"905\" data-end=\"1028\">\r\n<p data-start=\"907\" data-end=\"1028\"><strong data-start=\"907\" data-end=\"925\">Онлайн курсове</strong> – програми за освобождаване от негативни емоции, трансформация на убеждения и постигане на хармония.</p>\r\n</li>\r\n \t<li data-start=\"1029\" data-end=\"1104\">\r\n<p data-start=\"1031\" data-end=\"1104\"><strong data-start=\"1031\" data-end=\"1054\">Книги и ръководства</strong> – вдъхновяващи източници на знание и мотивация.</p>\r\n</li>\r\n \t<li data-start=\"1105\" data-end=\"1198\">\r\n<p data-start=\"1107\" data-end=\"1198\"><strong data-start=\"1107\" data-end=\"1142\">Талисмани и енергийни аксесоари</strong> – заредени с енергия за защита, любов и благополучие.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1200\" data-end=\"1239\">✨ <strong data-start=\"1202\" data-end=\"1237\">Защо да изберете нашия магазин?</strong></p>\r\n\r\n<ul data-start=\"1240\" data-end=\"1400\">\r\n \t<li data-start=\"1240\" data-end=\"1300\">\r\n<p data-start=\"1242\" data-end=\"1300\">Подбрани продукти с доказан ефект върху личната промяна.</p>\r\n</li>\r\n \t<li data-start=\"1301\" data-end=\"1354\">\r\n<p data-start=\"1303\" data-end=\"1354\">Уникални комплекти, създадени с внимание и любов.</p>\r\n</li>\r\n \t<li data-start=\"1355\" data-end=\"1400\">\r\n<p data-start=\"1357\" data-end=\"1400\">Бърза и сигурна доставка в цяла България.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1402\" data-end=\"1530\">🌿 <strong data-start=\"1405\" data-end=\"1452\">Направете първата стъпка към своя нов живот</strong> – изберете продукт, който ще ви подкрепи по пътя към осъзнатост и хармония.</p>",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 20,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Магазин Архиви - Eli Paneva</title>\n<meta name=\"description\" content=\"Онлайн магазин на Ели Панева – МАК карти, онлайн курсове по самопознание, книги за личностно развитие и енергийни талисмани.\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Магазин Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:description\" content=\"Онлайн магазин на Ели Панева – МАК карти, онлайн курсове по самопознание, книги за личностно развитие и енергийни талисмани.\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/\",\"url\":\"https://elipaneva.com/product-category/shop/\",\"name\":\"Магазин Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"description\":\"Онлайн магазин на Ели Панева – МАК карти, онлайн курсове по самопознание, книги за личностно развитие и енергийни талисмани.\",\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Магазин Архиви - Eli Paneva",
+      "description": "Онлайн магазин на Ели Панева – МАК карти, онлайн курсове по самопознание, книги за личностно развитие и енергийни талисмани.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Магазин Архиви - Eli Paneva",
+      "og_description": "Онлайн магазин на Ели Панева – МАК карти, онлайн курсове по самопознание, книги за личностно развитие и енергийни талисмани.",
+      "og_url": "https://elipaneva.com/product-category/shop/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/",
+            "url": "https://elipaneva.com/product-category/shop/",
+            "name": "Магазин Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "description": "Онлайн магазин на Ели Панева – МАК карти, онлайн курсове по самопознание, книги за личностно развитие и енергийни талисмани.",
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/82",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "name": "Мак карти и защити",
+    "slug": "%d0%ba%d0%b0%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8",
+    "parent": 0,
+    "description": "<h1 data-start=\"1026\" data-end=\"1113\">🟣 <strong data-start=\"1031\" data-end=\"1113\">МАК КАРТИ – Транформация чрез образ, интуиция и дълбока работа с подсъзнанието</strong></h1>\r\n<p data-start=\"1115\" data-end=\"1353\">Метафоричните асоциативни карти (МАК) са мощен терапевтичен инструмент, който активира интуицията, отключва скрити блокажи и помага за разплитане на теми като родови програми, вторични ползи, страхове, пари, отношения и лични убеждения.</p>\r\n<p data-start=\"1355\" data-end=\"1512\">В тази категория ще откриеш <strong data-start=\"1383\" data-end=\"1408\">моите авторски колоди</strong>, специално създадени за трансформационна работа – както за специалисти, така и за самостоятелна работа.</p>\r\n\r\n<h3 data-start=\"1823\" data-end=\"1853\"><strong data-start=\"1825\" data-end=\"1853\">За кого са подходящи?</strong></h3>\r\n<ul data-start=\"1854\" data-end=\"1996\">\r\n \t<li data-start=\"1854\" data-end=\"1867\">\r\n<p data-start=\"1856\" data-end=\"1867\">Терапевти, Консултанти, Коучове, Бах терапевти, Психолози</p>\r\n</li>\r\n \t<li data-start=\"1928\" data-end=\"1955\">\r\n<p data-start=\"1930\" data-end=\"1955\">Тета и PSYCH-K практици, Хора в личен процес на трансформация</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"3330\" data-end=\"3418\"><a href=\"https://elipaneva.com/product/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-2/\">онлайн констелации </a></p>\r\n<p data-start=\"1355\" data-end=\"1512\"></p>",
+    "display": "products",
+    "image": {
+      "id": 13848,
+      "date_created": "2025-11-20T14:24:54",
+      "date_created_gmt": "2025-11-20T12:24:54",
+      "date_modified": "2025-11-20T14:25:12",
+      "date_modified_gmt": "2025-11-20T12:25:12",
+      "src": "https://elipaneva.com/wp-content/uploads/2025/11/kolodi1-Photoroom.jpg",
+      "name": "kolodi1-Photoroom",
+      "alt": "МАК Родови програми – продуктова снимка“"
+    },
+    "menu_order": 0,
+    "count": 8,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Мак карти и защити Архиви - Eli Paneva</title>\n<meta name=\"description\" content=\"МАК Карти и талисмани за лична трансформация, родова работа и защита. МАК карти и енергийни амулети, създадени за дълбока вътрешна промяна и подкрепа.\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/карти-и-талисмани/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Мак карти и защити Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:description\" content=\"МАК Карти и талисмани за лична трансформация, родова работа и защита. МАК карти и енергийни амулети, създадени за дълбока вътрешна промяна и подкрепа.\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/карти-и-талисмани/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/%d0%ba%d0%b0%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/%d0%ba%d0%b0%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/\",\"name\":\"Мак карти и защити Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"description\":\"МАК Карти и талисмани за лична трансформация, родова работа и защита. МАК карти и енергийни амулети, създадени за дълбока вътрешна промяна и подкрепа.\",\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/%d0%ba%d0%b0%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/%d0%ba%d0%b0%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Мак карти и защити\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Мак карти и защити Архиви - Eli Paneva",
+      "description": "МАК Карти и талисмани за лична трансформация, родова работа и защита. МАК карти и енергийни амулети, създадени за дълбока вътрешна промяна и подкрепа.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/карти-и-талисмани/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Мак карти и защити Архиви - Eli Paneva",
+      "og_description": "МАК Карти и талисмани за лична трансформация, родова работа и защита. МАК карти и енергийни амулети, създадени за дълбока вътрешна промяна и подкрепа.",
+      "og_url": "https://elipaneva.com/product-category/карти-и-талисмани/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/%d0%ba%d0%b0%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/",
+            "url": "https://elipaneva.com/product-category/%d0%ba%d0%b0%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/",
+            "name": "Мак карти и защити Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "description": "МАК Карти и талисмани за лична трансформация, родова работа и защита. МАК карти и енергийни амулети, създадени за дълбока вътрешна промяна и подкрепа.",
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/%d0%ba%d0%b0%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/%d0%ba%d0%b0%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Мак карти и защити"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/85",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  },
+  {
+    "id": 73,
+    "name": "Онлайн Констелации",
+    "slug": "%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8",
+    "parent": 72,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 1,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Онлайн Констелации Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/контстелации/онлайн-констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Онлайн Констелации Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/контстелации/онлайн-констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"name\":\"Онлайн Констелации Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Констелации\",\"item\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"Онлайн Констелации\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Онлайн Констелации Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/контстелации/онлайн-констелации/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Онлайн Констелации Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/shop/контстелации/онлайн-констелации/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "url": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "name": "Онлайн Констелации Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Констелации",
+                "item": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Онлайн Констелации"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/73",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/72"
+        }
+      ]
+    }
+  },
+  {
+    "id": 71,
+    "name": "Програми",
+    "slug": "%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 3,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Програми Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/програми/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Програми Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/програми/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/\",\"name\":\"Програми Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Програми\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Програми Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/програми/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Програми Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/програми/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/",
+            "url": "https://elipaneva.com/product-category/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/",
+            "name": "Програми Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Програми"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/71",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  },
+  {
+    "id": 110,
+    "name": "Продукти за здавето",
+    "slug": "producti-za-zdraveto",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 5,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Продукти за здавето - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/producti-za-zdraveto/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Продукти за здавето - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/producti-za-zdraveto/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/producti-za-zdraveto/\",\"url\":\"https://elipaneva.com/product-category/producti-za-zdraveto/\",\"name\":\"Продукти за здавето - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/producti-za-zdraveto/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/producti-za-zdraveto/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Продукти за здавето\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Продукти за здавето - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/producti-za-zdraveto/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Продукти за здавето - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/producti-za-zdraveto/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/producti-za-zdraveto/",
+            "url": "https://elipaneva.com/product-category/producti-za-zdraveto/",
+            "name": "Продукти за здавето - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/producti-za-zdraveto/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/producti-za-zdraveto/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Продукти за здавето"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/110",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  },
+  {
+    "id": 109,
+    "name": "Родови програми",
+    "slug": "%d1%80%d0%be%d0%b4%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 1,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Родови програми Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/родови-програми/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Родови програми Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/родови-програми/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/%d1%80%d0%be%d0%b4%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/%d1%80%d0%be%d0%b4%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/\",\"name\":\"Родови програми Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/%d1%80%d0%be%d0%b4%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/%d1%80%d0%be%d0%b4%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Родови програми\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Родови програми Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/родови-програми/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Родови програми Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/родови-програми/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/%d1%80%d0%be%d0%b4%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/",
+            "url": "https://elipaneva.com/product-category/%d1%80%d0%be%d0%b4%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/",
+            "name": "Родови програми Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/%d1%80%d0%be%d0%b4%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/%d1%80%d0%be%d0%b4%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Родови програми"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/109",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  },
+  {
+    "id": 106,
+    "name": "Свещи и талисмани",
+    "slug": "%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8",
+    "parent": 82,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 4,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Свещи и талисмани Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/свещи-и-талисмани/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Свещи и талисмани Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/свещи-и-талисмани/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/shop/%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/\",\"name\":\"Свещи и талисмани Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Свещи и талисмани\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Свещи и талисмани Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/свещи-и-талисмани/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Свещи и талисмани Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/shop/свещи-и-талисмани/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/",
+            "url": "https://elipaneva.com/product-category/shop/%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/",
+            "name": "Свещи и талисмани Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Свещи и талисмани"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/106",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/82"
+        }
+      ]
+    }
+  },
+  {
+    "id": 107,
+    "name": "Свещи и талисмани",
+    "slug": "sveshti-i-talismani",
+    "parent": 0,
+    "description": "<h2 data-start=\"311\" data-end=\"631\"><strong data-start=\"311\" data-end=\"375\">Добре дошли в нашата колекция от свещи и енергийни талисмани</strong> –</h2>\r\n<p data-start=\"311\" data-end=\"631\">Специално подбрани продукти, създадени да внесат светлина, защита и хармония във вашия живот.<br data-start=\"471\" data-end=\"474\" />Тук ще откриете ръчно изработени свещи с етерични масла и кристали, както и енергийни талисмани, заредени с намерение за любов, изобилие и вътрешен баланс.</p>\r\n<p data-start=\"633\" data-end=\"861\">🕯 <strong data-start=\"636\" data-end=\"652\">Нашите свещи</strong><br data-start=\"652\" data-end=\"655\" />Всяка свещ е изработена от висококачествен восък и е обогатена с ароматни етерични масла и кристали с мощна енергия. Подходящи са за медитация, ритуали, релаксация или като красив подарък с дълбок смисъл.</p>\r\n<p data-start=\"863\" data-end=\"1058\">🔮 <strong data-start=\"866\" data-end=\"896\">Нашите енергийни талисмани</strong><br data-start=\"896\" data-end=\"899\" />Енергийни амулети, изработени с внимание и заредени с положителна вибрация. Подкрепят ви в привличането на желаното – любов, здраве, защита или благополучие.</p>\r\n<p data-start=\"1060\" data-end=\"1120\">✨ <strong data-start=\"1062\" data-end=\"1118\">Защо да изберете нашите свещи и енергийни талисмани?</strong></p>\r\n\r\n<ul data-start=\"1121\" data-end=\"1337\">\r\n \t<li data-start=\"1121\" data-end=\"1164\">\r\n<p data-start=\"1123\" data-end=\"1164\">Ръчна изработка с внимание към детайла.</p>\r\n</li>\r\n \t<li data-start=\"1165\" data-end=\"1223\">\r\n<p data-start=\"1167\" data-end=\"1223\">Енергийно пречистени и заредени с конкретно намерение.</p>\r\n</li>\r\n \t<li data-start=\"1224\" data-end=\"1281\">\r\n<p data-start=\"1226\" data-end=\"1281\">Подходящи както за лична употреба, така и за подарък.</p>\r\n</li>\r\n \t<li data-start=\"1282\" data-end=\"1337\">\r\n<p data-start=\"1284\" data-end=\"1337\">Съчетаващи красота, символика и енергийна стойност.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1339\" data-end=\"1499\">🌿 Изберете свещ или енергиен талисман, който ще донесе светлина и положителна енергия във вашето ежедневие. Позволете на магията да влезе в дома ви още днес.</p>\r\n\r\n\r\n<hr data-start=\"1501\" data-end=\"1504\" />",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 0,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Свещи и талисмани Архиви - Eli Paneva</title>\n<meta name=\"description\" content=\"Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/sveshti-i-talismani/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Свещи и талисмани Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:description\" content=\"Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/sveshti-i-talismani/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/sveshti-i-talismani/\",\"url\":\"https://elipaneva.com/product-category/sveshti-i-talismani/\",\"name\":\"Свещи и талисмани Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"description\":\"Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.\",\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Свещи и талисмани\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Свещи и талисмани Архиви - Eli Paneva",
+      "description": "Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/sveshti-i-talismani/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Свещи и талисмани Архиви - Eli Paneva",
+      "og_description": "Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.",
+      "og_url": "https://elipaneva.com/product-category/sveshti-i-talismani/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/sveshti-i-talismani/",
+            "url": "https://elipaneva.com/product-category/sveshti-i-talismani/",
+            "name": "Свещи и талисмани Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "description": "Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.",
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Свещи и талисмани"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/107",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  }
+]
