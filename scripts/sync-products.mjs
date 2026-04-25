@@ -72,14 +72,14 @@ async function main() {
   const slimProducts = products.map(p => ({
     id: p.id,
     name: p.name,
-    slug: p.slug,
+    slug: decodeURIComponent(p.slug),
     permalink: p.permalink,
     description: p.description,
     short_description: p.short_description,
     price: p.price,
     regular_price: p.regular_price,
     sale_price: p.sale_price,
-    categories: p.categories,
+    categories: p.categories.map(c => ({ ...c, slug: decodeURIComponent(c.slug) })),
     images: p.images,
     status: p.status,
     featured: p.featured,
@@ -90,9 +90,14 @@ async function main() {
     join(root, 'src/data/shop/products.json'),
     JSON.stringify(slimProducts, null, 2)
   )
+  const slimCategories = categories.map(c => ({
+    ...c,
+    slug: decodeURIComponent(c.slug),
+  }))
+
   writeFileSync(
     join(root, 'src/data/shop/categories.json'),
-    JSON.stringify(categories, null, 2)
+    JSON.stringify(slimCategories, null, 2)
   )
 
   console.log('\n✓ Saved:')
