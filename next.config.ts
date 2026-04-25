@@ -13,8 +13,9 @@ const securityHeaders = [
       "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https://elipaneva.com https://*.wp.com blob:",
-      "connect-src 'self' https://elipaneva.com",
+      "img-src 'self' data: blob: https://elipaneva.com https://*.wp.com https://*.googleapis.com https://*.gstatic.com https://*.google.com",
+      "frame-src https://www.google.com https://maps.google.com https://www.google.com/maps/",
+      "connect-src 'self' https://elipaneva.com https://*.googleapis.com",
     ].join('; '),
   },
 ]
