@@ -899,6 +899,163 @@
     }
   },
   {
+    "id": 108,
+    "name": "Констелации",
+    "slug": "%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8",
+    "parent": 82,
+    "description": "",
+    "display": "default",
+    "image": {
+      "id": 13212,
+      "date_created": "2025-05-28T21:19:57",
+      "date_created_gmt": "2025-05-28T18:19:57",
+      "date_modified": "2025-05-28T21:20:17",
+      "date_modified_gmt": "2025-05-28T18:20:17",
+      "src": "https://elipaneva.com/wp-content/uploads/2023/11/семейни-конст-2.png",
+      "name": "семейни конст 2",
+      "alt": "Групова сесия по констелации с представители – системна терапия за разкриване на скрити семейни връзки"
+    },
+    "menu_order": 0,
+    "count": 0,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Констелации Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Констелации Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"name\":\"Констелации Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Констелации\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Констелации Архиви - Eli Paneva",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/shop/констелации/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Констелации Архиви - Eli Paneva",
+      "og_url": "https://elipaneva.com/product-category/shop/констелации/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "url": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
+            "name": "Констелации Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Магазин",
+                "item": "https://elipaneva.com/product-category/shop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Констелации"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/108",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ],
+      "up": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/82"
+        }
+      ]
+    }
+  },
+  {
     "id": 72,
     "name": "Констелации",
     "slug": "%d0%ba%d0%be%d0%bd%d1%82%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8",
@@ -1035,163 +1192,6 @@
       "self": [
         {
           "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/72",
-          "targetHints": {
-            "allow": [
-              "GET",
-              "POST",
-              "PUT",
-              "PATCH",
-              "DELETE"
-            ]
-          }
-        }
-      ],
-      "collection": [
-        {
-          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
-        }
-      ],
-      "up": [
-        {
-          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/82"
-        }
-      ]
-    }
-  },
-  {
-    "id": 108,
-    "name": "Констелации",
-    "slug": "%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8",
-    "parent": 82,
-    "description": "",
-    "display": "default",
-    "image": {
-      "id": 13212,
-      "date_created": "2025-05-28T21:19:57",
-      "date_created_gmt": "2025-05-28T18:19:57",
-      "date_modified": "2025-05-28T21:20:17",
-      "date_modified_gmt": "2025-05-28T18:20:17",
-      "src": "https://elipaneva.com/wp-content/uploads/2023/11/семейни-конст-2.png",
-      "name": "семейни конст 2",
-      "alt": "Групова сесия по констелации с представители – системна терапия за разкриване на скрити семейни връзки"
-    },
-    "menu_order": 0,
-    "count": 0,
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Констелации Архиви - Eli Paneva</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/shop/констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Констелации Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/shop/констелации/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"url\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/\",\"name\":\"Констелации Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Магазин\",\"item\":\"https://elipaneva.com/product-category/shop/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Констелации\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
-    "yoast_head_json": {
-      "title": "Констелации Архиви - Eli Paneva",
-      "robots": {
-        "index": "index",
-        "follow": "follow",
-        "max-snippet": "max-snippet:-1",
-        "max-image-preview": "max-image-preview:large",
-        "max-video-preview": "max-video-preview:-1"
-      },
-      "canonical": "https://elipaneva.com/product-category/shop/констелации/",
-      "og_locale": "en_US",
-      "og_type": "article",
-      "og_title": "Констелации Архиви - Eli Paneva",
-      "og_url": "https://elipaneva.com/product-category/shop/констелации/",
-      "og_site_name": "Eli Paneva",
-      "og_image": [
-        {
-          "width": 500,
-          "height": 500,
-          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
-          "type": "image/png"
-        }
-      ],
-      "twitter_card": "summary_large_image",
-      "schema": {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "CollectionPage",
-            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
-            "url": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/",
-            "name": "Констелации Архиви - Eli Paneva",
-            "isPartOf": {
-              "@id": "https://elipaneva.com/#website"
-            },
-            "breadcrumb": {
-              "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb"
-            },
-            "inLanguage": "en-US"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://elipaneva.com/product-category/shop/%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Начало",
-                "item": "https://elipaneva.com/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Магазин",
-                "item": "https://elipaneva.com/product-category/shop/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Констелации"
-              }
-            ]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://elipaneva.com/#website",
-            "url": "https://elipaneva.com/",
-            "name": "Eli Paneva",
-            "description": "Трансформирайте живота си с мен",
-            "publisher": {
-              "@id": "https://elipaneva.com/#organization"
-            },
-            "potentialAction": [
-              {
-                "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
-                },
-                "query-input": {
-                  "@type": "PropertyValueSpecification",
-                  "valueRequired": true,
-                  "valueName": "search_term_string"
-                }
-              }
-            ],
-            "inLanguage": "en-US"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://elipaneva.com/#organization",
-            "name": "Eli Paneva",
-            "url": "https://elipaneva.com/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "en-US",
-              "@id": "https://elipaneva.com/#/schema/logo/image/",
-              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
-              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
-              "width": 354,
-              "height": 67,
-              "caption": "Eli Paneva"
-            },
-            "image": {
-              "@id": "https://elipaneva.com/#/schema/logo/image/"
-            }
-          }
-        ]
-      }
-    },
-    "_links": {
-      "self": [
-        {
-          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/108",
           "targetHints": {
             "allow": [
               "GET",
@@ -2364,6 +2364,146 @@
     }
   },
   {
+    "id": 107,
+    "name": "Свещи и талисмани",
+    "slug": "sveshti-i-talismani",
+    "parent": 0,
+    "description": "<h2 data-start=\"311\" data-end=\"631\"><strong data-start=\"311\" data-end=\"375\">Добре дошли в нашата колекция от свещи и енергийни талисмани</strong> –</h2>\r\n<p data-start=\"311\" data-end=\"631\">Специално подбрани продукти, създадени да внесат светлина, защита и хармония във вашия живот.<br data-start=\"471\" data-end=\"474\" />Тук ще откриете ръчно изработени свещи с етерични масла и кристали, както и енергийни талисмани, заредени с намерение за любов, изобилие и вътрешен баланс.</p>\r\n<p data-start=\"633\" data-end=\"861\">🕯 <strong data-start=\"636\" data-end=\"652\">Нашите свещи</strong><br data-start=\"652\" data-end=\"655\" />Всяка свещ е изработена от висококачествен восък и е обогатена с ароматни етерични масла и кристали с мощна енергия. Подходящи са за медитация, ритуали, релаксация или като красив подарък с дълбок смисъл.</p>\r\n<p data-start=\"863\" data-end=\"1058\">🔮 <strong data-start=\"866\" data-end=\"896\">Нашите енергийни талисмани</strong><br data-start=\"896\" data-end=\"899\" />Енергийни амулети, изработени с внимание и заредени с положителна вибрация. Подкрепят ви в привличането на желаното – любов, здраве, защита или благополучие.</p>\r\n<p data-start=\"1060\" data-end=\"1120\">✨ <strong data-start=\"1062\" data-end=\"1118\">Защо да изберете нашите свещи и енергийни талисмани?</strong></p>\r\n\r\n<ul data-start=\"1121\" data-end=\"1337\">\r\n \t<li data-start=\"1121\" data-end=\"1164\">\r\n<p data-start=\"1123\" data-end=\"1164\">Ръчна изработка с внимание към детайла.</p>\r\n</li>\r\n \t<li data-start=\"1165\" data-end=\"1223\">\r\n<p data-start=\"1167\" data-end=\"1223\">Енергийно пречистени и заредени с конкретно намерение.</p>\r\n</li>\r\n \t<li data-start=\"1224\" data-end=\"1281\">\r\n<p data-start=\"1226\" data-end=\"1281\">Подходящи както за лична употреба, така и за подарък.</p>\r\n</li>\r\n \t<li data-start=\"1282\" data-end=\"1337\">\r\n<p data-start=\"1284\" data-end=\"1337\">Съчетаващи красота, символика и енергийна стойност.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1339\" data-end=\"1499\">🌿 Изберете свещ или енергиен талисман, който ще донесе светлина и положителна енергия във вашето ежедневие. Позволете на магията да влезе в дома ви още днес.</p>\r\n\r\n\r\n<hr data-start=\"1501\" data-end=\"1504\" />",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 0,
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Свещи и талисмани Архиви - Eli Paneva</title>\n<meta name=\"description\" content=\"Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/sveshti-i-talismani/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Свещи и талисмани Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:description\" content=\"Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/sveshti-i-talismani/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/sveshti-i-talismani/\",\"url\":\"https://elipaneva.com/product-category/sveshti-i-talismani/\",\"name\":\"Свещи и талисмани Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"description\":\"Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.\",\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Свещи и талисмани\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Свещи и талисмани Архиви - Eli Paneva",
+      "description": "Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://elipaneva.com/product-category/sveshti-i-talismani/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Свещи и талисмани Архиви - Eli Paneva",
+      "og_description": "Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.",
+      "og_url": "https://elipaneva.com/product-category/sveshti-i-talismani/",
+      "og_site_name": "Eli Paneva",
+      "og_image": [
+        {
+          "width": 500,
+          "height": 500,
+          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://elipaneva.com/product-category/sveshti-i-talismani/",
+            "url": "https://elipaneva.com/product-category/sveshti-i-talismani/",
+            "name": "Свещи и талисмани Архиви - Eli Paneva",
+            "isPartOf": {
+              "@id": "https://elipaneva.com/#website"
+            },
+            "description": "Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.",
+            "breadcrumb": {
+              "@id": "https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Начало",
+                "item": "https://elipaneva.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Свещи и талисмани"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://elipaneva.com/#website",
+            "url": "https://elipaneva.com/",
+            "name": "Eli Paneva",
+            "description": "Трансформирайте живота си с мен",
+            "publisher": {
+              "@id": "https://elipaneva.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://elipaneva.com/#organization",
+            "name": "Eli Paneva",
+            "url": "https://elipaneva.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://elipaneva.com/#/schema/logo/image/",
+              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
+              "width": 354,
+              "height": 67,
+              "caption": "Eli Paneva"
+            },
+            "image": {
+              "@id": "https://elipaneva.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/107",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
+        }
+      ]
+    }
+  },
+  {
     "id": 106,
     "name": "Свещи и талисмани",
     "slug": "%d1%81%d0%b2%d0%b5%d1%89%d0%b8-%d0%b8-%d1%82%d0%b0%d0%bb%d0%b8%d1%81%d0%bc%d0%b0%d0%bd%d0%b8",
@@ -2507,146 +2647,6 @@
       "up": [
         {
           "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/82"
-        }
-      ]
-    }
-  },
-  {
-    "id": 107,
-    "name": "Свещи и талисмани",
-    "slug": "sveshti-i-talismani",
-    "parent": 0,
-    "description": "<h2 data-start=\"311\" data-end=\"631\"><strong data-start=\"311\" data-end=\"375\">Добре дошли в нашата колекция от свещи и енергийни талисмани</strong> –</h2>\r\n<p data-start=\"311\" data-end=\"631\">Специално подбрани продукти, създадени да внесат светлина, защита и хармония във вашия живот.<br data-start=\"471\" data-end=\"474\" />Тук ще откриете ръчно изработени свещи с етерични масла и кристали, както и енергийни талисмани, заредени с намерение за любов, изобилие и вътрешен баланс.</p>\r\n<p data-start=\"633\" data-end=\"861\">🕯 <strong data-start=\"636\" data-end=\"652\">Нашите свещи</strong><br data-start=\"652\" data-end=\"655\" />Всяка свещ е изработена от висококачествен восък и е обогатена с ароматни етерични масла и кристали с мощна енергия. Подходящи са за медитация, ритуали, релаксация или като красив подарък с дълбок смисъл.</p>\r\n<p data-start=\"863\" data-end=\"1058\">🔮 <strong data-start=\"866\" data-end=\"896\">Нашите енергийни талисмани</strong><br data-start=\"896\" data-end=\"899\" />Енергийни амулети, изработени с внимание и заредени с положителна вибрация. Подкрепят ви в привличането на желаното – любов, здраве, защита или благополучие.</p>\r\n<p data-start=\"1060\" data-end=\"1120\">✨ <strong data-start=\"1062\" data-end=\"1118\">Защо да изберете нашите свещи и енергийни талисмани?</strong></p>\r\n\r\n<ul data-start=\"1121\" data-end=\"1337\">\r\n \t<li data-start=\"1121\" data-end=\"1164\">\r\n<p data-start=\"1123\" data-end=\"1164\">Ръчна изработка с внимание към детайла.</p>\r\n</li>\r\n \t<li data-start=\"1165\" data-end=\"1223\">\r\n<p data-start=\"1167\" data-end=\"1223\">Енергийно пречистени и заредени с конкретно намерение.</p>\r\n</li>\r\n \t<li data-start=\"1224\" data-end=\"1281\">\r\n<p data-start=\"1226\" data-end=\"1281\">Подходящи както за лична употреба, така и за подарък.</p>\r\n</li>\r\n \t<li data-start=\"1282\" data-end=\"1337\">\r\n<p data-start=\"1284\" data-end=\"1337\">Съчетаващи красота, символика и енергийна стойност.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1339\" data-end=\"1499\">🌿 Изберете свещ или енергиен талисман, който ще донесе светлина и положителна енергия във вашето ежедневие. Позволете на магията да влезе в дома ви още днес.</p>\r\n\r\n\r\n<hr data-start=\"1501\" data-end=\"1504\" />",
-    "display": "default",
-    "image": null,
-    "menu_order": 0,
-    "count": 0,
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Свещи и талисмани Архиви - Eli Paneva</title>\n<meta name=\"description\" content=\"Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://elipaneva.com/product-category/sveshti-i-talismani/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:locale\" content=\"en_US\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:type\" content=\"article\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:title\" content=\"Свещи и талисмани Архиви - Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:description\" content=\"Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:url\" content=\"https://elipaneva.com/product-category/sveshti-i-talismani/\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:site_name\" content=\"Eli Paneva\" class=\"yoast-seo-meta-tag\" />\n<meta property=\"og:image\" content=\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:width\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:height\" content=\"500\" class=\"yoast-seo-meta-tag\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" class=\"yoast-seo-meta-tag\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" class=\"yoast-seo-meta-tag\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://elipaneva.com/product-category/sveshti-i-talismani/\",\"url\":\"https://elipaneva.com/product-category/sveshti-i-talismani/\",\"name\":\"Свещи и талисмани Архиви - Eli Paneva\",\"isPartOf\":{\"@id\":\"https://elipaneva.com/#website\"},\"description\":\"Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.\",\"breadcrumb\":{\"@id\":\"https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Начало\",\"item\":\"https://elipaneva.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Свещи и талисмани\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elipaneva.com/#website\",\"url\":\"https://elipaneva.com/\",\"name\":\"Eli Paneva\",\"description\":\"Трансформирайте живота си с мен\",\"publisher\":{\"@id\":\"https://elipaneva.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elipaneva.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elipaneva.com/#organization\",\"name\":\"Eli Paneva\",\"url\":\"https://elipaneva.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elipaneva.com/#/schema/logo/image/\",\"url\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"contentUrl\":\"https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png\",\"width\":354,\"height\":67,\"caption\":\"Eli Paneva\"},\"image\":{\"@id\":\"https://elipaneva.com/#/schema/logo/image/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
-    "yoast_head_json": {
-      "title": "Свещи и талисмани Архиви - Eli Paneva",
-      "description": "Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.",
-      "robots": {
-        "index": "index",
-        "follow": "follow",
-        "max-snippet": "max-snippet:-1",
-        "max-image-preview": "max-image-preview:large",
-        "max-video-preview": "max-video-preview:-1"
-      },
-      "canonical": "https://elipaneva.com/product-category/sveshti-i-talismani/",
-      "og_locale": "en_US",
-      "og_type": "article",
-      "og_title": "Свещи и талисмани Архиви - Eli Paneva",
-      "og_description": "Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.",
-      "og_url": "https://elipaneva.com/product-category/sveshti-i-talismani/",
-      "og_site_name": "Eli Paneva",
-      "og_image": [
-        {
-          "width": 500,
-          "height": 500,
-          "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-1.png",
-          "type": "image/png"
-        }
-      ],
-      "twitter_card": "summary_large_image",
-      "schema": {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "CollectionPage",
-            "@id": "https://elipaneva.com/product-category/sveshti-i-talismani/",
-            "url": "https://elipaneva.com/product-category/sveshti-i-talismani/",
-            "name": "Свещи и талисмани Архиви - Eli Paneva",
-            "isPartOf": {
-              "@id": "https://elipaneva.com/#website"
-            },
-            "description": "Изберете свещи и енергийни талисмани, които носят любов, защита и изобилие. Всеки продукт е ръчно изработен и зареден с енергия за вашето благополучие.",
-            "breadcrumb": {
-              "@id": "https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb"
-            },
-            "inLanguage": "en-US"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://elipaneva.com/product-category/sveshti-i-talismani/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Начало",
-                "item": "https://elipaneva.com/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Свещи и талисмани"
-              }
-            ]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://elipaneva.com/#website",
-            "url": "https://elipaneva.com/",
-            "name": "Eli Paneva",
-            "description": "Трансформирайте живота си с мен",
-            "publisher": {
-              "@id": "https://elipaneva.com/#organization"
-            },
-            "potentialAction": [
-              {
-                "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://elipaneva.com/?s={search_term_string}"
-                },
-                "query-input": {
-                  "@type": "PropertyValueSpecification",
-                  "valueRequired": true,
-                  "valueName": "search_term_string"
-                }
-              }
-            ],
-            "inLanguage": "en-US"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://elipaneva.com/#organization",
-            "name": "Eli Paneva",
-            "url": "https://elipaneva.com/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "en-US",
-              "@id": "https://elipaneva.com/#/schema/logo/image/",
-              "url": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
-              "contentUrl": "https://elipaneva.com/wp-content/uploads/2025/02/ELIEliPaneva-e1739610161466.png",
-              "width": 354,
-              "height": 67,
-              "caption": "Eli Paneva"
-            },
-            "image": {
-              "@id": "https://elipaneva.com/#/schema/logo/image/"
-            }
-          }
-        ]
-      }
-    },
-    "_links": {
-      "self": [
-        {
-          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories/107",
-          "targetHints": {
-            "allow": [
-              "GET",
-              "POST",
-              "PUT",
-              "PATCH",
-              "DELETE"
-            ]
-          }
-        }
-      ],
-      "collection": [
-        {
-          "href": "https://elipaneva.com/wp-json/wc/v3/products/categories"
         }
       ]
     }
