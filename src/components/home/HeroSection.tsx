@@ -17,8 +17,8 @@ const floatingLabels = [
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-(--bg) pt-16 pb-8 md:pb-16 overflow-x-hidden">
-      <div className="max-w-6xl mx-auto px-6 py-8 md:py-12">
+    <section className="relative bg-(--bg) pt-16 overflow-x-hidden min-h-dvh flex flex-col justify-center">
+      <div className="max-w-6xl mx-auto px-6 py-8 md:py-0 w-full">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 
           {/* Photo column — first on mobile, second on desktop */}

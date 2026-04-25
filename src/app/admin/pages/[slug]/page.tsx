@@ -35,6 +35,30 @@ const FIELD_LABELS: Record<string, Record<string, string>> = {
   },
 }
 
+const FIELD_DEFAULTS: Record<string, Record<string, string>> = {
+  home: {
+    hero_title: 'Намерете мира.\nНамерете себе си.',
+    hero_subtitle: 'Подкрепям хората в процеса на вътрешна промяна чрез системни констелации, PSYCH-K®, енергийна психология и МАК карти.',
+    hero_cta: 'Запази час',
+  },
+  'za-men': {
+    hero_title: 'Ели Панева',
+    bio_paragraph_1: 'Аз съм холистичен консултант, трансформационен коуч и автор.',
+    bio_paragraph_2: 'Работя с хора от всички сфери на живота.',
+    story_paragraph_1: '',
+    story_paragraph_2: '',
+    story_paragraph_3: '',
+    story_paragraph_4: '',
+  },
+  kontakti: {
+    intro: 'Запази своята консултация или задай въпрос. Отговарям в рамките на 24 часа в работни дни.',
+  },
+  cta_section: {
+    title: 'Направете първата стъпка\nкъм живота, който заслужавате',
+    subtitle: 'Над 500 клиенти са си върнали увереността, подобрили са отношенията си и са открили вътрешен мир.',
+  },
+}
+
 interface Props { params: Promise<{ slug: string }> }
 
 export default async function PageEditorPage({ params }: Props) {
@@ -49,7 +73,9 @@ export default async function PageEditorPage({ params }: Props) {
     allContent = JSON.parse(await readFile(contentFile, 'utf-8'))
   } catch { /* empty */ }
 
-  const pageContent = allContent[slug] ?? {}
+  const defaults = FIELD_DEFAULTS[slug] ?? {}
+  const saved = allContent[slug] ?? {}
+  const pageContent = { ...defaults, ...saved }
   const fields = FIELD_LABELS[slug] ?? {}
 
   return (

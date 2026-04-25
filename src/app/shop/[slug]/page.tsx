@@ -2,9 +2,9 @@ import { getProduct, getProducts } from '@/lib/woocommerce'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import PriceDisplay from '@/components/ui/PriceDisplay'
-import Button from '@/components/ui/Button'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import StructuredData from '@/components/ui/StructuredData'
+import AddToCartButton from '@/components/shop/AddToCartButton'
 import { bgnToEur } from '@/lib/currency'
 import type { Metadata } from 'next'
 
@@ -112,9 +112,7 @@ export default async function ProductPage({ params }: Props) {
               className="text-(--text-muted) leading-relaxed mb-8"
               dangerouslySetInnerHTML={{ __html: product.short_description }}
             />
-            <Button href={product.permalink} variant="primary" external className="w-full justify-center mb-4">
-              Купи сега
-            </Button>
+            <AddToCartButton product={product} />
             <div
               className="prose prose-sm max-w-none text-(--text-muted) mt-8"
               dangerouslySetInnerHTML={{ __html: product.description }}
