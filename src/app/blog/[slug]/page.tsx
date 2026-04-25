@@ -1,4 +1,5 @@
 import { getPost, getPosts } from '@/lib/wordpress'
+import { translitSlug } from '@/lib/translit'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
@@ -9,10 +10,15 @@ import type { Metadata } from 'next'
 
 interface Props { params: Promise<{ slug: string }> }
 
-// Pages render on first request and are cached via ISR (revalidate: 3600)
-// Avoids hammering the WordPress API with 20 concurrent fetches at build time
-export function generateStaticParams() {
-  return []
+export const revalidate = 3600
+
+export async function generateStaticParams() {
+  try {
+    const posts = await getPosts(1, 100)
+    return posts.map(p => ({ slug: translitSlug(p.slug) }))
+  } catch {
+    return []
+  }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

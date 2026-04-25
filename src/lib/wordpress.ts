@@ -29,35 +29,34 @@ export async function getPosts(page = 1, perPage = 10): Promise<WPPost[]> {
 export async function getPost(slug: string): Promise<WPPost | null> {
   if (!WP_API) return null
   try {
-    // Try direct WP slug lookup (decoded — covers Cyrillic or Latin slugs)
-    const u = new URL(`${WP_API}/posts`)
-    u.searchParams.set('slug', decodeURIComponent(slug))
-    u.searchParams.set('_embed', 'wp:featuredmedia')
-    const res = await fetch(u.toString(), { cache: 'no-store' })
-    if (res.ok) {
-      const posts: WPPost[] = await res.json()
-      if (posts.length > 0) return posts[0]
-    }
-
-    // Fallback: incoming slug is transliterated Latin; fetch all posts across pages
-    // and match by transliterating the WP slug
+    // Step 1: scan all post slugs (no embed — lightweight, fast)
+    let cyrillicSlug: string | null = null
     let page = 1
-    while (page <= 5) {
-      const pageRes = await fetch(
-        `${WP_API}/posts?per_page=100&page=${page}&_embed=wp:featuredmedia`,
-        { cache: 'no-store' }
+    while (page <= 10) {
+      const r = await fetch(
+        `${WP_API}/posts?per_page=100&page=${page}&_fields=slug`,
+        { next: { revalidate: 3600 } }
       )
-      if (!pageRes.ok) break
-      const batch: WPPost[] = await pageRes.json()
+      if (!r.ok) break
+      const batch: Array<{ slug: string }> = await r.json()
       if (batch.length === 0) break
       const match = batch.find(
         p => translitSlug(p.slug) === slug || p.slug === slug || decodeURIComponent(p.slug) === slug
       )
-      if (match) return match
+      if (match) { cyrillicSlug = decodeURIComponent(match.slug); break }
       if (batch.length < 100) break
       page++
     }
-    return null
+    if (!cyrillicSlug) return null
+
+    // Step 2: fetch the specific post by its Cyrillic slug with embed
+    const u = new URL(`${WP_API}/posts`)
+    u.searchParams.set('slug', cyrillicSlug)
+    u.searchParams.set('_embed', 'wp:featuredmedia')
+    const r2 = await fetch(u.toString(), { next: { revalidate: 3600 } })
+    if (!r2.ok) return null
+    const posts: WPPost[] = await r2.json()
+    return posts[0] ?? null
   } catch {
     return null
   }
