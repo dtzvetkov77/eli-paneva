@@ -70,7 +70,7 @@ export default async function AdminDashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Recent orders */}
-        {stats?.recentOrders?.length > 0 && (
+        {stats && stats.recentOrders.length > 0 && (
           <div className="lg:col-span-2 bg-white rounded-lg border border-gray-200 overflow-hidden">
             <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
               <h2 className="text-sm font-semibold text-gray-900">Последни поръчки</h2>
