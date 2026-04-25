@@ -4,23 +4,28 @@ import { redirect } from 'next/navigation'
 const sections = [
   {
     title: 'Поръчки',
-    desc: 'Преглед на поръчки и приходи',
+    desc: 'Преглед на поръчки и статистики',
     href: '/admin/orders',
   },
   {
+    title: 'Продукти',
+    desc: 'Управление на продуктите в магазина',
+    href: '/admin/products',
+  },
+  {
+    title: 'Категории',
+    desc: 'Редактиране на категории',
+    href: '/admin/categories',
+  },
+  {
     title: 'Снимки',
-    desc: 'Качи и управлявай снимки за сайта',
+    desc: 'Качване и управление на снимки',
     href: '/admin/images',
   },
   {
     title: 'Страници',
-    desc: 'Редактирай съдържанието на страниците',
+    desc: 'Редактиране на съдържанието',
     href: '/admin/pages',
-  },
-  {
-    title: 'Категории',
-    desc: 'Управление на категориите в магазина',
-    href: '/admin/categories',
   },
 ]
 
