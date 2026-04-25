@@ -48,6 +48,7 @@ export default function Footer() {
         <div className="flex gap-4">
           <Link href="/politika-za-poveritelnost" className="hover:text-white/70 transition-colors">Поверителност</Link>
           <Link href="/obshti-uslovia" className="hover:text-white/70 transition-colors">Общи условия</Link>
+          <Link href="/politika-za-biskvitki" className="hover:text-white/70 transition-colors">Бисквитки</Link>
         </div>
       </div>
     </footer>

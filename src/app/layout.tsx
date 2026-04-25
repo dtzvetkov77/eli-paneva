@@ -5,6 +5,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { CartProvider } from '@/components/cart/CartContext'
 import CartDrawer from '@/components/cart/CartDrawer'
+import CookieBanner from '@/components/ui/CookieBanner'
 
 const playfair = Playfair_Display({
   subsets: ['latin', 'cyrillic'],
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <CartDrawer />
           <main>{children}</main>
           <Footer />
+          <CookieBanner />
         </CartProvider>
       </body>
     </html>

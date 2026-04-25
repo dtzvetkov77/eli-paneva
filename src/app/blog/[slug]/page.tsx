@@ -77,11 +77,12 @@ export default async function BlogPostPage({ params }: Props) {
         {image && (
           <div className="aspect-video relative overflow-hidden mb-10 bg-(--sage-light)">
             <Image
-              src={image.source_url}
+              src={encodeURI(image.source_url)}
               alt={image.alt_text || title}
               fill
               className="object-cover"
               priority
+              unoptimized
             />
           </div>
         )}

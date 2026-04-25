@@ -29,11 +29,12 @@ export default async function BlogPreview() {
                 <div className="aspect-video bg-(--sage)/20 relative overflow-hidden">
                   {image && (
                     <Image
-                      src={image.source_url}
+                      src={encodeURI(image.source_url)}
                       alt={image.alt_text || ''}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 33vw"
+                      unoptimized
                     />
                   )}
                 </div>
