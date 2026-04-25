@@ -1,4 +1,5 @@
 import StructuredData from '@/components/ui/StructuredData'
+import { SOCIAL_LINKS, SOCIAL_SCHEMA_URLS } from '@/lib/social-links'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function ContactPage() {
     url: 'https://elipaneva.com',
     telephone: '+359882420894',
     email: 'elipaneva2023@gmail.com',
+    sameAs: SOCIAL_SCHEMA_URLS,
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'бул. Дондуков 65, ет. 1, офис 2',
@@ -55,7 +57,6 @@ export default function ContactPage() {
                 <a href="tel:+359882420894" className="text-(--text-dark) hover:text-(--sage) transition-colors font-medium">
                   +359 882 420 894
                 </a>
-                <p className="text-xs text-(--text-muted) mt-1">Viber и WhatsApp: +359 898 436 850</p>
               </div>
               <div>
                 <h3 className="text-xs uppercase tracking-widest text-(--text-muted) mb-3">Имейл</h3>
@@ -65,19 +66,14 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="text-xs uppercase tracking-widest text-(--text-muted) mb-3">Социални мрежи</h3>
-                <div className="flex flex-wrap gap-4">
-                  {[
-                    { label: 'Facebook', href: 'https://www.facebook.com/elipaneva' },
-                    { label: 'Instagram', href: 'https://www.instagram.com/elipaneva' },
-                    { label: 'YouTube', href: 'https://www.youtube.com/@elipaneva' },
-                    { label: 'TikTok', href: 'https://www.tiktok.com/@elipaneva' },
-                  ].map(s => (
+                <div className="flex flex-wrap gap-3">
+                  {SOCIAL_LINKS.map(s => (
                     <a
                       key={s.label}
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-(--text-muted) hover:text-(--sage) transition-colors border border-(--border) px-4 py-2 hover:border-(--sage)"
+                      className="text-sm text-(--text-muted) hover:text-(--sage) transition-colors border border-(--border) px-4 py-2 rounded-full hover:border-(--sage)"
                     >
                       {s.label}
                     </a>
@@ -88,7 +84,7 @@ export default function ContactPage() {
           </div>
 
           {/* Form */}
-          <div className="bg-white border border-(--border) p-8">
+          <div className="bg-white border border-(--border) rounded-2xl p-8">
             <h2 className="font-serif text-2xl text-(--text-dark) mb-6">Изпрати съобщение</h2>
             <form action="/api/contact" method="POST" className="space-y-5">
               <div>
@@ -169,6 +165,26 @@ export default function ContactPage() {
               </button>
             </form>
           </div>
+        </div>
+
+        {/* Map */}
+        <div className="mt-16">
+          <h2 className="font-serif text-2xl text-(--text-dark) mb-6">Как да ни намерите</h2>
+          <div className="w-full rounded-2xl overflow-hidden border border-(--border)" style={{ height: '420px' }}>
+            <iframe
+              title="Офис Ели Панева — бул. Дондуков 65, София"
+              src="https://www.google.com/maps?q=бул.+Дондуков+65,+1504+София,+България&output=embed&z=16"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <p className="text-sm text-(--text-muted) mt-3">
+            бул. „Дондуков" 65, ет. 1, офис 2 · 1504 София
+          </p>
         </div>
       </div>
     </div>

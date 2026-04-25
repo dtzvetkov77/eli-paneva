@@ -1,3 +1,4 @@
+import { SOCIAL_SCHEMA_URLS } from '@/lib/social-links'
 import HeroSection from '@/components/home/HeroSection'
 import StatementSection from '@/components/home/StatementSection'
 import AboutTeaser from '@/components/home/AboutTeaser'
@@ -22,10 +23,7 @@ const personSchema = {
   },
   telephone: '+359882420894',
   email: 'elipaneva2023@gmail.com',
-  sameAs: [
-    'https://www.facebook.com/elipaneva',
-    'https://www.instagram.com/elipaneva',
-  ],
+  sameAs: SOCIAL_SCHEMA_URLS,
 }
 
 export default function HomePage() {

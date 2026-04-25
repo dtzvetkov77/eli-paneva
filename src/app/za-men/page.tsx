@@ -1,3 +1,4 @@
+import { SOCIAL_SCHEMA_URLS } from '@/lib/social-links'
 import Button from '@/components/ui/Button'
 import StructuredData from '@/components/ui/StructuredData'
 import Link from 'next/link'
@@ -73,10 +74,7 @@ export default function AboutPage() {
       addressCountry: 'BG',
     },
     knowsAbout: methods.map(m => m.name),
-    sameAs: [
-      'https://www.facebook.com/elipaneva',
-      'https://www.instagram.com/elipaneva',
-    ],
+    sameAs: SOCIAL_SCHEMA_URLS,
   }
 
   return (

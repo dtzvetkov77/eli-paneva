@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { SOCIAL_LINKS } from '@/lib/social-links'
 
 const serviceLinks = [
   { label: 'Лични консултации', href: '/uslugi/lichni-konsultatsii' },
@@ -17,10 +18,10 @@ export default function Footer() {
           <p className="text-sm leading-relaxed max-w-sm">
             Холистичен консултант, трансформационен коуч и автор. Подкрепям хората в процеса на вътрешна промяна чрез системни констелации, PSYCH-K® и МАК карти.
           </p>
-          <div className="flex gap-4 mt-6">
-            <a href="https://www.facebook.com/elipaneva" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-(--gold) transition-colors text-sm">Facebook</a>
-            <a href="https://www.instagram.com/elipaneva" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-(--gold) transition-colors text-sm">Instagram</a>
-            <a href="https://www.youtube.com/@elipaneva" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-(--gold) transition-colors text-sm">YouTube</a>
+          <div className="flex flex-wrap gap-4 mt-6">
+            {SOCIAL_LINKS.map(s => (
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-(--gold) transition-colors text-sm">{s.label}</a>
+            ))}
           </div>
         </div>
         <div>

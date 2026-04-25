@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { WPPost } from '@/lib/wordpress'
+import { translitSlug } from '@/lib/translit'
 
 export default function BlogCard({ post }: { post: WPPost }) {
   const image = post._embedded?.['wp:featuredmedia']?.[0]
@@ -11,7 +12,7 @@ export default function BlogCard({ post }: { post: WPPost }) {
   })
   return (
     <Link
-      href={`/blog/${post.slug}`}
+      href={`/blog/${translitSlug(post.slug)}`}
       className="group bg-white block border border-(--border) hover:border-(--sage) transition-colors rounded-2xl overflow-hidden"
     >
       <div className="aspect-video bg-(--sage-light) relative overflow-hidden">
