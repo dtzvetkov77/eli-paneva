@@ -47,11 +47,10 @@ export async function getProduct(slug: string): Promise<WCProduct | null> {
 }
 
 export async function getCategories(): Promise<WCCategory[]> {
-  return allCategories.filter(c => {
-    const decoded = safeDecodeURIComponent(c.slug).toLowerCase()
-    return !['uncategorized', 'без-категория'].includes(decoded) &&
-           c.name.toLowerCase() !== 'uncategorized'
-  })
+  return allCategories.filter(c =>
+    !['uncategorized', 'без-категория', 'shop'].includes(c.slug.toLowerCase()) &&
+    c.name.toLowerCase() !== 'uncategorized'
+  )
 }
 
 export async function getProductsByCategory(categorySlug: string): Promise<WCProduct[]> {

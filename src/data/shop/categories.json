@@ -139,7 +139,7 @@
   {
     "id": 78,
     "name": "Безплатни курсове",
-    "slug": "безплатни-курсове",
+    "slug": "bezplatni-kursove",
     "parent": 70,
     "description": "",
     "display": "default",
@@ -293,7 +293,7 @@
   {
     "id": 84,
     "name": "Безплатно",
-    "slug": "безплатно",
+    "slug": "bezplatno",
     "parent": 0,
     "description": "",
     "display": "default",
@@ -587,7 +587,7 @@
   {
     "id": 70,
     "name": "Електронни курсове и обучения",
-    "slug": "електронни-курсове",
+    "slug": "elektronni-kursove",
     "parent": 82,
     "description": "<h1 data-start=\"1492\" data-end=\"1557\">🌸 <strong data-start=\"1497\" data-end=\"1557\">Електронните курсове и обучения от Ели Панева – промяна отвътре навън</strong></h1>\r\n<p data-start=\"1559\" data-end=\"1739\">Онлайн курсовете, които ще откриеш тук, са създадени специално за жени и хора в личностно развитие, които искат истинска и трайна промяна – без объркване, без бързане и без тежест.</p>\r\n<p data-start=\"1741\" data-end=\"1767\">Всички курсове комбинират:</p>\r\n\r\n<ul data-start=\"1768\" data-end=\"1993\">\r\n \t<li data-start=\"1768\" data-end=\"1782\">\r\n<p data-start=\"1770\" data-end=\"1782\">психология трансформационни техники работа с убеждения</p>\r\n</li>\r\n \t<li data-start=\"1908\" data-end=\"1937\">\r\n<p data-start=\"1910\" data-end=\"1937\">практики работа с  емоции медитации и положителни афирмаци</p>\r\n</li>\r\n</ul>\r\n<h2 data-start=\"4015\" data-end=\"4052\"><strong data-start=\"4017\" data-end=\"4052\"> </strong><span style=\"font-size: 16px\">Безплатни </span><a style=\"font-size: 16px\" href=\"https://elipaneva.com/product-category/%d0%b1%d0%b5%d0%b7%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d0%be/\">медитации, афирмации, аудио курсове</a></h2>\r\n<p data-start=\"1789\" data-end=\"1978\"></p>",
     "display": "default",
@@ -747,7 +747,7 @@
   {
     "id": 74,
     "name": "Индивидуални констелации",
-    "slug": "индивидуални-констелации",
+    "slug": "individualni-konstelatsii",
     "parent": 72,
     "description": "",
     "display": "default",
@@ -901,7 +901,7 @@
   {
     "id": 72,
     "name": "Констелации",
-    "slug": "контстелации",
+    "slug": "kontstelatsii",
     "parent": 82,
     "description": "<h1 data-start=\"170\" data-end=\"238\"><strong data-start=\"170\" data-end=\"236\">Констелации метод – семейни, бизнес и индивидуални констелации</strong></h1>\r\n<p data-start=\"341\" data-end=\"577\"><strong data-start=\"289\" data-end=\"310\">Констелации метод</strong> е дълбока терапевтична и трансформационна практика, която разкрива скритите връзки и модели в нашия живот. Този подход помага да разберем как родови сценарии, нерешени конфликти и подсъзнателни лоялности влияят на настоящето ни, както и как да се освободим от тях.</p>\r\n\r\n<h3 data-start=\"579\" data-end=\"622\">В категорията <strong data-start=\"593\" data-end=\"610\">„Констелации“</strong> ще откриеш:</h3>\r\n<ul data-start=\"623\" data-end=\"1049\">\r\n \t<li data-start=\"623\" data-end=\"726\">\r\n<h4 data-start=\"625\" data-end=\"726\"><strong data-start=\"625\" data-end=\"648\">Семейни констелации</strong> – за освобождаване от родови блокажи и възстановяване на хармонията в рода.</h4>\r\n</li>\r\n \t<li data-start=\"727\" data-end=\"832\">\r\n<p data-start=\"729\" data-end=\"832\"><strong data-start=\"729\" data-end=\"751\">Бизнес констелации</strong> – за подобряване на отношенията в екипа, успешни проекти и устойчиво развитие.</p>\r\n</li>\r\n \t<li data-start=\"833\" data-end=\"942\">\r\n<p data-start=\"835\" data-end=\"942\"><strong data-start=\"835\" data-end=\"863\">Индивидуални констелации</strong> – за лична работа по конкретни теми, когато предпочиташ индивидуален подход.</p>\r\n</li>\r\n \t<li data-start=\"943\" data-end=\"1049\">\r\n<p data-start=\"945\" data-end=\"1049\"><strong data-start=\"945\" data-end=\"972\">Констелации с МАК карти</strong> – за бърз достъп до скритите ресурси и осъзнаване на подсъзнателните модели.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1051\" data-end=\"1227\">Методът работи на дълбоко емоционално и енергийно ниво, като води до яснота, вътрешно спокойствие и нови решения. Подходящ е както за лични, така и за професионални ситуации.</p>\r\n<p data-start=\"1229\" data-end=\"1379\">💡 Независимо коя констелация избереш, ще получиш пространство за безопасно изследване на темите, които те вълнуват, и подкрепа по пътя към промяната.</p>",
     "display": "default",
@@ -1061,7 +1061,7 @@
   {
     "id": 108,
     "name": "Констелации",
-    "slug": "констелации",
+    "slug": "konstelatsii",
     "parent": 82,
     "description": "",
     "display": "default",
@@ -1218,7 +1218,7 @@
   {
     "id": 75,
     "name": "Констелации с представители",
-    "slug": "констелации-с-представители",
+    "slug": "konstelatsii-s-predstaviteli",
     "parent": 72,
     "description": "",
     "display": "default",
@@ -1372,7 +1372,7 @@
   {
     "id": 86,
     "name": "Лични сесии",
-    "slug": "лични-сесии",
+    "slug": "lichni-sesii",
     "parent": 0,
     "description": "<h3 data-start=\"247\" data-end=\"562\"><strong data-start=\"247\" data-end=\"326\">Добре дошли в категорията „Лични сесии за личностно развитие“ на Ели Панева</strong></h3>\r\n<p data-start=\"247\" data-end=\"562\">– пространство за индивидуална работа, насочена към вашия вътрешен баланс, емоционално изцеление и постигане на лични цели.<br data-start=\"450\" data-end=\"453\" />Всяка среща е съобразена изцяло с вашите нужди и използва доказани методи за трансформация и осъзнат живот.</p>\r\n<p data-start=\"564\" data-end=\"602\">💠 <strong data-start=\"567\" data-end=\"600\">Какво включват личните сесии?</strong></p>\r\n\r\n<ul data-start=\"603\" data-end=\"1110\">\r\n \t<li data-start=\"603\" data-end=\"700\">\r\n<p data-start=\"605\" data-end=\"700\"><strong data-start=\"605\" data-end=\"639\">Системни и семейни констелации</strong> – за откриване и освобождаване от родови блокажи и модели.</p>\r\n</li>\r\n \t<li data-start=\"701\" data-end=\"808\">\r\n<p data-start=\"703\" data-end=\"808\"><strong data-start=\"703\" data-end=\"730\">Консултации с МАК карти</strong> – работа със съзнанието и подсъзнанието чрез метафорични асоциативни карти.</p>\r\n</li>\r\n \t<li data-start=\"809\" data-end=\"899\">\r\n<p data-start=\"811\" data-end=\"899\"><strong data-start=\"811\" data-end=\"829\">PSYCH-K® сесии</strong> – трансформация на ограничителни убеждения и подсъзнателни блокажи.</p>\r\n</li>\r\n \t<li data-start=\"900\" data-end=\"1015\">\r\n<p data-start=\"902\" data-end=\"1015\"><strong data-start=\"902\" data-end=\"965\">Енергийна психология и техники за емоционално освобождаване</strong> – за намаляване на стрес и вътрешно напрежение.</p>\r\n</li>\r\n \t<li data-start=\"1016\" data-end=\"1110\">\r\n<p data-start=\"1018\" data-end=\"1110\"><strong data-start=\"1018\" data-end=\"1055\">Коучинг и холистично консултиране</strong> – за яснота, насока и подкрепа в процеса на промяна.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1112\" data-end=\"1162\">✨ <strong data-start=\"1114\" data-end=\"1160\">Защо да изберете лична сесия с Ели Панева?</strong></p>\r\n\r\n<ul data-start=\"1163\" data-end=\"1340\">\r\n \t<li data-start=\"1163\" data-end=\"1223\">\r\n<p data-start=\"1165\" data-end=\"1223\">Индивидуален подход, напълно съобразен с вашата история.</p>\r\n</li>\r\n \t<li data-start=\"1224\" data-end=\"1278\">\r\n<p data-start=\"1226\" data-end=\"1278\">Дискретност и безопасно пространство за споделяне.</p>\r\n</li>\r\n \t<li data-start=\"1279\" data-end=\"1340\">\r\n<p data-start=\"1281\" data-end=\"1340\">Доказани методи за постигане на вътрешен мир и увереност.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1342\" data-end=\"1458\">🌿 Запишете своята <strong data-start=\"1361\" data-end=\"1398\">лична сесия за личностно развитие</strong> още днес и направете крачка към ново, по-осъзнато бъдеще.</p>\r\n\r\n\r\n<hr data-start=\"1460\" data-end=\"1463\" />",
     "display": "default",
@@ -1652,7 +1652,7 @@
   {
     "id": 85,
     "name": "Мак карти и защити",
-    "slug": "карти-и-талисмани",
+    "slug": "karti-i-talismani",
     "parent": 0,
     "description": "<h1 data-start=\"1026\" data-end=\"1113\">🟣 <strong data-start=\"1031\" data-end=\"1113\">МАК КАРТИ – Транформация чрез образ, интуиция и дълбока работа с подсъзнанието</strong></h1>\r\n<p data-start=\"1115\" data-end=\"1353\">Метафоричните асоциативни карти (МАК) са мощен терапевтичен инструмент, който активира интуицията, отключва скрити блокажи и помага за разплитане на теми като родови програми, вторични ползи, страхове, пари, отношения и лични убеждения.</p>\r\n<p data-start=\"1355\" data-end=\"1512\">В тази категория ще откриеш <strong data-start=\"1383\" data-end=\"1408\">моите авторски колоди</strong>, специално създадени за трансформационна работа – както за специалисти, така и за самостоятелна работа.</p>\r\n\r\n<h3 data-start=\"1823\" data-end=\"1853\"><strong data-start=\"1825\" data-end=\"1853\">За кого са подходящи?</strong></h3>\r\n<ul data-start=\"1854\" data-end=\"1996\">\r\n \t<li data-start=\"1854\" data-end=\"1867\">\r\n<p data-start=\"1856\" data-end=\"1867\">Терапевти, Консултанти, Коучове, Бах терапевти, Психолози</p>\r\n</li>\r\n \t<li data-start=\"1928\" data-end=\"1955\">\r\n<p data-start=\"1930\" data-end=\"1955\">Тета и PSYCH-K практици, Хора в личен процес на трансформация</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"3330\" data-end=\"3418\"><a href=\"https://elipaneva.com/product/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b5%d0%bb%d0%b0%d1%86%d0%b8%d0%b8-2/\">онлайн констелации </a></p>\r\n<p data-start=\"1355\" data-end=\"1512\"></p>",
     "display": "products",
@@ -1801,7 +1801,7 @@
   {
     "id": 73,
     "name": "Онлайн Констелации",
-    "slug": "онлайн-констелации",
+    "slug": "onlayn-konstelatsii",
     "parent": 72,
     "description": "",
     "display": "default",
@@ -1955,7 +1955,7 @@
   {
     "id": 71,
     "name": "Програми",
-    "slug": "програми",
+    "slug": "programi",
     "parent": 0,
     "description": "",
     "display": "default",
@@ -2229,7 +2229,7 @@
   {
     "id": 109,
     "name": "Родови програми",
-    "slug": "родови-програми",
+    "slug": "rodovi-programi",
     "parent": 0,
     "description": "",
     "display": "default",
@@ -2366,7 +2366,7 @@
   {
     "id": 106,
     "name": "Свещи и талисмани",
-    "slug": "свещи-и-талисмани",
+    "slug": "sveshti-i-talismani",
     "parent": 82,
     "description": "",
     "display": "default",
