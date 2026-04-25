@@ -24,7 +24,7 @@ export default async function BlogPreview() {
           {posts.map(post => {
             const image = post._embedded?.['wp:featuredmedia']?.[0]
             return (
-              <Link key={post.id} href={`/blog/${post.slug}`} className="group bg-white block">
+              <Link key={post.id} href={`/blog/${post.slug}`} className="group bg-white block rounded-2xl overflow-hidden border border-(--border) hover:border-(--sage) transition-colors">
                 <div className="aspect-video bg-(--sage)/20 relative overflow-hidden">
                   {image && (
                     <Image

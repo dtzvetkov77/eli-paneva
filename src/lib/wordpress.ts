@@ -27,8 +27,10 @@ export async function getPosts(page = 1, perPage = 10): Promise<WPPost[]> {
 export async function getPost(slug: string): Promise<WPPost | null> {
   if (!WP_API) return null
   try {
-    const url = `${WP_API}/posts?slug=${slug}&_embed=wp:featuredmedia`
-    const res = await fetch(url, { next: { revalidate: 3600 } })
+    const u = new URL(`${WP_API}/posts`)
+    u.searchParams.set('slug', decodeURIComponent(slug))
+    u.searchParams.set('_embed', 'wp:featuredmedia')
+    const res = await fetch(u.toString(), { next: { revalidate: 3600 } })
     if (!res.ok) return null
     const posts: WPPost[] = await res.json()
     return posts[0] ?? null

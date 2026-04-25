@@ -12,7 +12,7 @@ export default function BlogCard({ post }: { post: WPPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group bg-white block border border-(--border) hover:border-(--sage) transition-colors"
+      className="group bg-white block border border-(--border) hover:border-(--sage) transition-colors rounded-2xl overflow-hidden"
     >
       <div className="aspect-video bg-(--sage-light) relative overflow-hidden">
         {image && (

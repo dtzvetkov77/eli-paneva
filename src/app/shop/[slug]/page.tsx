@@ -1,16 +1,14 @@
-import { getProduct, getProducts } from '@/lib/woocommerce'
-import Image from 'next/image'
+import { getProduct } from '@/lib/woocommerce'
 import { notFound } from 'next/navigation'
-import PriceDisplay from '@/components/ui/PriceDisplay'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import StructuredData from '@/components/ui/StructuredData'
 import AddToCartButton from '@/components/shop/AddToCartButton'
+import ProductGallery from '@/components/shop/ProductGallery'
 import { bgnToEur } from '@/lib/currency'
 import type { Metadata } from 'next'
 
 interface Props { params: Promise<{ slug: string }> }
 
-// Pages render on first request and are cached via ISR (revalidate: 3600)
 export function generateStaticParams() {
   return []
 }
@@ -43,7 +41,10 @@ export default async function ProductPage({ params }: Props) {
   if (!product) notFound()
 
   const price = parseFloat(product.price) || 0
+  const regularPrice = parseFloat(product.regular_price) || 0
+  const hasDiscount = regularPrice > price && regularPrice > 0
   const eur = bgnToEur(price)
+  const regularEur = bgnToEur(regularPrice)
 
   const productSchema = {
     '@context': 'https://schema.org',
@@ -71,54 +72,71 @@ export default async function ProductPage({ params }: Props) {
           { label: 'Магазин', href: '/shop' },
           { label: product.name },
         ]} />
-        <div className="grid md:grid-cols-2 gap-16">
+
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+          {/* Gallery */}
+          <ProductGallery images={product.images} name={product.name} />
+
+          {/* Info */}
           <div>
-            {product.images[0] ? (
-              <div className="aspect-square relative overflow-hidden bg-(--sage-light)">
-                <Image
-                  src={product.images[0].src}
-                  alt={product.images[0].alt || product.name}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            ) : (
-              <div className="aspect-square bg-(--sage-light) flex items-center justify-center">
-                <span className="font-serif text-4xl text-(--sage)/40">Е</span>
+            <h1 className="font-serif text-3xl md:text-4xl text-(--text-dark) mb-5 leading-tight">
+              {product.name}
+            </h1>
+
+            {/* Price — EUR primary, BGN secondary */}
+            {price > 0 && (
+              <div className="mb-6">
+                <div className="flex items-baseline gap-3">
+                  <span className="text-3xl font-light text-(--text-dark) tabular-nums">
+                    {eur.toFixed(2)} €
+                  </span>
+                  {hasDiscount && (
+                    <span className="text-base line-through text-(--text-muted) tabular-nums">
+                      {regularEur.toFixed(2)} €
+                    </span>
+                  )}
+                </div>
+                <p className="text-sm text-(--text-muted) mt-1 tabular-nums">
+                  {price.toFixed(2)} лв
+                  {hasDiscount && (
+                    <span className="line-through ml-2">{regularPrice.toFixed(2)} лв</span>
+                  )}
+                </p>
               </div>
             )}
-            {product.images.length > 1 && (
-              <div className="grid grid-cols-4 gap-2 mt-2">
-                {product.images.slice(1, 5).map(img => (
-                  <div key={img.id} className="aspect-square relative overflow-hidden bg-(--sage-light)">
-                    <Image src={img.src} alt={img.alt} fill className="object-cover" />
-                  </div>
+
+            {/* Short description */}
+            {product.short_description && (
+              <div
+                className="text-(--text-muted) leading-relaxed mb-8 text-base"
+                dangerouslySetInnerHTML={{ __html: product.short_description }}
+              />
+            )}
+
+            <AddToCartButton product={product} />
+
+            {product.categories.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-6">
+                {product.categories.map(c => (
+                  <span key={c.id} className="text-xs text-(--text-muted) border border-(--border) rounded-full px-3 py-1">
+                    {c.name}
+                  </span>
                 ))}
               </div>
             )}
           </div>
-          <div>
-            <h1 className="font-serif text-3xl md:text-4xl text-(--text-dark) mb-4">{product.name}</h1>
-            {price > 0 && (
-              <div className="mb-6">
-                <div className="text-3xl font-light text-(--text-dark)">
-                  {price.toFixed(2)} лв
-                </div>
-                <div className="text-(--text-muted) text-sm mt-1">{eur.toFixed(2)} €</div>
-              </div>
-            )}
+        </div>
+
+        {/* Full description below */}
+        {product.description && (
+          <div className="mt-16 pt-12 border-t border-(--border)">
+            <h2 className="font-serif text-2xl text-(--text-dark) mb-6">Описание</h2>
             <div
-              className="text-(--text-muted) leading-relaxed mb-8"
-              dangerouslySetInnerHTML={{ __html: product.short_description }}
-            />
-            <AddToCartButton product={product} />
-            <div
-              className="prose prose-sm max-w-none text-(--text-muted) mt-8"
+              className="prose prose-lg max-w-3xl text-(--text-muted) prose-headings:font-serif prose-headings:text-(--text-dark)"
               dangerouslySetInnerHTML={{ __html: product.description }}
             />
           </div>
-        </div>
+        )}
       </div>
     </div>
   )

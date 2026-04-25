@@ -12,11 +12,11 @@ const serviceLinks = services.map(s => ({ label: s.shortTitle, href: `/uslugi/${
 const shopLinks = [
   { label: 'Всички продукти', href: '/shop' },
   { label: 'МАК карти', href: '/mac-karti' },
-  { label: 'Карти и талисмани', href: '/shop/category/карти-и-талисмани' },
-  { label: 'Електронни курсове', href: '/shop/category/електронни-курсове' },
-  { label: 'Констелации', href: '/shop/category/констелации' },
-  { label: 'Онлайн констелации', href: '/shop/category/онлайн-констелации' },
-  { label: 'Програми', href: '/shop/category/програми' },
+  { label: 'Карти и защити', href: '/shop/category/karti-i-talismani' },
+  { label: 'Електронни курсове', href: '/shop/category/elektronni-kursove' },
+  { label: 'Констелации', href: '/shop/category/konstelatsii' },
+  { label: 'Онлайн констелации', href: '/shop/category/onlayn-konstelatsii' },
+  { label: 'Програми', href: '/shop/category/programi' },
 ]
 
 function ChevronIcon({ open }: { open: boolean }) {
