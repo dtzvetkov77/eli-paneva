@@ -5,9 +5,9 @@ import { bgnToEur, formatEur, formatBgn } from '@/lib/currency'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const BANK_NAME = 'УниКредит Булбанк'
-const IBAN = 'BG72UNCR70001522827170'
-const BIC = 'UNCRBGSF'
+const BANK_NAME = 'Първа Инвестиционна Банка'
+const IBAN = 'BG31FINV91501015509543'
+const BIC = 'FINVBGSF'
 
 interface OrderSuccess {
   orderId: number
