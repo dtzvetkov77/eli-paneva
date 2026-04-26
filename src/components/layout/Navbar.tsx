@@ -115,10 +115,11 @@ export default function Navbar() {
           <Image
             src="/logo.webp"
             alt="Ели Панева"
-            width={84}
-            height={84}
-            className="h-51 w-auto"
+            width={500}
+            height={500}
+            className="h-12.75 w-auto"
             priority
+            unoptimized
           />
         </Link>
 
