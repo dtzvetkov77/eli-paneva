@@ -1,5 +1,6 @@
 import productsData from '@/data/shop/products.json'
 import categoriesData from '@/data/shop/categories.json'
+import { readProducts, readCategories } from './blob-store'
 
 export interface WCImage { id: number; src: string; alt: string }
 export interface WCCategory { id: number; name: string; slug: string }
@@ -20,8 +21,8 @@ export interface WCProduct {
   stock_status: string
 }
 
-const allProducts = productsData as WCProduct[]
-const allCategories = categoriesData as WCCategory[]
+const localProducts = productsData as WCProduct[]
+const localCategories = categoriesData as WCCategory[]
 
 function safeDecodeURIComponent(s: string): string {
   try { return decodeURIComponent(s) } catch { return s }
@@ -34,19 +35,21 @@ function slugMatch(stored: string, query: string): boolean {
 }
 
 export async function getProducts(params: Record<string, string> = {}): Promise<WCProduct[]> {
-  let products = allProducts
+  const allProducts = await readProducts(localProducts)
   if (params.category) {
     const catId = parseInt(params.category)
-    products = products.filter(p => p.categories.some(c => c.id === catId))
+    return allProducts.filter(p => p.categories.some(c => c.id === catId))
   }
-  return products
+  return allProducts
 }
 
 export async function getProduct(slug: string): Promise<WCProduct | null> {
+  const allProducts = await readProducts(localProducts)
   return allProducts.find(p => slugMatch(p.slug, slug)) ?? null
 }
 
 export async function getCategories(): Promise<WCCategory[]> {
+  const allCategories = await readCategories(localCategories)
   return allCategories.filter(c =>
     !['uncategorized', 'без-категория', 'shop'].includes(c.slug.toLowerCase()) &&
     c.name.toLowerCase() !== 'uncategorized'
@@ -54,6 +57,8 @@ export async function getCategories(): Promise<WCCategory[]> {
 }
 
 export async function getProductsByCategory(categorySlug: string): Promise<WCProduct[]> {
+  const allCategories = await readCategories(localCategories)
+  const allProducts = await readProducts(localProducts)
   const cat = allCategories.find(c => slugMatch(c.slug, categorySlug))
   if (!cat) return []
   return allProducts.filter(p => p.categories.some(c => c.id === cat.id))

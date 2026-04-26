@@ -116,9 +116,37 @@ async function main() {
     JSON.stringify(slimCategories, null, 2)
   )
 
-  console.log('\n✓ Saved:')
+  console.log('\n✓ Saved locally:')
   console.log('  src/data/shop/products.json')
   console.log('  src/data/shop/categories.json')
+
+  // Push to Vercel Blob if token is available
+  const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN
+  if (BLOB_TOKEN) {
+    console.log('\nUploading to Vercel Blob...')
+    try {
+      const { put } = await import('@vercel/blob')
+      const [pr, cr] = await Promise.all([
+        put('shop/products.json', JSON.stringify(slimProducts, null, 2), {
+          access: 'public', contentType: 'application/json',
+          addRandomSuffix: false, token: BLOB_TOKEN,
+        }),
+        put('shop/categories.json', JSON.stringify(slimCategories, null, 2), {
+          access: 'public', contentType: 'application/json',
+          addRandomSuffix: false, token: BLOB_TOKEN,
+        }),
+      ])
+      const storeUrl = pr.url.replace('/shop/products.json', '')
+      console.log(`  ✓ Products  → ${pr.url}`)
+      console.log(`  ✓ Categories→ ${cr.url}`)
+      console.log(`\nBLOB_STORE_URL=${storeUrl}`)
+    } catch (e) {
+      console.error('  Blob upload failed:', e.message)
+    }
+  } else {
+    console.log('\nTip: Set BLOB_READ_WRITE_TOKEN in .env.local to also push to Vercel Blob.')
+  }
+
   console.log('\nRun "git add src/data/shop && git commit" to commit the catalog.')
 }
 
