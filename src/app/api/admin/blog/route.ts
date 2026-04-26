@@ -34,16 +34,22 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   if (!(await isAuthenticated())) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  const body: Omit<BlogPost, 'id' | 'date'> = await req.json()
-  const id = Date.now().toString()
-  const post: BlogPost = {
-    ...body,
-    id,
-    date: new Date().toISOString(),
-    slug: body.slug || id,
+  if (!TOKEN) return NextResponse.json({ error: 'BLOB_READ_WRITE_TOKEN not set in environment' }, { status: 500 })
+  try {
+    const body: Omit<BlogPost, 'id' | 'date'> = await req.json()
+    const id = Date.now().toString()
+    const post: BlogPost = {
+      ...body,
+      id,
+      date: new Date().toISOString(),
+      slug: body.slug || id,
+    }
+    await put(`blog/${post.id}.json`, JSON.stringify(post), {
+      access: 'public', contentType: 'application/json', addRandomSuffix: false, token: TOKEN,
+    })
+    return NextResponse.json(post)
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e)
+    return NextResponse.json({ error: msg }, { status: 500 })
   }
-  await put(`blog/${post.id}.json`, JSON.stringify(post), {
-    access: 'public', contentType: 'application/json', addRandomSuffix: false, token: TOKEN,
-  })
-  return NextResponse.json(post)
 }
