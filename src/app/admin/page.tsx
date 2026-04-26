@@ -106,7 +106,6 @@ export default async function AdminDashboard() {
               { label: 'Всички поръчки', href: '/admin/orders' },
               { label: 'Добави продукт', href: '/admin/products' },
               { label: 'Управление снимки', href: '/admin/images' },
-              { label: 'Редактирай страници', href: '/admin/pages' },
               { label: 'Категории', href: '/admin/categories' },
             ].map(l => (
               <Link key={l.href} href={l.href} className="flex items-center justify-between px-6 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors">

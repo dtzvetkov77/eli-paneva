@@ -69,9 +69,12 @@ export async function POST(req: NextRequest) {
   })
 
   if (!res.ok) {
-    const err = await res.text()
+    const err = await res.json().catch(() => ({ message: res.statusText }))
     console.error('WC order error:', err)
-    return NextResponse.json({ error: 'Грешка при създаване на поръчката' }, { status: 500 })
+    const msg = err?.message?.includes('write permissions')
+      ? 'API ключът няма права за запис. Промени разрешенията в WooCommerce → REST API.'
+      : 'Грешка при създаване на поръчката'
+    return NextResponse.json({ error: msg }, { status: 500 })
   }
 
   const order = await res.json()

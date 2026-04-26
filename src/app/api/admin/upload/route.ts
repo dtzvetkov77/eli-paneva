@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { isAuthenticated } from '@/lib/admin-auth'
-import { writeFile, mkdir } from 'fs/promises'
-import { join } from 'path'
 
 const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/avif']
 const MAX_SIZE = 10 * 1024 * 1024 // 10 MB
@@ -22,13 +20,40 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Максимален размер 10 MB' }, { status: 400 })
   }
 
-  const ext = file.name.split('.').pop()?.toLowerCase() ?? 'jpg'
-  const safeName = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
-  const uploadsDir = join(process.cwd(), 'public', 'uploads')
+  const wpUrl = process.env.WP_API_URL
+  const wpUser = process.env.WP_USERNAME
+  const wpPass = process.env.WP_APP_PASSWORD
 
-  await mkdir(uploadsDir, { recursive: true })
-  const buffer = Buffer.from(await file.arrayBuffer())
-  await writeFile(join(uploadsDir, safeName), buffer)
+  if (!wpUrl || !wpUser || !wpPass) {
+    return NextResponse.json(
+      { error: 'WP credentials not configured — add WP_USERNAME and WP_APP_PASSWORD to Vercel env vars' },
+      { status: 500 }
+    )
+  }
 
-  return NextResponse.json({ url: `/uploads/${safeName}`, name: safeName })
+  const credentials = Buffer.from(`${wpUser}:${wpPass}`).toString('base64')
+  const bytes = await file.arrayBuffer()
+
+  const wpRes = await fetch(`${wpUrl}/media`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${credentials}`,
+      'Content-Disposition': `attachment; filename="${encodeURIComponent(file.name)}"`,
+      'Content-Type': file.type,
+    },
+    body: bytes,
+  })
+
+  if (!wpRes.ok) {
+    const err = await wpRes.text()
+    console.error('WP media upload error:', err)
+    return NextResponse.json({ error: 'Грешка при качване в WordPress' }, { status: 500 })
+  }
+
+  const media = await wpRes.json()
+  return NextResponse.json({
+    url: media.source_url as string,
+    name: file.name,
+    id: media.id as number,
+  })
 }
