@@ -43,10 +43,26 @@ export default async function ServicePage({ params }: Props) {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': `https://elipaneva.com/uslugi/${service.slug}#service`,
     name: service.title,
+    serviceType: service.title,
     description: service.longDescription,
-    provider: { '@type': 'Person', name: 'Ели Панева', url: 'https://elipaneva.com' },
-    areaServed: { '@type': 'City', name: 'София' },
+    provider: {
+      '@type': 'Person',
+      '@id': 'https://elipaneva.com/#person',
+      name: 'Ели Панева',
+      url: 'https://elipaneva.com',
+    },
+    areaServed: [
+      { '@type': 'City', name: 'София' },
+      { '@type': 'Country', name: 'България' },
+    ],
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      url: 'https://elipaneva.com/kontakti',
+      seller: { '@type': 'Person', name: 'Ели Панева' },
+    },
     url: `https://elipaneva.com/uslugi/${service.slug}`,
   }
 

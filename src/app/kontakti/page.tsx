@@ -11,11 +11,15 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'ProfessionalService',
+    '@id': 'https://elipaneva.com/#business',
     name: 'Ели Панева — Холистичен консултант',
+    description: 'Холистичен консултант и трансформационен коуч в София. Системни констелации, PSYCH-K®, лични консултации, МАК карти.',
     url: 'https://elipaneva.com',
     telephone: '+359882420894',
     email: 'elipaneva2023@gmail.com',
+    image: 'https://elipaneva.com/eli-photo.webp',
+    priceRange: 'лв лв',
     sameAs: SOCIAL_SCHEMA_URLS,
     address: {
       '@type': 'PostalAddress',
@@ -29,7 +33,7 @@ export default function ContactPage() {
       latitude: '42.6977',
       longitude: '23.3219',
     },
-    openingHours: 'Mo-Fr 09:00-18:00',
+    openingHours: ['Mo-Fr 09:00-18:00'],
   }
 
   return (

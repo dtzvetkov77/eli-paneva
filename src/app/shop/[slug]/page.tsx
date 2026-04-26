@@ -52,6 +52,8 @@ export default async function ProductPage({ params }: Props) {
     name: product.name,
     description: product.short_description.replace(/<[^>]+>/g, ''),
     image: product.images.map(i => i.src),
+    sku: String(product.id),
+    brand: { '@type': 'Brand', name: 'Ели Панева' },
     offers: {
       '@type': 'Offer',
       price: price.toFixed(2),
@@ -60,6 +62,11 @@ export default async function ProductPage({ params }: Props) {
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
       url: `https://elipaneva.com/shop/${product.slug}`,
+      seller: {
+        '@type': 'Organization',
+        name: 'Ели Панева',
+        url: 'https://elipaneva.com',
+      },
     },
   }
 

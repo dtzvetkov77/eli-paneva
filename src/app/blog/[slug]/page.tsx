@@ -58,12 +58,24 @@ export default async function BlogPostPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
+    description: post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 160),
     datePublished: post.date,
-    author: { '@type': 'Person', name: 'Ели Панева', url: 'https://elipaneva.com' },
-    publisher: { '@type': 'Person', name: 'Ели Панева' },
-    image: image ? image.source_url : undefined,
-    url: `https://elipaneva.com/blog/${post.slug}`,
-    mainEntityOfPage: `https://elipaneva.com/blog/${post.slug}`,
+    dateModified: post.modified ?? post.date,
+    url: `https://elipaneva.com/blog/${slug}`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://elipaneva.com/blog/${slug}` },
+    author: {
+      '@type': 'Person',
+      '@id': 'https://elipaneva.com/#person',
+      name: 'Ели Панева',
+      url: 'https://elipaneva.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Ели Панева',
+      url: 'https://elipaneva.com',
+      logo: { '@type': 'ImageObject', url: 'https://elipaneva.com/logo.webp' },
+    },
+    ...(image ? { image: encodeURI(image.source_url) } : {}),
   }
 
   return (
