@@ -2,6 +2,7 @@
 import { useState, useRef } from 'react'
 import Image from 'next/image'
 import type { BlogPost } from '@/app/api/admin/blog/route'
+import RichTextEditor from '@/components/admin/RichTextEditor'
 
 function slugify(str: string) {
   return str
@@ -44,7 +45,7 @@ export default function BlogEditorClient({ post }: { post: BlogPost | null }) {
     setSaved(false)
   }
 
-  async function uploadImage(file: File) {
+  async function uploadCoverImage(file: File) {
     setUploading(true)
     setUploadDone(false)
     setError('')
@@ -62,6 +63,15 @@ export default function BlogEditorClient({ post }: { post: BlogPost | null }) {
     } finally {
       setUploading(false)
     }
+  }
+
+  async function uploadInlineImage(file: File): Promise<string> {
+    const fd = new FormData()
+    fd.append('file', file)
+    const res = await fetch('/api/admin/blog-image', { method: 'POST', body: fd })
+    if (!res.ok) throw new Error('Upload failed')
+    const { url } = await res.json()
+    return url
   }
 
   async function save() {
@@ -162,7 +172,7 @@ export default function BlogEditorClient({ post }: { post: BlogPost | null }) {
             >
               {uploading ? 'Качва...' : uploadDone ? '✓ Качено' : 'Качи'}
             </button>
-            <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={e => { if (e.target.files?.[0]) uploadImage(e.target.files[0]) }} />
+            <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={e => { if (e.target.files?.[0]) uploadCoverImage(e.target.files[0]) }} />
           </div>
           {form.coverImage && (
             <div className="mt-3 relative w-full aspect-video rounded-xl overflow-hidden bg-gray-100">
@@ -183,17 +193,15 @@ export default function BlogEditorClient({ post }: { post: BlogPost | null }) {
           />
         </div>
 
-        {/* Content */}
+        {/* Content — Rich text editor */}
         <div>
           <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Съдържание</label>
-          <textarea
+          <RichTextEditor
             value={form.content}
-            onChange={e => set('content', e.target.value)}
-            rows={24}
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gray-400 transition-colors resize-y font-mono"
-            placeholder="HTML съдържание на статията..."
+            onChange={html => set('content', html)}
+            onImageUpload={uploadInlineImage}
+            placeholder="Напиши съдържанието на статията..."
           />
-          <p className="text-xs text-gray-400 mt-1">HTML е позволен. Параграфи: &lt;p&gt;...&lt;/p&gt;, заглавия: &lt;h2&gt;, &lt;h3&gt;</p>
         </div>
 
         {/* Published toggle */}
