@@ -135,7 +135,7 @@ export default async function OrdersPage() {
         </div>
         <div className="bg-white rounded-2xl border border-gray-200 p-6">
           <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Приходи</p>
-          <p className="text-3xl font-semibold text-gray-900">{totalRevenue.toFixed(0)} лв</p>
+          <p className="text-3xl font-semibold text-gray-900">{(totalRevenue / 1.95583).toFixed(0)} €</p>
         </div>
         <div className="bg-white rounded-2xl border border-gray-200 p-6">
           <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Изчакващи</p>
@@ -190,7 +190,7 @@ export default async function OrdersPage() {
                       </span>
                     </td>
                     <td className="px-6 py-4 text-right font-medium text-gray-900 tabular-nums">
-                      {order.total.toFixed(2)} лв
+                      {(order.total / 1.95583).toFixed(2)} €
                     </td>
                     <td className="px-6 py-4 text-gray-400 text-xs whitespace-nowrap">
                       {order.date}

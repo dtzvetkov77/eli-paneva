@@ -26,13 +26,23 @@ interface Props {
   allCategories: WCCategory[]
 }
 
+const BGN_PER_EUR = 1.95583
+function bgnToEur(bgn: string) {
+  const n = parseFloat(bgn)
+  return isNaN(n) || n === 0 ? '' : (n / BGN_PER_EUR).toFixed(2)
+}
+function eurToBgn(eur: string) {
+  const n = parseFloat(eur)
+  return isNaN(n) || n === 0 ? '' : (n * BGN_PER_EUR).toFixed(2)
+}
+
 export default function ProductEditClient({ product, allCategories }: Props) {
   const [form, setForm] = useState({
     name: product.name,
     short_description: product.short_description,
     description: product.description,
-    regular_price: product.regular_price,
-    sale_price: product.sale_price,
+    regular_price: bgnToEur(product.regular_price),
+    sale_price: bgnToEur(product.sale_price),
     status: product.status,
     stock_status: product.stock_status,
     featured: product.featured,
@@ -64,7 +74,11 @@ export default function ProductEditClient({ product, allCategories }: Props) {
       const res = await fetch(`/api/admin/products/${product.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          regular_price: eurToBgn(form.regular_price),
+          sale_price: eurToBgn(form.sale_price),
+        }),
       })
       if (!res.ok) {
         const d = await res.json()
@@ -133,7 +147,7 @@ export default function ProductEditClient({ product, allCategories }: Props) {
           {/* Prices */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Редовна цена (лв)</label>
+              <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Редовна цена (€)</label>
               <input
                 type="number"
                 step="0.01"
@@ -145,7 +159,7 @@ export default function ProductEditClient({ product, allCategories }: Props) {
               />
             </div>
             <div>
-              <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Намалена цена (лв)</label>
+              <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Намалена цена (€)</label>
               <input
                 type="number"
                 step="0.01"

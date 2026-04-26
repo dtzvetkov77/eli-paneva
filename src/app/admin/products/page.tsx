@@ -144,9 +144,9 @@ export default async function ProductsPage() {
                     <td className="px-4 py-3 text-right tabular-nums">
                       {price > 0 ? (
                         <div>
-                          <span className="font-medium text-gray-900">{price.toFixed(2)} лв</span>
+                          <span className="font-medium text-gray-900">{(price / 1.95583).toFixed(2)} €</span>
                           {hasDiscount && (
-                            <span className="block text-xs text-gray-400 line-through">{regular.toFixed(2)} лв</span>
+                            <span className="block text-xs text-gray-400 line-through">{(regular / 1.95583).toFixed(2)} €</span>
                           )}
                         </div>
                       ) : <span className="text-gray-400">—</span>}
