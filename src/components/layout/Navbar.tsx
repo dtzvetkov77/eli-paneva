@@ -117,7 +117,7 @@ export default function Navbar() {
             alt="Ели Панева"
             width={500}
             height={500}
-            className="h-12.75 w-auto"
+            className="h-[84px] w-auto"
             priority
             unoptimized
           />

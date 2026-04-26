@@ -25,6 +25,7 @@ export default function BlogEditorClient({ post }: { post: BlogPost | null }) {
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState('')
   const [uploading, setUploading] = useState(false)
+  const [uploadDone, setUploadDone] = useState(false)
   const [deleting, setDeleting] = useState(false)
   const fileRef = useRef<HTMLInputElement>(null)
 
@@ -45,6 +46,8 @@ export default function BlogEditorClient({ post }: { post: BlogPost | null }) {
 
   async function uploadImage(file: File) {
     setUploading(true)
+    setUploadDone(false)
+    setError('')
     try {
       const fd = new FormData()
       fd.append('file', file)
@@ -52,6 +55,8 @@ export default function BlogEditorClient({ post }: { post: BlogPost | null }) {
       if (!res.ok) throw new Error('Upload failed')
       const { url } = await res.json()
       set('coverImage', url)
+      setUploadDone(true)
+      setTimeout(() => setUploadDone(false), 3000)
     } catch {
       setError('Грешка при качване на снимката')
     } finally {
@@ -72,18 +77,19 @@ export default function BlogEditorClient({ post }: { post: BlogPost | null }) {
         body: JSON.stringify(form),
       })
       if (!res.ok) {
-        const d = await res.json()
-        setError(d.error ?? 'Грешка при запазване')
+        let msg = 'Грешка при запазване'
+        try { const d = await res.json(); msg = d.error ?? msg } catch {}
+        setError(msg)
       } else {
+        const created: BlogPost = await res.json()
         setSaved(true)
         setTimeout(() => setSaved(false), 3000)
         if (isNew) {
-          const created: BlogPost = await res.clone().json()
           window.location.href = `/admin/blog/${created.id}`
         }
       }
-    } catch {
-      setError('Мрежова грешка')
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Мрежова грешка')
     } finally {
       setSaving(false)
     }
@@ -154,7 +160,7 @@ export default function BlogEditorClient({ post }: { post: BlogPost | null }) {
               disabled={uploading}
               className="shrink-0 border border-gray-200 rounded-xl px-4 py-3 text-sm hover:border-gray-400 transition-colors disabled:opacity-50"
             >
-              {uploading ? 'Качва...' : 'Качи'}
+              {uploading ? 'Качва...' : uploadDone ? '✓ Качено' : 'Качи'}
             </button>
             <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={e => { if (e.target.files?.[0]) uploadImage(e.target.files[0]) }} />
           </div>
