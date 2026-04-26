@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
+import { headers } from 'next/headers'
 import { CartProvider } from '@/components/cart/CartContext'
-import SiteChrome from '@/components/layout/SiteChrome'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import CartDrawer from '@/components/cart/CartDrawer'
+import CookieBanner from '@/components/ui/CookieBanner'
 
 const playfair = Playfair_Display({
   subsets: ['latin', 'cyrillic'],
@@ -40,12 +44,26 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://elipaneva.com' },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const headersList = await headers()
+  const pathname = headersList.get('x-pathname') ?? ''
+  const isAdmin = pathname.startsWith('/admin')
+
   return (
     <html lang="bg" className={`${playfair.variable} ${inter.variable}`}>
       <body>
         <CartProvider>
-          <SiteChrome>{children}</SiteChrome>
+          {isAdmin ? (
+            children
+          ) : (
+            <>
+              <Navbar />
+              <CartDrawer />
+              <main>{children}</main>
+              <Footer />
+              <CookieBanner />
+            </>
+          )}
         </CartProvider>
       </body>
     </html>
