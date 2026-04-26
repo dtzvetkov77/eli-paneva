@@ -1,25 +1,18 @@
 import { isAuthenticated } from '@/lib/admin-auth'
 import { redirect } from 'next/navigation'
+import { list } from '@vercel/blob'
 
-interface WCOrder {
-  id: number
+interface NormalizedOrder {
+  id: string
   number: string
   status: string
-  date_created: string
-  total: string
-  currency: string
-  billing: {
-    first_name: string
-    last_name: string
-    email: string
-    phone: string
-  }
-  line_items: Array<{
-    name: string
-    quantity: number
-    total: string
-  }>
-  payment_method_title: string
+  date: string
+  total: number
+  customerName: string
+  email: string
+  phone: string
+  items: Array<{ name: string; quantity: number }>
+  source: 'wc' | 'blob'
 }
 
 const STATUS_BG: Record<string, string> = {
@@ -42,12 +35,11 @@ const STATUS_COLOR: Record<string, string> = {
   failed: 'bg-red-50 text-red-700 border-red-200',
 }
 
-async function fetchOrders(): Promise<WCOrder[]> {
+async function fetchWCOrders(): Promise<NormalizedOrder[]> {
   const key = process.env.WOOCOMMERCE_KEY
   const secret = process.env.WOOCOMMERCE_SECRET
   const base = process.env.WC_API_URL
   if (!key || !secret || !base) return []
-
   try {
     const auth = 'Basic ' + Buffer.from(`${key}:${secret}`).toString('base64')
     const res = await fetch(`${base}/orders?per_page=50&orderby=date&order=desc`, {
@@ -55,7 +47,54 @@ async function fetchOrders(): Promise<WCOrder[]> {
       next: { revalidate: 60 },
     })
     if (!res.ok) return []
-    return res.json()
+    const orders = await res.json()
+    return orders.map((o: {
+      id: number; number: string; status: string; date_created: string; total: string;
+      billing: { first_name: string; last_name: string; email: string; phone: string };
+      line_items: Array<{ name: string; quantity: number }>;
+    }) => ({
+      id: String(o.id),
+      number: o.number,
+      status: o.status,
+      date: o.date_created,
+      total: parseFloat(o.total),
+      customerName: `${o.billing.first_name} ${o.billing.last_name}`,
+      email: o.billing.email,
+      phone: o.billing.phone,
+      items: o.line_items.map(i => ({ name: i.name, quantity: i.quantity })),
+      source: 'wc' as const,
+    }))
+  } catch {
+    return []
+  }
+}
+
+async function fetchBlobOrders(): Promise<NormalizedOrder[]> {
+  const token = process.env.BLOB_READ_WRITE_TOKEN
+  if (!token) return []
+  try {
+    const { blobs } = await list({ prefix: 'orders/', token })
+    const results = await Promise.allSettled(
+      blobs.map(b => fetch(b.url).then(r => r.json()))
+    )
+    return results
+      .filter((r): r is PromiseFulfilledResult<{
+        orderId: string; date: string; status: string; total: string;
+        customer: { firstName: string; lastName: string; email: string; phone: string };
+        items: Array<{ name: string; quantity: number }>;
+      }> => r.status === 'fulfilled')
+      .map(r => ({
+        id: r.value.orderId,
+        number: r.value.orderId,
+        status: r.value.status,
+        date: r.value.date,
+        total: parseFloat(r.value.total),
+        customerName: `${r.value.customer.firstName} ${r.value.customer.lastName}`,
+        email: r.value.customer.email,
+        phone: r.value.customer.phone,
+        items: r.value.items.map(i => ({ name: i.name, quantity: i.quantity })),
+        source: 'blob' as const,
+      }))
   } catch {
     return []
   }
@@ -64,11 +103,17 @@ async function fetchOrders(): Promise<WCOrder[]> {
 export default async function OrdersPage() {
   if (!(await isAuthenticated())) redirect('/admin/login')
 
-  const orders = await fetchOrders()
+  const [wcOrders, blobOrders] = await Promise.all([fetchWCOrders(), fetchBlobOrders()])
+
+  // Merge, deduplicate by id, sort by date desc
+  const seen = new Set<string>()
+  const orders = [...wcOrders, ...blobOrders]
+    .filter(o => { if (seen.has(o.id)) return false; seen.add(o.id); return true })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   const totalRevenue = orders
-    .filter(o => ['processing', 'completed'].includes(o.status))
-    .reduce((sum, o) => sum + parseFloat(o.total), 0)
+    .filter(o => ['processing', 'completed', 'pending'].includes(o.status))
+    .reduce((sum, o) => sum + o.total, 0)
 
   const byStatus = orders.reduce<Record<string, number>>((acc, o) => {
     acc[o.status] = (acc[o.status] ?? 0) + 1
@@ -83,7 +128,6 @@ export default async function OrdersPage() {
         <h1 className="text-2xl font-semibold text-gray-900">Поръчки</h1>
       </div>
 
-      {/* Stats */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         <div className="bg-white rounded-2xl border border-gray-200 p-6">
           <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Общо поръчки</p>
@@ -94,8 +138,8 @@ export default async function OrdersPage() {
           <p className="text-3xl font-semibold text-gray-900">{totalRevenue.toFixed(0)} лв</p>
         </div>
         <div className="bg-white rounded-2xl border border-gray-200 p-6">
-          <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Обработват се</p>
-          <p className="text-3xl font-semibold text-gray-900">{byStatus['processing'] ?? 0}</p>
+          <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Изчакващи</p>
+          <p className="text-3xl font-semibold text-gray-900">{byStatus['pending'] ?? 0}</p>
         </div>
         <div className="bg-white rounded-2xl border border-gray-200 p-6">
           <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Завършени</p>
@@ -103,7 +147,6 @@ export default async function OrdersPage() {
         </div>
       </div>
 
-      {/* Orders table */}
       {orders.length === 0 ? (
         <div className="bg-white rounded-2xl border border-gray-200 p-12 text-center">
           <p className="text-gray-400 text-sm">Все още няма поръчки.</p>
@@ -127,17 +170,18 @@ export default async function OrdersPage() {
                   <tr key={order.id} className="hover:bg-gray-50 transition-colors">
                     <td className="px-6 py-4">
                       <span className="font-mono text-gray-700">#{order.number}</span>
+                      {order.source === 'blob' && (
+                        <span className="ml-2 text-xs bg-amber-50 text-amber-600 border border-amber-200 rounded-full px-2 py-0.5">локал</span>
+                      )}
                     </td>
                     <td className="px-6 py-4">
-                      <p className="font-medium text-gray-900">{order.billing.first_name} {order.billing.last_name}</p>
-                      <p className="text-gray-400 text-xs">{order.billing.email}</p>
-                      {order.billing.phone && <p className="text-gray-400 text-xs">{order.billing.phone}</p>}
+                      <p className="font-medium text-gray-900">{order.customerName}</p>
+                      <p className="text-gray-400 text-xs">{order.email}</p>
+                      {order.phone && <p className="text-gray-400 text-xs">{order.phone}</p>}
                     </td>
                     <td className="px-6 py-4 max-w-xs">
-                      {order.line_items.map((item, i) => (
-                        <p key={i} className="text-gray-600 truncate">
-                          {item.quantity}× {item.name}
-                        </p>
+                      {order.items.map((item, i) => (
+                        <p key={i} className="text-gray-600 truncate">{item.quantity}× {item.name}</p>
                       ))}
                     </td>
                     <td className="px-6 py-4">
@@ -146,12 +190,10 @@ export default async function OrdersPage() {
                       </span>
                     </td>
                     <td className="px-6 py-4 text-right font-medium text-gray-900 tabular-nums">
-                      {parseFloat(order.total).toFixed(2)} лв
+                      {order.total.toFixed(2)} лв
                     </td>
                     <td className="px-6 py-4 text-gray-400 text-xs whitespace-nowrap">
-                      {new Date(order.date_created).toLocaleDateString('bg-BG', {
-                        day: 'numeric', month: 'short', year: 'numeric'
-                      })}
+                      {order.date}
                     </td>
                   </tr>
                 ))}
