@@ -108,7 +108,7 @@ export default function Navbar() {
           : 'bg-transparent',
       ].join(' ')}
     >
-      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="hover:opacity-75 transition-opacity duration-300 shrink-0">
