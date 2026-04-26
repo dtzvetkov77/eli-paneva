@@ -64,8 +64,8 @@ export default async function ProductPage({ params }: Props) {
     brand: { '@type': 'Brand', name: 'Ели Панева' },
     offers: {
       '@type': 'Offer',
-      price: price.toFixed(2),
-      priceCurrency: 'BGN',
+      price: eur.toFixed(2),
+      priceCurrency: 'EUR',
       availability: product.stock_status === 'instock'
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
@@ -99,7 +99,6 @@ export default async function ProductPage({ params }: Props) {
               {product.name}
             </h1>
 
-            {/* Price — EUR primary, BGN secondary */}
             {price > 0 && (
               <div className="mb-6">
                 <div className="flex items-baseline gap-3">
@@ -112,12 +111,6 @@ export default async function ProductPage({ params }: Props) {
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-(--text-muted) mt-1 tabular-nums">
-                  {price.toFixed(2)} лв
-                  {hasDiscount && (
-                    <span className="line-through ml-2">{regularPrice.toFixed(2)} лв</span>
-                  )}
-                </p>
               </div>
             )}
 

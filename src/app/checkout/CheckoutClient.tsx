@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useCart } from '@/components/cart/CartContext'
-import { bgnToEur, formatEur, formatBgn } from '@/lib/currency'
+import { bgnToEur, formatEur } from '@/lib/currency'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -239,9 +239,6 @@ export default function CheckoutClient() {
                   <p className="text-sm font-semibold text-(--text-dark) tabular-nums">
                     {formatEur(bgnToEur(item.priceBgn * item.quantity))}
                   </p>
-                  <p className="text-xs text-(--text-muted) tabular-nums">
-                    {formatBgn(item.priceBgn * item.quantity)}
-                  </p>
                 </div>
               </li>
             ))}
@@ -254,10 +251,7 @@ export default function CheckoutClient() {
             </div>
             <div className="flex justify-between items-baseline">
               <span className="text-sm font-semibold text-(--text-dark) uppercase tracking-wider">Общо</span>
-              <div className="text-right">
-                <p className="font-serif text-2xl text-(--text-dark)">{eur.toFixed(2)} €</p>
-                <p className="text-xs text-(--text-muted)">{total.toFixed(2)} лв</p>
-              </div>
+              <p className="font-serif text-2xl text-(--text-dark)">{eur.toFixed(2)} €</p>
             </div>
           </div>
         </div>

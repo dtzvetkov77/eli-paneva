@@ -19,7 +19,7 @@ export default function ContactPage() {
     telephone: '+359882420894',
     email: 'elipaneva2023@gmail.com',
     image: 'https://elipaneva.com/eli-photo.webp',
-    priceRange: 'лв лв',
+    priceRange: '€€',
     sameAs: SOCIAL_SCHEMA_URLS,
     address: {
       '@type': 'PostalAddress',

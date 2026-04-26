@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import AddToCartButton from '@/components/cart/AddToCartButton'
-import { bgnToEur, formatEur, formatBgn } from '@/lib/currency'
+import { bgnToEur, formatEur } from '@/lib/currency'
 import type { WCProduct } from '@/lib/woocommerce'
 
 export default function ProductCard({ product }: { product: WCProduct }) {
@@ -41,18 +41,12 @@ export default function ProductCard({ product }: { product: WCProduct }) {
 
           {price > 0 && (
             <div className="space-y-0.5">
-              {/* Current price — EUR primary */}
               <div className="flex items-baseline gap-2">
                 <span className="font-semibold text-(--text-dark)">{formatEur(bgnToEur(price))}</span>
-                <span className="text-xs text-(--text-muted)">/ {formatBgn(price)}</span>
-              </div>
-              {/* Strikethrough original if on sale */}
-              {isOnSale && (
-                <div className="flex items-baseline gap-2">
+                {isOnSale && (
                   <span className="text-xs text-(--text-muted) line-through">{formatEur(bgnToEur(regularPrice))}</span>
-                  <span className="text-xs text-(--text-muted) line-through">{formatBgn(regularPrice)}</span>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           )}
         </div>

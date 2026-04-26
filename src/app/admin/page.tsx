@@ -56,7 +56,7 @@ export default async function AdminDashboard() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {[
             { label: 'Поръчки', value: stats.orders, href: '/admin/orders' },
-            { label: 'Приходи', value: `${stats.revenue.toFixed(0)} лв`, href: '/admin/orders' },
+            { label: 'Приходи', value: `${(stats.revenue / 1.95583).toFixed(0)} €`, href: '/admin/orders' },
             { label: 'Продукти', value: stats.totalProducts, href: '/admin/products' },
             { label: 'Нови тази седмица', value: stats.recentOrders.length, href: '/admin/orders' },
           ].map(s => (
@@ -89,7 +89,7 @@ export default async function AdminDashboard() {
                   <span className={`text-xs px-2 py-1 rounded-full font-medium shrink-0 ${STATUS_COLOR[o.status] ?? 'bg-gray-100 text-gray-500'}`}>
                     {STATUS_BG[o.status] ?? o.status}
                   </span>
-                  <span className="text-sm font-medium text-gray-900 tabular-nums shrink-0">{parseFloat(o.total).toFixed(2)} лв</span>
+                  <span className="text-sm font-medium text-gray-900 tabular-nums shrink-0">{(parseFloat(o.total) / 1.95583).toFixed(2)} €</span>
                 </div>
               ))}
             </div>

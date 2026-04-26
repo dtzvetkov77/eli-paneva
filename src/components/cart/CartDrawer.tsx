@@ -1,6 +1,6 @@
 'use client'
 import { useCart } from './CartContext'
-import { bgnToEur, formatEur, formatBgn } from '@/lib/currency'
+import { bgnToEur, formatEur } from '@/lib/currency'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -101,9 +101,6 @@ export default function CartDrawer() {
                         <p className="text-sm font-semibold text-(--text-dark) tabular-nums">
                           {formatEur(bgnToEur(item.priceBgn * item.quantity))}
                         </p>
-                        <p className="text-xs text-(--text-muted) tabular-nums">
-                          {formatBgn(item.priceBgn * item.quantity)}
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -130,10 +127,7 @@ export default function CartDrawer() {
             {/* Subtotal */}
             <div className="flex items-center justify-between">
               <span className="text-sm text-(--text-muted) uppercase tracking-widest">Сума</span>
-              <div className="text-right">
-                <p className="font-serif text-2xl text-(--text-dark)">{eur.toFixed(2)} €</p>
-                <p className="text-xs text-(--text-muted)">{total.toFixed(2)} лв</p>
-              </div>
+              <p className="font-serif text-2xl text-(--text-dark)">{eur.toFixed(2)} €</p>
             </div>
 
             {/* Checkout button */}
