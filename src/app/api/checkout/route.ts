@@ -67,11 +67,11 @@ async function sendOrderEmail(order: StoredOrder): Promise<void> {
         </h2>
         <h3 style="color:#6B6B63;font-size:13px;text-transform:uppercase;letter-spacing:2px">Клиент</h3>
         <table style="width:100%;margin-bottom:20px">
-          <tr><td style="color:#6B6B63;width:120px">Име</td><td>${order.customer.firstName} ${order.customer.lastName}</td></tr>
-          <tr><td style="color:#6B6B63">Имейл</td><td><a href="mailto:${order.customer.email}" style="color:#6B8F71">${order.customer.email}</a></td></tr>
-          <tr><td style="color:#6B6B63">Телефон</td><td>${order.customer.phone}</td></tr>
-          <tr><td style="color:#6B6B63">Адрес</td><td>${order.customer.address}, ${order.customer.city} ${order.customer.postcode}</td></tr>
-          ${order.note ? `<tr><td style="color:#6B6B63">Бележка</td><td>${order.note}</td></tr>` : ''}
+          <tr><td style="color:#6B6B63;width:120px;padding:4px 0">Име</td><td>${order.customer.firstName} ${order.customer.lastName}</td></tr>
+          <tr><td style="color:#6B6B63;padding:4px 0">Имейл</td><td><a href="mailto:${order.customer.email}" style="color:#6B8F71">${order.customer.email}</a></td></tr>
+          <tr><td style="color:#6B6B63;padding:4px 0">Телефон</td><td>${order.customer.phone}</td></tr>
+          <tr><td style="color:#6B6B63;padding:4px 0">Адрес</td><td>${order.customer.address}, ${order.customer.city} ${order.customer.postcode}</td></tr>
+          ${order.note ? `<tr><td style="color:#6B6B63;padding:4px 0">Бележка</td><td>${order.note}</td></tr>` : ''}
         </table>
         <h3 style="color:#6B6B63;font-size:13px;text-transform:uppercase;letter-spacing:2px">Продукти</h3>
         <table style="width:100%;border-collapse:collapse">
@@ -91,7 +91,7 @@ async function sendOrderEmail(order: StoredOrder): Promise<void> {
           </tfoot>
         </table>
         <p style="margin-top:24px;padding:12px;background:#FFF3CD;border-left:3px solid #C8A96E;font-size:13px">
-          Плащане: Банков превод. Изпрати потвърждение на клиента след получаване.
+          Плащане: Банков превод. Изпрати потвърждение на клиента след получаване на превода.
         </p>
         <p style="color:#9B9B93;font-size:12px">Поръчка от elipaneva.com · ${order.date}</p>
       </div>
@@ -107,39 +107,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Липсват задължителни полета' }, { status: 400 })
   }
 
-  // Try WC first (if key has write permissions)
-  const key = process.env.WOOCOMMERCE_KEY
-  const secret = process.env.WOOCOMMERCE_SECRET
-  const baseUrl = process.env.WC_API_URL
-  if (key && secret && baseUrl) {
-    const credentials = Buffer.from(`${key}:${secret}`).toString('base64')
-    const res = await fetch(`${baseUrl}/orders`, {
-      method: 'POST',
-      headers: { Authorization: `Basic ${credentials}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        payment_method: 'bacs',
-        payment_method_title: 'Банков превод',
-        set_paid: false,
-        billing: { first_name: firstName, last_name: lastName, email, phone, address_1: address, city, postcode, country: 'BG' },
-        shipping: { first_name: firstName, last_name: lastName, address_1: address, city, postcode, country: 'BG' },
-        line_items: lineItems.map(i => ({ product_id: i.id, quantity: i.quantity })),
-        customer_note: note ?? '',
-      }),
-    })
-
-    if (res.ok) {
-      const order = await res.json()
-      return NextResponse.json({ orderId: order.id, orderNumber: order.number })
-    }
-    // If NOT a permissions error, fail loudly
-    const err = await res.json().catch(() => ({ message: res.statusText }))
-    if (!err?.message?.includes('write permissions')) {
-      return NextResponse.json({ error: 'Грешка при създаване на поръчката' }, { status: 500 })
-    }
-    // Write permissions error → fall through to Blob+email path
-  }
-
-  // Blob + email fallback
   const allProducts = await readProducts(productsData as WCProduct[])
   const orderId = `EP-${Date.now()}`
   const date = new Date().toLocaleString('bg-BG', { timeZone: 'Europe/Sofia' })
