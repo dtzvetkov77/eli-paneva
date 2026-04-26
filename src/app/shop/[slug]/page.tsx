@@ -1,5 +1,6 @@
-import { getProduct } from '@/lib/woocommerce'
+import { getProduct, getProducts } from '@/lib/woocommerce'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import StructuredData from '@/components/ui/StructuredData'
 import AddToCartButton from '@/components/shop/AddToCartButton'
@@ -9,8 +10,13 @@ import type { Metadata } from 'next'
 
 interface Props { params: Promise<{ slug: string }> }
 
-export function generateStaticParams() {
-  return []
+export async function generateStaticParams() {
+  try {
+    const allProducts = await getProducts()
+    return allProducts.map(p => ({ slug: p.slug }))
+  } catch {
+    return []
+  }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -18,9 +24,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const product = await getProduct(slug)
     if (!product) return {}
+    const desc = product.short_description.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 155)
     return {
       title: product.name,
-      description: product.short_description.replace(/<[^>]+>/g, '').slice(0, 160),
+      description: desc,
+      alternates: { canonical: `https://elipaneva.com/shop/${slug}` },
       openGraph: {
         images: product.images[0] ? [{ url: product.images[0].src }] : [],
       },
@@ -61,6 +69,7 @@ export default async function ProductPage({ params }: Props) {
       availability: product.stock_status === 'instock'
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
+      itemCondition: 'https://schema.org/NewCondition',
       url: `https://elipaneva.com/shop/${product.slug}`,
       seller: {
         '@type': 'Organization',
@@ -125,9 +134,9 @@ export default async function ProductPage({ params }: Props) {
             {product.categories.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-6">
                 {product.categories.map(c => (
-                  <span key={c.id} className="text-xs text-(--text-muted) border border-(--border) rounded-full px-3 py-1">
+                  <Link key={c.id} href={`/shop/category/${c.slug}`} className="text-xs text-(--text-muted) border border-(--border) rounded-full px-3 py-1 hover:border-(--sage) hover:text-(--sage) transition-colors">
                     {c.name}
-                  </span>
+                  </Link>
                 ))}
               </div>
             )}

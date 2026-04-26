@@ -6,7 +6,17 @@ import type { Metadata } from 'next'
 interface Props { params: Promise<{ slug: string }> }
 
 export const revalidate = 3600
-export function generateStaticParams() { return [] }
+
+export async function generateStaticParams() {
+  try {
+    const cats = await getCategories()
+    return cats
+      .filter(c => !['uncategorized', 'без-категория'].includes(c.slug.toLowerCase()))
+      .map(c => ({ slug: c.slug }))
+  } catch {
+    return []
+  }
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
@@ -14,7 +24,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const decoded = decodeURIComponent(slug)
     const cats = await getCategories()
     const cat = cats.find(c => c.slug === decoded || c.slug === slug)
-    return { title: cat?.name ?? decoded }
+    const name = cat?.name ?? decoded
+    return {
+      title: name,
+      description: `${name} — продукти от Ели Панева. Системни констелации, МАК карти и инструменти за трансформация.`,
+      alternates: { canonical: `https://elipaneva.com/shop/category/${slug}` },
+    }
   } catch {
     return { title: 'Категория' }
   }

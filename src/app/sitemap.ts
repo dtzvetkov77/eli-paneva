@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { getProducts } from '@/lib/woocommerce'
+import { getProducts, getCategories } from '@/lib/woocommerce'
 import { getPosts } from '@/lib/wordpress'
 import { services } from '@/data/services'
 
@@ -8,9 +8,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   let products: Awaited<ReturnType<typeof getProducts>> = []
   let posts: Awaited<ReturnType<typeof getPosts>> = []
+  let categories: Awaited<ReturnType<typeof getCategories>> = []
 
   try {
-    ;[products, posts] = await Promise.all([getProducts(), getPosts(1, 100)])
+    ;[products, posts, categories] = await Promise.all([getProducts(), getPosts(1, 100), getCategories()])
   } catch {
     // Fallback to empty arrays if API unavailable during build
   }
@@ -48,5 +49,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...servicePages, ...productPages, ...blogPages]
+  const categoryPages: MetadataRoute.Sitemap = categories
+    .filter(c => !['uncategorized', 'без-категория'].includes(c.slug.toLowerCase()))
+    .map(c => ({
+      url: `${base}/shop/category/${c.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    }))
+
+  return [...staticPages, ...servicePages, ...productPages, ...blogPages, ...categoryPages]
 }
