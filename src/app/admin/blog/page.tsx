@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import { list } from '@vercel/blob'
 import Link from 'next/link'
 import type { BlogPost } from '@/app/api/admin/blog/route'
+import MigrateBlogButton from './MigrateBlogButton'
 
 async function fetchPosts(): Promise<BlogPost[]> {
   const token = process.env.BLOB_READ_WRITE_TOKEN
@@ -33,14 +34,18 @@ export default async function AdminBlogPage() {
           <span className="text-gray-300">/</span>
           <h1 className="text-2xl font-semibold text-gray-900">Блог</h1>
         </div>
-        <Link href="/admin/blog/new" className="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-700 transition-colors">
-          + Нова статия
-        </Link>
+        <div className="flex items-center gap-3">
+          <MigrateBlogButton />
+          <Link href="/admin/blog/new" className="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-700 transition-colors">
+            + Нова статия
+          </Link>
+        </div>
       </div>
 
       {posts.length === 0 ? (
         <div className="bg-white rounded-2xl border border-gray-200 p-12 text-center">
           <p className="text-gray-400 text-sm mb-4">Все още няма статии.</p>
+          <p className="text-gray-400 text-xs mb-6">Използвай бутона „Импорт от WordPress" за да прехвърлиш съществуващите статии.</p>
           <Link href="/admin/blog/new" className="text-sm text-gray-900 underline">Създай първата статия →</Link>
         </div>
       ) : (
