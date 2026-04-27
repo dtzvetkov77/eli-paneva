@@ -17,29 +17,29 @@ interface WCProduct {
   categories: Array<{ id: number; name: string; slug: string }>
 }
 
-async function fetchProducts(): Promise<WCProduct[]> {
+async function fetchProducts(): Promise<{ products: WCProduct[]; error?: string }> {
   const key = process.env.WOOCOMMERCE_KEY
   const secret = process.env.WOOCOMMERCE_SECRET
   const base = process.env.WC_API_URL
-  if (!key || !secret || !base) return []
+  if (!key || !secret || !base) return { products: [], error: 'WooCommerce credentials not configured (WOOCOMMERCE_KEY / WOOCOMMERCE_SECRET / WC_API_URL missing)' }
   try {
     const auth = 'Basic ' + Buffer.from(`${key}:${secret}`).toString('base64')
-    const pages = []
+    const pages: WCProduct[] = []
     let page = 1
     while (true) {
       const res = await fetch(`${base}/products?per_page=100&page=${page}&orderby=title&order=asc`, {
         headers: { Authorization: auth },
-        next: { revalidate: 60 },
+        cache: 'no-store',
       })
-      if (!res.ok) break
+      if (!res.ok) return { products: [], error: `WooCommerce API error: ${res.status} ${res.statusText}` }
       const batch: WCProduct[] = await res.json()
       pages.push(...batch)
       if (batch.length < 100) break
       page++
     }
-    return pages
-  } catch {
-    return []
+    return { products: pages }
+  } catch (e) {
+    return { products: [], error: e instanceof Error ? e.message : String(e) }
   }
 }
 
@@ -56,9 +56,8 @@ const STOCK_COLOR: Record<string, string> = {
 
 export default async function ProductsPage() {
   if (!(await isAuthenticated())) redirect('/admin/login')
-  const products = await fetchProducts()
+  const { products, error } = await fetchProducts()
 
-  const totalRevenue = 0
   const inStock = products.filter(p => p.stock_status === 'instock').length
   const published = products.filter(p => p.status === 'publish').length
 
@@ -78,6 +77,10 @@ export default async function ProductsPage() {
           + Нов продукт
         </Link>
       </div>
+
+      {error && (
+        <div className="mb-6 bg-red-50 border border-red-200 rounded-xl px-5 py-4 text-sm text-red-700 font-mono">{error}</div>
+      )}
 
       {/* Stats */}
       <div className="grid grid-cols-3 gap-4 mb-8">
