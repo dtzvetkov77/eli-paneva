@@ -273,7 +273,7 @@ export default function ProductEditClient({ product, allCategories }: Props) {
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
               {product.images.map((img, i) => (
                 <div key={img.id} className="relative aspect-square rounded-xl overflow-hidden bg-gray-100 group">
-                  <Image src={img.src} alt={img.alt || product.name} fill className="object-cover" sizes="150px" />
+                  <Image src={img.src} alt={img.alt || product.name} fill className="object-cover" sizes="150px" unoptimized />
                   {i === 0 && (
                     <div className="absolute bottom-1 left-1 bg-black/60 text-white text-xs rounded px-1.5 py-0.5">Главна</div>
                   )}

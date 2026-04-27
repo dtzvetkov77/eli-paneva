@@ -24,6 +24,7 @@ export default function ProductGallery({ images, name }: { images: WCImage[]; na
           className="object-cover transition-opacity duration-300"
           priority
           sizes="(max-width: 768px) 100vw, 50vw"
+          unoptimized
         />
       </div>
       {images.length > 1 && (
@@ -42,6 +43,7 @@ export default function ProductGallery({ images, name }: { images: WCImage[]; na
                 fill
                 className="object-cover"
                 sizes="80px"
+                unoptimized
               />
             </button>
           ))}
