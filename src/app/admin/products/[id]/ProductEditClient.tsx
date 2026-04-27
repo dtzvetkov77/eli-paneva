@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 
 interface WCCategory { id: number; name: string; slug: string }
@@ -47,11 +47,15 @@ export default function ProductEditClient({ product, allCategories }: Props) {
     stock_status: product.stock_status,
     featured: product.featured,
     category_ids: product.categories.map(c => c.id),
+    images: product.images,
   })
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState('')
   const [activeTab, setActiveTab] = useState<'general' | 'description' | 'images'>('general')
+  const [uploading, setUploading] = useState(false)
+  const [uploadError, setUploadError] = useState('')
+  const fileRef = useRef<HTMLInputElement>(null)
 
   function set<K extends keyof typeof form>(key: K, value: typeof form[K]) {
     setForm(prev => ({ ...prev, [key]: value }))
@@ -64,6 +68,34 @@ export default function ProductEditClient({ product, allCategories }: Props) {
       ? form.category_ids.filter(x => x !== id)
       : [...form.category_ids, id]
     )
+  }
+
+  async function uploadImage(file: File) {
+    setUploading(true)
+    setUploadError('')
+    const fd = new FormData()
+    fd.append('file', file)
+    const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
+    const data = await res.json()
+    if (!res.ok) {
+      setUploadError(data.error ?? 'Грешка при качване')
+    } else {
+      const newImg: WCImage = { id: Date.now(), src: data.url, alt: file.name.replace(/\.[^.]+$/, '') }
+      set('images', [...form.images, newImg])
+    }
+    setUploading(false)
+  }
+
+  async function removeImage(idx: number) {
+    set('images', form.images.filter((_, i) => i !== idx))
+  }
+
+  function moveToMain(idx: number) {
+    if (idx === 0) return
+    const imgs = [...form.images]
+    const [img] = imgs.splice(idx, 1)
+    imgs.unshift(img)
+    set('images', imgs)
   }
 
   async function save() {
@@ -114,7 +146,7 @@ export default function ProductEditClient({ product, allCategories }: Props) {
         {([
           ['general', 'Основни'],
           ['description', 'Описание'],
-          ['images', 'Снимки'],
+          ['images', `Снимки${form.images.length ? ` (${form.images.length})` : ''}`],
         ] as const).map(([tab, label]) => (
           <button
             key={tab}
@@ -133,7 +165,6 @@ export default function ProductEditClient({ product, allCategories }: Props) {
       {/* General tab */}
       {activeTab === 'general' && (
         <div className="space-y-6">
-          {/* Name */}
           <div>
             <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Наименование *</label>
             <input
@@ -144,14 +175,11 @@ export default function ProductEditClient({ product, allCategories }: Props) {
             />
           </div>
 
-          {/* Prices */}
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Редовна цена (€)</label>
               <input
-                type="number"
-                step="0.01"
-                min="0"
+                type="number" step="0.01" min="0"
                 value={form.regular_price}
                 onChange={e => set('regular_price', e.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gray-400 transition-colors"
@@ -161,9 +189,7 @@ export default function ProductEditClient({ product, allCategories }: Props) {
             <div>
               <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Намалена цена (€)</label>
               <input
-                type="number"
-                step="0.01"
-                min="0"
+                type="number" step="0.01" min="0"
                 value={form.sale_price}
                 onChange={e => set('sale_price', e.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gray-400 transition-colors"
@@ -172,7 +198,6 @@ export default function ProductEditClient({ product, allCategories }: Props) {
             </div>
           </div>
 
-          {/* Status row */}
           <div className="grid grid-cols-3 gap-4">
             <div>
               <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Статус</label>
@@ -211,7 +236,6 @@ export default function ProductEditClient({ product, allCategories }: Props) {
             </div>
           </div>
 
-          {/* Short description */}
           <div>
             <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Кратко описание</label>
             <textarea
@@ -223,7 +247,6 @@ export default function ProductEditClient({ product, allCategories }: Props) {
             <p className="text-xs text-gray-400 mt-1">HTML е позволен</p>
           </div>
 
-          {/* Categories */}
           <div>
             <label className="block text-xs uppercase tracking-widest text-gray-500 mb-3">Категории</label>
             <div className="border border-gray-200 rounded-xl p-4 grid grid-cols-2 sm:grid-cols-3 gap-2 max-h-48 overflow-y-auto">
@@ -259,27 +282,73 @@ export default function ProductEditClient({ product, allCategories }: Props) {
 
       {/* Images tab */}
       {activeTab === 'images' && (
-        <div>
-          <p className="text-sm text-gray-500 mb-6">
-            Снимките се управляват директно в WooCommerce.{' '}
-            <a href={product.permalink + 'wp-admin/post.php?action=edit'} target="_blank" rel="noopener noreferrer" className="text-gray-900 underline">
-              Отвори в WP Admin
-            </a>
-            {' '}за да добавяш/премахваш снимки, или качи снимки от{' '}
-            <a href="/admin/images" className="text-gray-900 underline">Мениджър на снимки</a>
-            {' '}и копирай URL-а.
-          </p>
-          {product.images.length > 0 && (
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-              {product.images.map((img, i) => (
-                <div key={img.id} className="relative aspect-square rounded-xl overflow-hidden bg-gray-100 group">
-                  <Image src={img.src} alt={img.alt || product.name} fill className="object-cover" sizes="150px" unoptimized />
-                  {i === 0 && (
-                    <div className="absolute bottom-1 left-1 bg-black/60 text-white text-xs rounded px-1.5 py-0.5">Главна</div>
-                  )}
-                </div>
-              ))}
+        <div className="space-y-6">
+          {/* Upload area */}
+          <div
+            className="border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center hover:border-gray-400 transition-colors cursor-pointer"
+            onClick={() => fileRef.current?.click()}
+            onDragOver={e => e.preventDefault()}
+            onDrop={e => {
+              e.preventDefault()
+              const file = e.dataTransfer.files[0]
+              if (file) uploadImage(file)
+            }}
+          >
+            <input
+              ref={fileRef}
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+              className="hidden"
+              onChange={e => { const f = e.target.files?.[0]; if (f) uploadImage(f); e.target.value = '' }}
+            />
+            {uploading ? (
+              <p className="text-sm text-gray-500">Качване...</p>
+            ) : (
+              <>
+                <p className="text-sm text-gray-500">Провлачи снимка или <span className="text-gray-900 underline">избери файл</span></p>
+                <p className="text-xs text-gray-400 mt-1">JPG, PNG, WebP, GIF — макс. 10 MB</p>
+              </>
+            )}
+          </div>
+          {uploadError && <p className="text-sm text-red-500">{uploadError}</p>}
+
+          {/* Current images */}
+          {form.images.length > 0 ? (
+            <div>
+              <p className="text-xs uppercase tracking-widest text-gray-400 mb-3">
+                Снимки — влачи за наредба, първата е главна
+              </p>
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                {form.images.map((img, i) => (
+                  <div key={img.id} className="relative aspect-square rounded-xl overflow-hidden bg-gray-100 group">
+                    <Image src={img.src} alt={img.alt || product.name} fill className="object-cover" sizes="150px" unoptimized />
+                    {i === 0 && (
+                      <div className="absolute top-1 left-1 bg-black/60 text-white text-xs rounded px-1.5 py-0.5">Главна</div>
+                    )}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100">
+                      {i !== 0 && (
+                        <button
+                          onClick={() => moveToMain(i)}
+                          className="bg-white text-gray-900 text-xs rounded px-2 py-1 hover:bg-gray-100"
+                          title="Направи главна"
+                        >
+                          ★
+                        </button>
+                      )}
+                      <button
+                        onClick={() => removeImage(i)}
+                        className="bg-red-500 text-white text-xs rounded px-2 py-1 hover:bg-red-600"
+                        title="Премахни"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
+          ) : (
+            <p className="text-sm text-gray-400 text-center py-4">Няма снимки — качи от горе</p>
           )}
         </div>
       )}
@@ -293,7 +362,7 @@ export default function ProductEditClient({ product, allCategories }: Props) {
         >
           {saving ? 'Запазване...' : 'Запази промените'}
         </button>
-        {saved && <span className="text-sm text-green-600">Запазено в WooCommerce</span>}
+        {saved && <span className="text-sm text-green-600">Запазено</span>}
         {error && <span className="text-sm text-red-500">{error}</span>}
         <a
           href={product.permalink}
@@ -304,12 +373,6 @@ export default function ProductEditClient({ product, allCategories }: Props) {
           Виж в сайта →
         </a>
       </div>
-
-      {saved && (
-        <p className="mt-3 text-xs text-gray-400">
-          Промените са запазени в WooCommerce. Изпълни <code className="bg-gray-100 px-1 rounded">node scripts/sync-products.mjs</code> и deploy за да се отразят в магазина.
-        </p>
-      )}
     </div>
   )
 }

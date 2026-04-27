@@ -28,7 +28,7 @@ export async function PUT(req: NextRequest, { params }: RouteContext) {
 
   const {
     name, short_description, description,
-    regular_price, sale_price, status, stock_status, featured, category_ids,
+    regular_price, sale_price, status, stock_status, featured, category_ids, images,
   } = body
 
   const effectivePrice = sale_price || regular_price || existing.price
@@ -47,6 +47,7 @@ export async function PUT(req: NextRequest, { params }: RouteContext) {
     categories: Array.isArray(category_ids)
       ? existing.categories.filter(c => (category_ids as number[]).includes(c.id))
       : existing.categories,
+    images: Array.isArray(images) ? images : existing.images,
   }
 
   try {

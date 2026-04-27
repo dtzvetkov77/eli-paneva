@@ -1,37 +1,26 @@
 import { isAuthenticated } from '@/lib/admin-auth'
 import { redirect, notFound } from 'next/navigation'
 import ProductEditClient from './ProductEditClient'
+import { readProducts, readCategories } from '@/lib/supabase-store'
+import productsData from '@/data/shop/products.json'
+import categoriesData from '@/data/shop/categories.json'
+import type { WCProduct, WCCategory } from '@/lib/woocommerce'
 
 interface Props { params: Promise<{ id: string }> }
-
-async function wcFetch(path: string) {
-  const key = process.env.WOOCOMMERCE_KEY!
-  const secret = process.env.WOOCOMMERCE_SECRET!
-  const base = process.env.WC_API_URL!
-  const auth = 'Basic ' + Buffer.from(`${key}:${secret}`).toString('base64')
-  const res = await fetch(`${base}/${path}`, {
-    headers: { Authorization: auth },
-    cache: 'no-store',
-  })
-  if (!res.ok) return null
-  return res.json()
-}
 
 export default async function ProductEditPage({ params }: Props) {
   if (!(await isAuthenticated())) redirect('/admin/login')
 
   const { id } = await params
-  if (id === 'new') {
-    // TODO: create new product form
-    redirect('/admin/products')
-  }
+  if (id === 'new') redirect('/admin/products')
 
-  const [product, categories] = await Promise.all([
-    wcFetch(`products/${id}`),
-    wcFetch('products/categories?per_page=100'),
+  const [products, categories] = await Promise.all([
+    readProducts(productsData as WCProduct[]),
+    readCategories(categoriesData as WCCategory[]),
   ])
 
+  const product = products.find(p => p.id === parseInt(id))
   if (!product) notFound()
 
-  return <ProductEditClient product={product} allCategories={categories ?? []} />
+  return <ProductEditClient product={product} allCategories={categories} />
 }
