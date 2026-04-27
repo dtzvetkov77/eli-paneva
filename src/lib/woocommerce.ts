@@ -1,6 +1,6 @@
 import productsData from '@/data/shop/products.json'
 import categoriesData from '@/data/shop/categories.json'
-import { readProducts, readCategories } from './blob-store'
+import { readProducts, readCategories } from './supabase-store'
 
 export interface WCImage { id: number; src: string; alt: string }
 export interface WCCategory { id: number; name: string; slug: string }

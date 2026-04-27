@@ -2,16 +2,12 @@ import { isAuthenticated } from '@/lib/admin-auth'
 import { redirect } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { readProducts } from '@/lib/blob-store'
+import { readProducts, readCategories } from '@/lib/supabase-store'
 import productsData from '@/data/shop/products.json'
-import type { WCProduct } from '@/lib/woocommerce'
+import categoriesData from '@/data/shop/categories.json'
+import type { WCProduct, WCCategory } from '@/lib/woocommerce'
 
-
-const STOCK_LABEL: Record<string, string> = {
-  instock: 'В наличност',
-  outofstock: 'Изчерпан',
-  onbackorder: 'По заявка',
-}
+const STOCK_LABEL: Record<string, string> = { instock: 'В наличност', outofstock: 'Изчерпан', onbackorder: 'По заявка' }
 const STOCK_COLOR: Record<string, string> = {
   instock: 'bg-green-50 text-green-700 border-green-200',
   outofstock: 'bg-red-50 text-red-700 border-red-200',
@@ -20,34 +16,26 @@ const STOCK_COLOR: Record<string, string> = {
 
 export default async function ProductsPage() {
   if (!(await isAuthenticated())) redirect('/admin/login')
+
   const products = await readProducts(productsData as WCProduct[])
-  const error = products.length === 0 ? 'Няма продукти в локалния JSON.' : undefined
+  await readCategories(categoriesData as WCCategory[]) // preload
 
   const inStock = products.filter(p => p.stock_status === 'instock').length
   const published = products.filter(p => p.status === 'publish').length
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
-      {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-3">
           <a href="/admin" className="text-sm text-gray-400 hover:text-gray-700 transition-colors">← Назад</a>
           <span className="text-gray-300">/</span>
           <h1 className="text-2xl font-semibold text-gray-900">Продукти</h1>
         </div>
-        <Link
-          href="/admin/products/new"
-          className="bg-gray-900 text-white text-sm px-5 py-2.5 rounded-xl hover:bg-gray-700 transition-colors"
-        >
+        <Link href="/admin/products/new" className="bg-gray-900 text-white text-sm px-5 py-2.5 rounded-xl hover:bg-gray-700 transition-colors">
           + Нов продукт
         </Link>
       </div>
 
-      {error && (
-        <div className="mb-6 bg-red-50 border border-red-200 rounded-xl px-5 py-4 text-sm text-red-700 font-mono">{error}</div>
-      )}
-
-      {/* Stats */}
       <div className="grid grid-cols-3 gap-4 mb-8">
         <div className="bg-white rounded-2xl border border-gray-200 p-5">
           <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Общо продукти</p>
@@ -63,7 +51,6 @@ export default async function ProductsPage() {
         </div>
       </div>
 
-      {/* Table */}
       <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -89,7 +76,7 @@ export default async function ProductsPage() {
                     <td className="px-4 py-3">
                       <div className="w-12 h-12 rounded-lg overflow-hidden bg-gray-100 relative shrink-0">
                         {img ? (
-                          <Image src={img.src} alt={img.alt || product.name} fill className="object-cover" sizes="48px" />
+                          <Image src={img.src} alt={img.alt || product.name} fill className="object-cover" sizes="48px" unoptimized />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-gray-300 text-xs">—</div>
                         )}
@@ -113,9 +100,7 @@ export default async function ProductsPage() {
                       {price > 0 ? (
                         <div>
                           <span className="font-medium text-gray-900">{(price / 1.95583).toFixed(2)} €</span>
-                          {hasDiscount && (
-                            <span className="block text-xs text-gray-400 line-through">{(regular / 1.95583).toFixed(2)} €</span>
-                          )}
+                          {hasDiscount && <span className="block text-xs text-gray-400 line-through">{(regular / 1.95583).toFixed(2)} €</span>}
                         </div>
                       ) : <span className="text-gray-400">—</span>}
                     </td>
@@ -130,10 +115,7 @@ export default async function ProductsPage() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-right">
-                      <Link
-                        href={`/admin/products/${product.id}`}
-                        className="text-sm text-gray-500 hover:text-gray-900 border border-gray-200 rounded-lg px-3 py-1.5 hover:border-gray-400 transition-colors"
-                      >
+                      <Link href={`/admin/products/${product.id}`} className="text-sm text-gray-500 hover:text-gray-900 border border-gray-200 rounded-lg px-3 py-1.5 hover:border-gray-400 transition-colors">
                         Редактирай
                       </Link>
                     </td>

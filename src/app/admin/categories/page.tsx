@@ -1,13 +1,14 @@
 import { isAuthenticated } from '@/lib/admin-auth'
 import { redirect } from 'next/navigation'
 import CategoriesClient from './CategoriesClient'
-import { readCategories } from '@/lib/blob-store'
+import { readCategories } from '@/lib/supabase-store'
 import categoriesData from '@/data/shop/categories.json'
+import type { WCCategory } from '@/lib/woocommerce'
 
 export default async function CategoriesPage() {
   if (!(await isAuthenticated())) redirect('/admin/login')
 
-  const categories = await readCategories(categoriesData as Parameters<typeof readCategories>[0])
+  const categories = await readCategories(categoriesData as WCCategory[])
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-12">
