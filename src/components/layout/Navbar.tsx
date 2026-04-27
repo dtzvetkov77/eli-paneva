@@ -175,7 +175,6 @@ export default function Navbar() {
             )}
           </li>
 
-          <li><Link href="/blog" className={linkCls}>Блог</Link></li>
           <li><Link href="/kontakti" className={linkCls}>Контакти</Link></li>
         </ul>
 
@@ -210,7 +209,7 @@ export default function Navbar() {
       <div className={['md:hidden overflow-hidden transition-all duration-400 ease-out', mobileOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'].join(' ')}>
         <div className="bg-(--bg) border-t border-(--border) px-6 pb-6 pt-2">
 
-          {[{ label: 'Начало', href: '/' }, { label: 'За мен', href: '/za-men' }, { label: 'Блог', href: '/blog' }, { label: 'Контакти', href: '/kontakti' }].map(link => (
+          {[{ label: 'Начало', href: '/' }, { label: 'За мен', href: '/za-men' }, { label: 'Контакти', href: '/kontakti' }].map(link => (
             <Link key={link.href} href={link.href} className="flex items-center py-4 text-sm text-(--text-mid) border-b border-(--border-light) hover:text-(--sage) transition-colors" onClick={() => setMobileOpen(false)}>
               {link.label}
             </Link>

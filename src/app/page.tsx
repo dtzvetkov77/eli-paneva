@@ -5,7 +5,6 @@ import AboutTeaser from '@/components/home/AboutTeaser'
 import ServicesGrid from '@/components/home/ServicesGrid'
 import ProcessSection from '@/components/home/ProcessSection'
 import TestimonialsSection from '@/components/home/TestimonialsSection'
-import BlogPreview from '@/components/home/BlogPreview'
 import CtaSection from '@/components/home/CtaSection'
 import StructuredData from '@/components/ui/StructuredData'
 
@@ -51,8 +50,7 @@ export default function HomePage() {
       <ServicesGrid />
       <ProcessSection />
       <TestimonialsSection />
-      <BlogPreview />
-      <CtaSection />
+<CtaSection />
     </>
   )
 }

@@ -1,6 +1,5 @@
 import { isAuthenticated } from '@/lib/admin-auth'
 import { redirect } from 'next/navigation'
-import { list } from '@vercel/blob'
 
 interface NormalizedOrder {
   id: string
@@ -69,46 +68,10 @@ async function fetchWCOrders(): Promise<NormalizedOrder[]> {
   }
 }
 
-async function fetchBlobOrders(): Promise<NormalizedOrder[]> {
-  const token = process.env.BLOB_READ_WRITE_TOKEN
-  if (!token) return []
-  try {
-    const { blobs } = await list({ prefix: 'orders/', token })
-    const results = await Promise.allSettled(
-      blobs.map(b => fetch(b.url).then(r => r.json()))
-    )
-    return results
-      .filter((r): r is PromiseFulfilledResult<{
-        orderId: string; date: string; status: string; total: string;
-        customer: { firstName: string; lastName: string; email: string; phone: string };
-        items: Array<{ name: string; quantity: number }>;
-      }> => r.status === 'fulfilled')
-      .map(r => ({
-        id: r.value.orderId,
-        number: r.value.orderId,
-        status: r.value.status,
-        date: r.value.date,
-        total: parseFloat(r.value.total),
-        customerName: `${r.value.customer.firstName} ${r.value.customer.lastName}`,
-        email: r.value.customer.email,
-        phone: r.value.customer.phone,
-        items: r.value.items.map(i => ({ name: i.name, quantity: i.quantity })),
-        source: 'blob' as const,
-      }))
-  } catch {
-    return []
-  }
-}
-
 export default async function OrdersPage() {
   if (!(await isAuthenticated())) redirect('/admin/login')
 
-  const [wcOrders, blobOrders] = await Promise.all([fetchWCOrders(), fetchBlobOrders()])
-
-  // Merge, deduplicate by id, sort by date desc
-  const seen = new Set<string>()
-  const orders = [...wcOrders, ...blobOrders]
-    .filter(o => { if (seen.has(o.id)) return false; seen.add(o.id); return true })
+  const orders = (await fetchWCOrders())
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   const totalRevenue = orders
@@ -171,9 +134,6 @@ export default async function OrdersPage() {
                   <tr key={order.id} className="hover:bg-gray-50 transition-colors">
                     <td className="px-6 py-4">
                       <span className="font-mono text-gray-700">#{order.number}</span>
-                      {order.source === 'blob' && (
-                        <span className="ml-2 text-xs bg-amber-50 text-amber-600 border border-amber-200 rounded-full px-2 py-0.5">локал</span>
-                      )}
                     </td>
                     <td className="px-6 py-4">
                       <p className="font-medium text-gray-900">{order.customerName}</p>
@@ -197,9 +157,7 @@ export default async function OrdersPage() {
                       {order.date}
                     </td>
                     <td className="px-6 py-4 text-right">
-                      {order.source === 'wc' && (
-                        <a href={`/admin/orders/${order.id}`} className="text-xs text-gray-400 hover:text-gray-700 transition-colors">Виж →</a>
-                      )}
+                      <a href={`/admin/orders/${order.id}`} className="text-xs text-gray-400 hover:text-gray-700 transition-colors">Виж →</a>
                     </td>
                   </tr>
                 ))}
