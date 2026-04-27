@@ -1,30 +1,13 @@
 import { isAuthenticated } from '@/lib/admin-auth'
 import { redirect } from 'next/navigation'
 import CategoriesClient from './CategoriesClient'
-
-async function fetchCategories() {
-  const key = process.env.WOOCOMMERCE_KEY
-  const secret = process.env.WOOCOMMERCE_SECRET
-  const base = process.env.WC_API_URL
-  if (!key || !secret || !base) return []
-
-  try {
-    const auth = 'Basic ' + Buffer.from(`${key}:${secret}`).toString('base64')
-    const res = await fetch(`${base}/products/categories?per_page=100`, {
-      headers: { Authorization: auth },
-      next: { revalidate: 60 },
-    })
-    if (!res.ok) return []
-    return res.json()
-  } catch {
-    return []
-  }
-}
+import { readCategories } from '@/lib/blob-store'
+import categoriesData from '@/data/shop/categories.json'
 
 export default async function CategoriesPage() {
   if (!(await isAuthenticated())) redirect('/admin/login')
 
-  const categories = await fetchCategories()
+  const categories = await readCategories(categoriesData as Parameters<typeof readCategories>[0])
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-12">
@@ -33,10 +16,8 @@ export default async function CategoriesPage() {
         <span className="text-gray-300">/</span>
         <h1 className="text-2xl font-semibold text-gray-900">Категории</h1>
       </div>
-      <p className="text-sm text-gray-500 mb-6">
-        Промените се записват директно в WooCommerce. След промяна стартирай sync-products.mjs за да обновиш локалния каталог.
-      </p>
-      <CategoriesClient initialCategories={categories} />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <CategoriesClient initialCategories={categories as any} />
     </div>
   )
 }

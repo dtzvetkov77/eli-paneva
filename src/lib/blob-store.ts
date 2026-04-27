@@ -1,14 +1,14 @@
-import { put } from '@vercel/blob'
+import { put, list } from '@vercel/blob'
 import type { WCProduct, WCCategory } from './woocommerce'
 
-const BLOB_STORE_URL = process.env.BLOB_STORE_URL?.replace(/\/$/, '')
-
 export async function readBlobJson<T>(path: string, fallback: T): Promise<T> {
-  if (!BLOB_STORE_URL) return fallback
+  const token = process.env.BLOB_READ_WRITE_TOKEN
+  if (!token) return fallback
   try {
-    const res = await fetch(`${BLOB_STORE_URL}/${path}`, {
-      next: { revalidate: 60 },
-    })
+    const { blobs } = await list({ prefix: path, token })
+    const match = blobs.find(b => b.pathname === path)
+    if (!match) return fallback
+    const res = await fetch(match.url, { cache: 'no-store' })
     if (!res.ok) return fallback
     return res.json() as Promise<T>
   } catch {
@@ -23,6 +23,7 @@ export async function writeBlobJson(path: string, data: unknown): Promise<string
     access: 'public',
     contentType: 'application/json',
     addRandomSuffix: false,
+    allowOverwrite: true,
     token,
   })
   return blob.url
