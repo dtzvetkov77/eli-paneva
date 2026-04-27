@@ -1,4 +1,4 @@
-import { getPosts } from '@/lib/blog'
+import { getPosts, type WPPost } from '@/lib/wordpress'
 import BlogCard from '@/components/blog/BlogCard'
 import SectionHeader from '@/components/ui/SectionHeader'
 import type { Metadata } from 'next'
@@ -10,7 +10,8 @@ export const metadata: Metadata = {
 }
 
 export default async function BlogPage() {
-  const posts = await getPosts(1, 20)
+  let posts: WPPost[] = []
+  try { posts = await getPosts(1, 20) } catch { /* WP unavailable */ }
   return (
     <div className="pt-16">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -20,10 +21,7 @@ export default async function BlogPage() {
           subtitle="Размисли за вътрешна промяна, отношения и личностно развитие."
         />
         {posts.length === 0 ? (
-          <div className="text-center py-16">
-            <p className="font-serif text-2xl text-(--text-dark) mb-4">Очаквайте скоро нови статии</p>
-            <p className="text-(--text-muted)">Работим по нашия блог. Върнете се по-късно.</p>
-          </div>
+          <p className="text-(--text-muted)">Статиите се зареждат...</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map(post => (

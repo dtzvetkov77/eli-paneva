@@ -1,4 +1,4 @@
-import { getPost, getPosts } from '@/lib/blog'
+import { getPost } from '@/lib/wordpress'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
@@ -9,61 +9,49 @@ import type { Metadata } from 'next'
 
 interface Props { params: Promise<{ slug: string }> }
 
-export const revalidate = 300
-
-export async function generateStaticParams() {
-  try {
-    const posts = await getPosts(1, 100)
-    return posts.map(p => ({ slug: p.slug }))
-  } catch {
-    return []
-  }
-}
+export function generateStaticParams() { return [] }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const post = await getPost(slug)
+  let post = null
+  try { post = await getPost(slug) } catch {}
   if (!post) return {}
+  const desc = post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 160)
+  const image = post._embedded?.['wp:featuredmedia']?.[0]
   return {
-    title: post.title,
-    description: post.excerpt.replace(/<[^>]+>/g, '').slice(0, 160),
+    title: post.title.rendered.replace(/<[^>]+>/g, ''),
+    description: desc,
     alternates: { canonical: `https://elipaneva.com/blog/${slug}` },
     openGraph: {
       type: 'article',
       publishedTime: post.date,
-      images: post.coverImage ? [{ url: post.coverImage }] : [],
+      images: image ? [{ url: image.source_url }] : [],
     },
   }
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
-  const post = await getPost(slug)
+  let post = null
+  try { post = await getPost(slug) } catch {}
   if (!post) notFound()
 
+  const image = post._embedded?.['wp:featuredmedia']?.[0]
   const date = new Date(post.date).toLocaleDateString('bg-BG', {
     year: 'numeric', month: 'long', day: 'numeric',
   })
+  const title = post.title.rendered.replace(/<[^>]+>/g, '')
 
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt.replace(/<[^>]+>/g, '').slice(0, 160),
+    headline: title,
     datePublished: post.date,
-    url: `https://elipaneva.com/blog/${slug}`,
-    author: {
-      '@type': 'Person',
-      '@id': 'https://elipaneva.com/#person',
-      name: 'Ели Панева',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Ели Панева',
-      url: 'https://elipaneva.com',
-      logo: { '@type': 'ImageObject', url: 'https://elipaneva.com/logo.webp' },
-    },
-    ...(post.coverImage ? { image: post.coverImage } : {}),
+    author: { '@type': 'Person', name: 'Ели Панева', url: 'https://elipaneva.com' },
+    publisher: { '@type': 'Person', name: 'Ели Панева' },
+    image: image ? image.source_url : undefined,
+    url: `https://elipaneva.com/blog/${post.slug}`,
+    mainEntityOfPage: `https://elipaneva.com/blog/${post.slug}`,
   }
 
   return (
@@ -73,26 +61,28 @@ export default async function BlogPostPage({ params }: Props) {
         <Breadcrumbs crumbs={[
           { label: 'Начало', href: '/' },
           { label: 'Блог', href: '/blog' },
-          { label: post.title },
+          { label: title },
         ]} />
         <time className="text-xs text-(--gold) uppercase tracking-widest block mb-4">{date}</time>
-        <h1 className="font-serif text-4xl md:text-5xl text-(--text-dark) leading-tight mb-8">
-          {post.title}
-        </h1>
-        {post.coverImage && (
+        <h1
+          className="font-serif text-4xl md:text-5xl text-(--text-dark) leading-tight mb-8"
+          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+        />
+        {image && (
           <div className="aspect-video relative overflow-hidden mb-10 bg-(--sage-light)">
             <Image
-              src={post.coverImage}
-              alt={post.title}
+              src={encodeURI(image.source_url)}
+              alt={image.alt_text || title}
               fill
               className="object-cover"
               priority
+              unoptimized
             />
           </div>
         )}
         <div
           className="prose prose-lg max-w-none text-(--text-dark) prose-headings:font-serif prose-a:text-(--sage) prose-a:no-underline hover:prose-a:underline prose-img:rounded-sm"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
         />
         <div className="mt-16 pt-8 border-t border-(--border)">
           <div className="bg-(--sage-light) p-8 flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
