@@ -14,12 +14,13 @@ export interface BlogPost {
 const TOKEN = process.env.BLOB_READ_WRITE_TOKEN
 
 export async function getPosts(page = 1, perPage = 20): Promise<BlogPost[]> {
-  if (!TOKEN) return []
+  const token = process.env.BLOB_READ_WRITE_TOKEN
+  if (!token) return []
   try {
-    const { blobs } = await list({ prefix: 'blog/', token: TOKEN })
+    const { blobs } = await list({ prefix: 'blog/', token })
     const results = await Promise.allSettled(
       blobs.filter(b => b.pathname.endsWith('.json')).map(b =>
-        fetch(b.url, { next: { revalidate: 300 } }).then(r => r.json())
+        fetch(b.url, { cache: 'no-store' }).then(r => r.json())
       )
     )
     const all = results
@@ -33,12 +34,13 @@ export async function getPosts(page = 1, perPage = 20): Promise<BlogPost[]> {
 }
 
 export async function getPost(slug: string): Promise<BlogPost | null> {
-  if (!TOKEN) return null
+  const token = process.env.BLOB_READ_WRITE_TOKEN
+  if (!token) return null
   try {
-    const { blobs } = await list({ prefix: 'blog/', token: TOKEN })
+    const { blobs } = await list({ prefix: 'blog/', token })
     const results = await Promise.allSettled(
       blobs.filter(b => b.pathname.endsWith('.json')).map(b =>
-        fetch(b.url, { next: { revalidate: 300 } }).then(r => r.json())
+        fetch(b.url, { cache: 'no-store' }).then(r => r.json())
       )
     )
     return results
