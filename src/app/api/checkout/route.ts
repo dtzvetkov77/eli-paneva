@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { put } from '@vercel/blob'
-import { readProducts } from '@/lib/blob-store'
+import { readProducts } from '@/lib/supabase-store'
 import productsData from '@/data/shop/products.json'
 import type { WCProduct } from '@/lib/woocommerce'
 
