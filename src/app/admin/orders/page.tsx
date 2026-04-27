@@ -163,6 +163,7 @@ export default async function OrdersPage() {
                   <th className="text-left px-6 py-4 font-medium">Статус</th>
                   <th className="text-right px-6 py-4 font-medium">Сума</th>
                   <th className="text-left px-6 py-4 font-medium">Дата</th>
+                  <th className="px-6 py-4 font-medium"></th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50">
@@ -194,6 +195,11 @@ export default async function OrdersPage() {
                     </td>
                     <td className="px-6 py-4 text-gray-400 text-xs whitespace-nowrap">
                       {order.date}
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      {order.source === 'wc' && (
+                        <a href={`/admin/orders/${order.id}`} className="text-xs text-gray-400 hover:text-gray-700 transition-colors">Виж →</a>
+                      )}
                     </td>
                   </tr>
                 ))}

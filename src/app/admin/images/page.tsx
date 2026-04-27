@@ -5,10 +5,11 @@ import ImageManager from './ImageManager'
 export default async function ImagesPage() {
   if (!(await isAuthenticated())) redirect('/admin/login')
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
-      <div className="mb-8">
-        <h1 className="text-3xl font-semibold text-gray-900 mb-2">Снимки</h1>
-        <p className="text-gray-500 text-sm">Снимките се качват директно в WordPress медия библиотека и са достъпни чрез URL на elipaneva.com.</p>
+    <div className="max-w-6xl mx-auto px-6 py-10">
+      <div className="flex items-center gap-3 mb-8">
+        <a href="/admin" className="text-sm text-gray-400 hover:text-gray-700 transition-colors">← Назад</a>
+        <span className="text-gray-300">/</span>
+        <h1 className="text-2xl font-semibold text-gray-900">Снимки</h1>
       </div>
       <ImageManager />
     </div>
