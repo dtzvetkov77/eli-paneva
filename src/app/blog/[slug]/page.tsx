@@ -1,4 +1,5 @@
-import { getPost } from '@/lib/wordpress'
+import { getPosts } from '@/lib/wordpress'
+import { translitSlug } from '@/lib/translit'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
@@ -9,12 +10,18 @@ import type { Metadata } from 'next'
 
 interface Props { params: Promise<{ slug: string }> }
 
+async function findPost(latinSlug: string) {
+  try {
+    const posts = await getPosts(1, 100)
+    return posts.find(p => translitSlug(p.slug) === latinSlug) ?? null
+  } catch { return null }
+}
+
 export function generateStaticParams() { return [] }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  let post = null
-  try { post = await getPost(slug) } catch {}
+  const post = await findPost(slug)
   if (!post) return {}
   const desc = post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 160)
   const image = post._embedded?.['wp:featuredmedia']?.[0]
@@ -32,8 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
-  let post = null
-  try { post = await getPost(slug) } catch {}
+  const post = await findPost(slug)
   if (!post) notFound()
 
   const image = post._embedded?.['wp:featuredmedia']?.[0]
