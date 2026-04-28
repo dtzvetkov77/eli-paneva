@@ -48,6 +48,7 @@ export default function ProductCard({ product }: { product: WCProduct }) {
                   <span className="text-xs text-(--text-muted) line-through">{formatEur(bgnToEur(regularPrice))}</span>
                 )}
               </div>
+              <p className="text-xs text-(--text-muted)">{price.toFixed(2)} лв</p>
             </div>
           )}
         </div>

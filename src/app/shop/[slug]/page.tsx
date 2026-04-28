@@ -111,6 +111,7 @@ export default async function ProductPage({ params }: Props) {
                     </span>
                   )}
                 </div>
+                <p className="text-sm text-(--text-muted) mt-1 tabular-nums">{price.toFixed(2)} лв</p>
               </div>
             )}
 
