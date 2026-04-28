@@ -54,6 +54,37 @@ export async function createCategory(name: string): Promise<WCCategory & { count
   return newCat
 }
 
+export async function createProduct(fields: Partial<import('./woocommerce').WCProduct>): Promise<import('./woocommerce').WCProduct> {
+  const sb = getSupabaseAdmin()
+  const { data: existing } = await sb
+    .from('products')
+    .select('id')
+    .order('id', { ascending: false })
+    .limit(1)
+  const maxId = ((existing?.[0] as { id: number } | undefined)?.id) ?? 10000
+  const newId = maxId + 1
+  const slug = (fields.name ?? 'product').toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')
+  const product: import('./woocommerce').WCProduct = {
+    id: newId,
+    name: fields.name ?? '',
+    slug,
+    permalink: `https://elipaneva.com/shop/${slug}`,
+    description: fields.description ?? '',
+    short_description: fields.short_description ?? '',
+    price: fields.price ?? fields.regular_price ?? '0',
+    regular_price: fields.regular_price ?? '0',
+    sale_price: fields.sale_price ?? '',
+    status: fields.status ?? 'draft',
+    stock_status: fields.stock_status ?? 'instock',
+    featured: fields.featured ?? false,
+    categories: fields.categories ?? [],
+    images: fields.images ?? [],
+  }
+  const { error } = await sb.from('products').insert({ id: newId, data: product })
+  if (error) throw new Error(error.message)
+  return product
+}
+
 export async function deleteCategory(id: number): Promise<void> {
   const sb = getSupabaseAdmin()
   const { error } = await sb.from('categories').delete().eq('id', id)

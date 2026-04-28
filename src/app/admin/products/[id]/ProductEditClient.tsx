@@ -12,7 +12,7 @@ interface WCProduct {
   images: WCImage[]; categories: WCCategory[]
 }
 
-interface Props { product: WCProduct; allCategories: WCCategory[] }
+interface Props { product: WCProduct; allCategories: WCCategory[]; isNew?: boolean }
 
 const BGN_PER_EUR = 1.95583
 
@@ -29,7 +29,7 @@ function eurLabel(eur: string): string {
   return bgn ? `= ${bgn} лв` : ''
 }
 
-export default function ProductEditClient({ product, allCategories }: Props) {
+export default function ProductEditClient({ product, allCategories, isNew = false }: Props) {
   const [form, setForm] = useState({
     name: product.name,
     short_description: product.short_description,
@@ -89,8 +89,10 @@ export default function ProductEditClient({ product, allCategories }: Props) {
     if (!form.name.trim()) { setError('Наименованието е задължително'); return }
     setSaving(true); setError('')
     try {
-      const res = await fetch(`/api/admin/products/${product.id}`, {
-        method: 'PUT',
+      const url = isNew ? '/api/admin/products' : `/api/admin/products/${product.id}`
+      const method = isNew ? 'POST' : 'PUT'
+      const res = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...form,
@@ -102,8 +104,13 @@ export default function ProductEditClient({ product, allCategories }: Props) {
         const d = await res.json()
         setError(d.error ?? 'Грешка при запазване')
       } else {
-        setSaved(true)
-        setTimeout(() => setSaved(false), 3000)
+        if (isNew) {
+          const d = await res.json()
+          window.location.href = `/admin/products/${d.product.id}`
+        } else {
+          setSaved(true)
+          setTimeout(() => setSaved(false), 3000)
+        }
       }
     } catch { setError('Мрежова грешка') }
     finally { setSaving(false) }
@@ -132,14 +139,16 @@ export default function ProductEditClient({ product, allCategories }: Props) {
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6"/></svg>
             Продукти
           </a>
-          <h1 className="text-lg font-semibold text-gray-900 leading-tight">{product.name}</h1>
-          <p className="text-xs text-gray-400 font-mono mt-0.5">#{product.id}</p>
+          <h1 className="text-lg font-semibold text-gray-900 leading-tight">{isNew ? 'Нов продукт' : product.name}</h1>
+          {!isNew && <p className="text-xs text-gray-400 font-mono mt-0.5">#{product.id}</p>}
         </div>
-        <a href={product.permalink} target="_blank" rel="noopener noreferrer"
-          className="text-xs text-gray-400 hover:text-gray-700 transition-colors flex items-center gap-1 mt-1">
-          Виж в сайта
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
+        {!isNew && (
+          <a href={product.permalink} target="_blank" rel="noopener noreferrer"
+            className="text-xs text-gray-400 hover:text-gray-700 transition-colors flex items-center gap-1 mt-1">
+            Виж в сайта
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        )}
       </div>
 
       {/* Tabs */}
