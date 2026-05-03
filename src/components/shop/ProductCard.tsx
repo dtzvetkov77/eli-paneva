@@ -54,17 +54,19 @@ export default function ProductCard({ product }: { product: WCProduct }) {
         </div>
       </Link>
 
-      <div className="px-5 pb-5 mt-auto">
-        <AddToCartButton
-          id={product.id}
-          slug={product.slug}
-          name={product.name}
-          priceBgn={price}
-          regularPriceBgn={regularPrice}
-          image={image?.src}
-          permalink={product.permalink}
-        />
-      </div>
+      {price > 0 && (
+        <div className="px-5 pb-5 mt-auto">
+          <AddToCartButton
+            id={product.id}
+            slug={product.slug}
+            name={product.name}
+            priceBgn={price}
+            regularPriceBgn={regularPrice}
+            image={image?.src}
+            permalink={product.permalink}
+          />
+        </div>
+      )}
     </div>
   )
 }

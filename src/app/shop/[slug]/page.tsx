@@ -137,7 +137,7 @@ export default async function ProductPage({ params }: Props) {
               ) : null
             })()}
 
-            <AddToCartButton product={product} />
+            {price > 0 && <AddToCartButton product={product} />}
 
             {product.categories.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-6">
