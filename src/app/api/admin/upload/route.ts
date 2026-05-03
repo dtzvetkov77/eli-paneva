@@ -12,15 +12,12 @@ const MAX_IMAGE_SIZE = 10 * 1024 * 1024
 const MAX_AUDIO_SIZE = 100 * 1024 * 1024
 
 async function ensureAudioBucket(sb: ReturnType<typeof getSupabaseAdmin>) {
-  const { error } = await sb.storage.createBucket(AUDIO_BUCKET, {
+  // Ignore all errors — bucket may already exist; real failures surface on upload
+  await sb.storage.createBucket(AUDIO_BUCKET, {
     public: true,
     allowedMimeTypes: AUDIO_TYPES,
     fileSizeLimit: MAX_AUDIO_SIZE,
   })
-  // Ignore "already exists" error
-  if (error && !error.message.includes('already exists') && !error.message.includes('Duplicate')) {
-    throw error
-  }
 }
 
 export async function GET() {
@@ -48,11 +45,7 @@ export async function POST(req: NextRequest) {
 
   const sb = getSupabaseAdmin()
 
-  if (isAudio) {
-    try { await ensureAudioBucket(sb) } catch (e) {
-      return NextResponse.json({ error: 'Грешка при инициализация на аудио хранилище' }, { status: 500 })
-    }
-  }
+  if (isAudio) await ensureAudioBucket(sb)
 
   const bucket = isAudio ? AUDIO_BUCKET : IMAGE_BUCKET
   const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_')
