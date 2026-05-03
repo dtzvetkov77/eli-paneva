@@ -123,6 +123,13 @@ export default async function ProductPage({ params }: Props) {
               />
             )}
 
+            {product.audio_url && (
+              <div className="mb-8 border border-(--border) rounded-2xl p-4 bg-(--bg-warm)">
+                <p className="text-xs uppercase tracking-[0.15em] text-(--text-muted) mb-3">Аудио преглед</p>
+                <audio controls src={product.audio_url} className="w-full" />
+              </div>
+            )}
+
             <AddToCartButton product={product} />
 
             {product.categories.length > 0 && (

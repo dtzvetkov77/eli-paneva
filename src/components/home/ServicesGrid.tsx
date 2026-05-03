@@ -15,7 +15,7 @@ export default function ServicesGrid() {
         </div>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <h2 className="font-serif text-4xl md:text-5xl text-(--text-dark) font-normal leading-tight max-w-xl">
-            Как мога да ви помогна да процъфтите
+            Как мога да ви подкрепя по пътя към вътрешна промяна
           </h2>
           <div className="shrink-0">
             <Button href="/kontakti" variant="primary">Запази час</Button>

@@ -1,5 +1,6 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import Image from 'next/image'
 
 interface WCCategory { id: number; name: string; slug: string }
 interface WCImage { id: number; src: string; alt: string }
@@ -9,6 +10,7 @@ interface WCProduct {
   price: string; regular_price: string; sale_price: string
   status: string; featured: boolean; stock_status: string
   images: WCImage[]; categories: WCCategory[]
+  audio_url?: string
 }
 
 interface Props { product: WCProduct; allCategories: WCCategory[]; isNew?: boolean }
@@ -40,12 +42,19 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
     featured: product.featured,
     category_ids: product.categories.map(c => c.id),
     images: product.images,
+    audio_url: product.audio_url ?? '',
   })
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState('')
-  const [activeTab, setActiveTab] = useState<'general' | 'description'>('general')
+  const [activeTab, setActiveTab] = useState<'general' | 'description' | 'media'>('general')
   const [catSearch, setCatSearch] = useState('')
+  const [uploading, setUploading] = useState(false)
+  const [uploadError, setUploadError] = useState('')
+  const [audioUploading, setAudioUploading] = useState(false)
+  const [audioError, setAudioError] = useState('')
+  const fileRef = useRef<HTMLInputElement>(null)
+  const audioRef = useRef<HTMLInputElement>(null)
 
   function set<K extends keyof typeof form>(key: K, value: typeof form[K]) {
     setForm(prev => ({ ...prev, [key]: value }))
@@ -56,6 +65,47 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
     set('category_ids', form.category_ids.includes(id)
       ? form.category_ids.filter(x => x !== id)
       : [...form.category_ids, id])
+  }
+
+  async function uploadImage(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (!file) return
+    setUploading(true); setUploadError('')
+    try {
+      const fd = new FormData()
+      fd.append('file', file)
+      const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
+      const d = await res.json()
+      if (!res.ok) { setUploadError(d.error ?? 'Грешка при качване'); return }
+      const newImage: WCImage = { id: Date.now(), src: d.url, alt: '' }
+      set('images', [...form.images, newImage])
+    } catch { setUploadError('Мрежова грешка') }
+    finally { setUploading(false); if (fileRef.current) fileRef.current.value = '' }
+  }
+
+  function removeImage(src: string) {
+    set('images', form.images.filter(img => img.src !== src))
+  }
+
+  function moveToMain(src: string) {
+    const img = form.images.find(i => i.src === src)
+    if (!img) return
+    set('images', [img, ...form.images.filter(i => i.src !== src)])
+  }
+
+  async function uploadAudio(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (!file) return
+    setAudioUploading(true); setAudioError('')
+    try {
+      const fd = new FormData()
+      fd.append('file', file)
+      const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
+      const d = await res.json()
+      if (!res.ok) { setAudioError(d.error ?? 'Грешка при качване'); return }
+      set('audio_url', d.url)
+    } catch { setAudioError('Мрежова грешка') }
+    finally { setAudioUploading(false); if (audioRef.current) audioRef.current.value = '' }
   }
 
   async function save() {
@@ -71,6 +121,7 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
           ...form,
           regular_price: eurToBgn(form.regular_price),
           sale_price: eurToBgn(form.sale_price),
+          audio_url: form.audio_url || null,
         }),
       })
       if (!res.ok) {
@@ -100,6 +151,7 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
   const tabs = [
     { key: 'general' as const, label: 'Основни' },
     { key: 'description' as const, label: 'Описание' },
+    { key: 'media' as const, label: 'Медия' },
   ]
 
   return (
@@ -132,6 +184,11 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
             }`}
           >
             {t.label}
+            {t.key === 'media' && (form.images.length > 0 || form.audio_url) && (
+              <span className="ml-1.5 text-xs text-[#C8A96E]">
+                {form.images.length > 0 && form.audio_url ? '🖼+🎵' : form.images.length > 0 ? form.images.length : '♪'}
+              </span>
+            )}
           </button>
         ))}
       </div>
@@ -265,6 +322,144 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
             rows={22} placeholder="Пълно описание (HTML е позволен)..."
             className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gray-400 focus:ring-2 focus:ring-gray-100 transition-all resize-y font-mono"
           />
+        </div>
+      )}
+
+      {/* Media */}
+      {activeTab === 'media' && (
+        <div className="space-y-8">
+
+          {/* Images section */}
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <label className="text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Снимки
+                {form.images.length > 0 && (
+                  <span className="ml-2 text-[#C8A96E] font-normal normal-case">{form.images.length} файла</span>
+                )}
+              </label>
+              <button
+                onClick={() => fileRef.current?.click()}
+                disabled={uploading}
+                className="flex items-center gap-1.5 text-xs text-gray-600 border border-gray-200 rounded-lg px-3 py-1.5 hover:border-gray-400 hover:text-gray-900 transition-all disabled:opacity-50"
+              >
+                {uploading ? (
+                  <div className="w-3 h-3 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
+                ) : (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                )}
+                {uploading ? 'Качване...' : 'Добави снимка'}
+              </button>
+              <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={uploadImage} />
+            </div>
+            {uploadError && <p className="text-xs text-red-500 mb-2">{uploadError}</p>}
+            {form.images.length === 0 ? (
+              <button
+                onClick={() => fileRef.current?.click()}
+                className="w-full border-2 border-dashed border-gray-200 rounded-xl py-10 flex flex-col items-center gap-2 text-gray-400 hover:border-gray-300 hover:text-gray-500 transition-all"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span className="text-sm">Кликни за да добавиш снимки</span>
+              </button>
+            ) : (
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+                {form.images.map((img, i) => (
+                  <div key={img.src} className="relative group aspect-square rounded-xl overflow-hidden bg-gray-50 border border-gray-200">
+                    <Image src={img.src} alt={img.alt || ''} fill className="object-cover" unoptimized sizes="120px" />
+                    {i === 0 && (
+                      <div className="absolute top-1.5 left-1.5 bg-[#C8A96E] text-white text-[10px] font-medium px-1.5 py-0.5 rounded-md leading-none">
+                        Основна
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all flex items-center justify-center gap-1.5 opacity-0 group-hover:opacity-100">
+                      {i !== 0 && (
+                        <button
+                          onClick={() => moveToMain(img.src)}
+                          className="bg-white text-gray-800 rounded-lg px-2 py-1 text-[10px] font-medium hover:bg-[#C8A96E] hover:text-white transition-colors"
+                          title="Задай за основна"
+                        >
+                          ★
+                        </button>
+                      )}
+                      <button
+                        onClick={() => removeImage(img.src)}
+                        className="bg-white text-red-500 rounded-lg px-2 py-1 text-[10px] font-medium hover:bg-red-500 hover:text-white transition-colors"
+                        title="Премахни"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  </div>
+                ))}
+                <button
+                  onClick={() => fileRef.current?.click()}
+                  disabled={uploading}
+                  className="aspect-square rounded-xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center gap-1 text-gray-400 hover:border-gray-300 hover:text-gray-500 transition-all disabled:opacity-40"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span className="text-[10px]">Добави</span>
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-gray-100" />
+
+          {/* Audio section */}
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <label className="text-xs font-medium text-gray-500 uppercase tracking-wider">Аудио файл</label>
+              {!form.audio_url && (
+                <button
+                  onClick={() => audioRef.current?.click()}
+                  disabled={audioUploading}
+                  className="flex items-center gap-1.5 text-xs text-gray-600 border border-gray-200 rounded-lg px-3 py-1.5 hover:border-gray-400 hover:text-gray-900 transition-all disabled:opacity-50"
+                >
+                  {audioUploading ? (
+                    <div className="w-3 h-3 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
+                  ) : (
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  )}
+                  {audioUploading ? 'Качване...' : 'Качи аудио'}
+                </button>
+              )}
+              <input ref={audioRef} type="file" accept="audio/*" className="hidden" onChange={uploadAudio} />
+            </div>
+            {audioError && <p className="text-xs text-red-500 mb-2">{audioError}</p>}
+            {form.audio_url ? (
+              <div className="border border-gray-200 rounded-xl p-4 bg-gray-50">
+                <audio controls src={form.audio_url} className="w-full h-9 mb-3" />
+                <div className="flex items-center justify-between gap-3">
+                  <p className="text-xs text-gray-400 truncate">{form.audio_url.split('/').pop()}</p>
+                  <div className="flex gap-2 shrink-0">
+                    <button
+                      onClick={() => audioRef.current?.click()}
+                      className="text-xs text-gray-500 border border-gray-200 rounded-lg px-2.5 py-1 hover:border-gray-400 transition-colors"
+                    >
+                      Замени
+                    </button>
+                    <button
+                      onClick={() => set('audio_url', '')}
+                      className="text-xs text-red-500 border border-red-200 rounded-lg px-2.5 py-1 hover:bg-red-50 transition-colors"
+                    >
+                      Премахни
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <button
+                onClick={() => audioRef.current?.click()}
+                className="w-full border-2 border-dashed border-gray-200 rounded-xl py-8 flex flex-col items-center gap-2 text-gray-400 hover:border-gray-300 hover:text-gray-500 transition-all"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                <span className="text-sm">Кликни за да качиш аудио</span>
+                <span className="text-xs">MP3, WAV, OGG, AAC, FLAC</span>
+              </button>
+            )}
+          </div>
+
         </div>
       )}
 

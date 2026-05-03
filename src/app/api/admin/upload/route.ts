@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { isAuthenticated } from '@/lib/admin-auth'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
-const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/avif']
+const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/avif', 'audio/mpeg', 'audio/mp3', 'audio/wav', 'audio/ogg', 'audio/mp4', 'audio/aac', 'audio/flac']
 const MAX_SIZE = 10 * 1024 * 1024
 const BUCKET = 'product-images'
 
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
   const formData = await req.formData()
   const file = formData.get('file') as File | null
   if (!file) return NextResponse.json({ error: 'No file' }, { status: 400 })
-  if (!ALLOWED_TYPES.includes(file.type)) return NextResponse.json({ error: 'Само изображения (jpg/png/webp/gif/avif)' }, { status: 400 })
+  if (!ALLOWED_TYPES.includes(file.type)) return NextResponse.json({ error: 'Неподдържан формат (разрешени: jpg/png/webp/gif/avif/mp3/wav/ogg/aac/flac)' }, { status: 400 })
   if (file.size > MAX_SIZE) return NextResponse.json({ error: 'Максимален размер 10 MB' }, { status: 400 })
 
   const sb = getSupabaseAdmin()

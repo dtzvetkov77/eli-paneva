@@ -19,6 +19,7 @@ export interface WCProduct {
   status: string
   featured: boolean
   stock_status: string
+  audio_url?: string
 }
 
 const localProducts = productsData as WCProduct[]

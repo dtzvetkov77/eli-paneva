@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
   if (!(await isAuthenticated())) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const body = await req.json()
-  const { name, short_description, description, regular_price, sale_price, status, stock_status, featured, category_ids, images } = body
+  const { name, short_description, description, regular_price, sale_price, status, stock_status, featured, category_ids, images, audio_url } = body
 
   if (!name?.trim()) return NextResponse.json({ error: 'Наименованието е задължително' }, { status: 400 })
 
@@ -36,6 +36,7 @@ export async function POST(req: NextRequest) {
       featured: featured ?? false,
       categories,
       images: Array.isArray(images) ? images : [],
+      audio_url: audio_url || undefined,
     })
     return NextResponse.json({ ok: true, product })
   } catch (e) {

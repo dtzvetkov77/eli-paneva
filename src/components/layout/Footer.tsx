@@ -6,7 +6,7 @@ const serviceLinks = [
   { label: 'Системни констелации', href: '/uslugi/sistemni-konstelatsi' },
   { label: 'МАК карти', href: '/mac-karti' },
   { label: 'Тревожност и паники', href: '/uslugi/trevozhnost-i-paniki' },
-  { label: 'Медитации', href: '/uslugi/meditatsii' },
+  { label: 'Ограничаващи убеждения', href: '/uslugi/promyana-na-ubezhdenia' },
 ]
 
 export default function Footer() {

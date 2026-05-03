@@ -67,7 +67,7 @@ export default function HeroSection() {
               className="font-serif text-(--text-dark) font-normal leading-[1.1] mb-5"
               style={{ fontSize: 'clamp(2rem, 4.5vw, 4rem)' }}
             >
-              Намерете мира.<br />Намерете себе си.
+              Освободи вътрешните блокажи<br />и създай живот с повече<br /><em className="text-(--sage)">лекота, яснота и увереност</em>
             </h1>
 
             <p className="text-(--text-muted) text-base leading-relaxed mb-7 max-w-[42ch] mx-auto md:mx-0">
