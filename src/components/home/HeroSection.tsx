@@ -71,7 +71,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-(--text-muted) text-base leading-relaxed mb-7 max-w-[42ch] mx-auto md:mx-0">
-              Подкрепям хората в процеса на вътрешна промяна чрез системни констелации, PSYCH-K®, енергийна психология и МАК карти.
+              <strong className="text-(--text-dark)">Аз съм Ели Панева – трансформационен коуч и холистичен консултант.</strong> Подкрепям хората в процеса на лична промяна чрез системни констелации, PSYCH-K®, енергийна психология и МАК карти.
             </p>
 
             {/* Service pills */}
