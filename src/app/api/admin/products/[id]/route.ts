@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { isAuthenticated } from '@/lib/admin-auth'
-import { readProducts, writeProduct } from '@/lib/supabase-store'
+import { readProducts, writeProduct, deleteProduct } from '@/lib/supabase-store'
 import productsData from '@/data/shop/products.json'
 import type { WCProduct } from '@/lib/woocommerce'
 
@@ -53,6 +53,20 @@ export async function PUT(req: NextRequest, { params }: RouteContext) {
   try {
     await writeProduct(updated)
     return NextResponse.json({ ok: true, product: updated })
+  } catch (e) {
+    return NextResponse.json({ error: e instanceof Error ? e.message : String(e) }, { status: 500 })
+  }
+}
+
+export async function DELETE(_req: NextRequest, { params }: RouteContext) {
+  if (!(await isAuthenticated())) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const { id } = await params
+  const products = await readProducts(localProducts)
+  const exists = products.find(p => p.id === parseInt(id))
+  if (!exists) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+  try {
+    await deleteProduct(parseInt(id))
+    return NextResponse.json({ ok: true })
   } catch (e) {
     return NextResponse.json({ error: e instanceof Error ? e.message : String(e) }, { status: 500 })
   }

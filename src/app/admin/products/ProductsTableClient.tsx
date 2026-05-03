@@ -34,6 +34,8 @@ export default function ProductsTableClient({ initialProducts }: { initialProduc
   const [products, setProducts] = useState(initialProducts)
   const [toggling, setToggling] = useState<number | null>(null)
   const [search, setSearch] = useState('')
+  const [confirmDelete, setConfirmDelete] = useState<number | null>(null)
+  const [deleting, setDeleting] = useState<number | null>(null)
 
   const filtered = products.filter(p =>
     p.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -50,6 +52,14 @@ export default function ProductsTableClient({ initialProducts }: { initialProduc
       body: JSON.stringify({ stock_status: next }),
     })
     setToggling(null)
+  }
+
+  async function deleteProduct(id: number) {
+    setDeleting(id)
+    await fetch(`/api/admin/products/${id}`, { method: 'DELETE' })
+    setProducts(prev => prev.filter(p => p.id !== id))
+    setConfirmDelete(null)
+    setDeleting(null)
   }
 
   async function togglePublish(product: WCProduct) {
@@ -134,7 +144,7 @@ export default function ProductsTableClient({ initialProducts }: { initialProduc
 
                     {/* Name */}
                     <td className="px-4 py-3">
-                      <p className="font-medium text-gray-900 line-clamp-1 max-w-[200px]">{product.name}</p>
+                      <p className="font-medium text-gray-900 line-clamp-1 max-w-50">{product.name}</p>
                       <p className="text-xs text-gray-400 font-mono">#{product.id}</p>
                     </td>
 
@@ -195,15 +205,43 @@ export default function ProductsTableClient({ initialProducts }: { initialProduc
                       </button>
                     </td>
 
-                    {/* Edit */}
+                    {/* Actions */}
                     <td className="px-4 py-3">
-                      <Link
-                        href={`/admin/products/${product.id}`}
-                        className="opacity-0 group-hover:opacity-100 transition-opacity text-gray-400 hover:text-gray-700"
-                        title="Редактирай"
-                      >
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                      </Link>
+                      <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <Link
+                          href={`/admin/products/${product.id}`}
+                          className="text-gray-400 hover:text-gray-700 transition-colors"
+                          title="Редактирай"
+                        >
+                          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                        </Link>
+                        {confirmDelete === product.id ? (
+                          <span className="flex items-center gap-1.5">
+                            <button
+                              onClick={() => deleteProduct(product.id)}
+                              disabled={deleting === product.id}
+                              className="text-xs font-medium text-red-600 hover:text-red-700 disabled:opacity-50"
+                            >
+                              {deleting === product.id ? '...' : 'Да'}
+                            </button>
+                            <span className="text-gray-300">/</span>
+                            <button
+                              onClick={() => setConfirmDelete(null)}
+                              className="text-xs text-gray-400 hover:text-gray-600"
+                            >
+                              Не
+                            </button>
+                          </span>
+                        ) : (
+                          <button
+                            onClick={() => setConfirmDelete(product.id)}
+                            className="text-gray-300 hover:text-red-500 transition-colors"
+                            title="Изтрий"
+                          >
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+                          </button>
+                        )}
+                      </div>
                     </td>
                   </tr>
                 )

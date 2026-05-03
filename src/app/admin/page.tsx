@@ -39,15 +39,51 @@ export default async function AdminDashboard() {
 
   const inStock = products.filter(p => p.stock_status === 'instock').length
   const published = products.filter(p => p.status === 'publish').length
+  const outOfStock = products.filter(p => p.stock_status === 'outofstock').length
+  const featured = products.filter(p => p.featured).length
   const revenue = orders
     .filter((o: { status: string }) => ['processing', 'completed'].includes(o.status))
     .reduce((sum: number, o: { total: string }) => sum + parseFloat(o.total), 0)
+  const revenueEur = (revenue / 1.95583).toFixed(0)
 
   const stats = [
-    { label: 'Продукти', value: products.length, sub: `${published} публикувани`, href: '/admin/products', color: 'text-violet-400' },
-    { label: 'В наличност', value: inStock, sub: `${products.length - inStock} изчерпани`, href: '/admin/products', color: 'text-emerald-400' },
-    { label: 'Поръчки', value: orders.length, sub: 'последни 8', href: '/admin/orders', color: 'text-blue-400' },
-    { label: 'Приходи', value: `${(revenue / 1.95583).toFixed(0)} €`, sub: `${revenue.toFixed(0)} лв`, href: '/admin/orders', color: 'text-[#C8A96E]' },
+    {
+      label: 'Продукти',
+      value: products.length,
+      sub: `${published} публикувани · ${products.length - published} скрити`,
+      href: '/admin/products',
+      icon: (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      ),
+    },
+    {
+      label: 'В наличност',
+      value: inStock,
+      sub: outOfStock > 0 ? `${outOfStock} изчерпани` : 'Всички налични',
+      href: '/admin/products',
+      icon: (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      ),
+    },
+    {
+      label: 'Поръчки',
+      value: orders.length,
+      sub: 'последни 8',
+      href: '/admin/orders',
+      icon: (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      ),
+    },
+    {
+      label: 'Приходи',
+      value: `${revenueEur} €`,
+      sub: `${revenue.toFixed(0)} лв`,
+      href: '/admin/orders',
+      icon: (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      ),
+      gold: true,
+    },
   ]
 
   return (
@@ -64,14 +100,41 @@ export default async function AdminDashboard() {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
         {stats.map(s => (
           <Link key={s.label} href={s.href}
-            className="bg-white rounded-xl border border-gray-100 p-4 hover:border-gray-300 hover:shadow-sm transition-all group"
+            className="bg-white rounded-xl border border-gray-100 p-4 hover:border-gray-200 hover:shadow-sm transition-all group"
           >
-            <p className="text-xs text-gray-400 font-medium mb-2">{s.label}</p>
-            <p className={`text-2xl font-bold tabular-nums ${s.color}`}>{s.value}</p>
-            <p className="text-xs text-gray-400 mt-1">{s.sub}</p>
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-xs text-gray-400 font-medium">{s.label}</p>
+              <span className={`${s.gold ? 'text-[#C8A96E]' : 'text-gray-300'} group-hover:text-gray-400 transition-colors`}>
+                {s.icon}
+              </span>
+            </div>
+            <p className={`text-2xl font-semibold tabular-nums ${s.gold ? 'text-[#C8A96E]' : 'text-gray-900'}`}>
+              {s.value}
+            </p>
+            <p className="text-xs text-gray-400 mt-1.5">{s.sub}</p>
           </Link>
         ))}
       </div>
+
+      {/* Product breakdown bar */}
+      {products.length > 0 && (
+        <div className="bg-white rounded-xl border border-gray-100 p-4 mb-4">
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-xs font-medium text-gray-500">Разбивка по продукти</p>
+            <Link href="/admin/products" className="text-xs text-gray-400 hover:text-gray-700 transition-colors">Управлявай →</Link>
+          </div>
+          <div className="flex h-2 rounded-full overflow-hidden gap-0.5 mb-3">
+            <div className="bg-gray-900 rounded-l-full" style={{ width: `${(published / products.length) * 100}%` }} title={`${published} публикувани`} />
+            <div className="bg-gray-300" style={{ width: `${((products.length - published) / products.length) * 100}%` }} title={`${products.length - published} скрити`} />
+          </div>
+          <div className="flex items-center gap-5 text-xs text-gray-400">
+            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-gray-900 inline-block" />{published} публикувани</span>
+            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-gray-300 inline-block" />{products.length - published} скрити</span>
+            {featured > 0 && <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#C8A96E] inline-block" />{featured} препоръчани</span>}
+            {outOfStock > 0 && <span className="flex items-center gap-1.5 text-amber-500"><span className="w-2 h-2 rounded-full bg-amber-400 inline-block" />{outOfStock} изчерпани</span>}
+          </div>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Recent orders */}

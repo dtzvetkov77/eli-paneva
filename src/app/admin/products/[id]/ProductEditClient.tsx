@@ -1,6 +1,5 @@
 'use client'
-import { useState, useRef } from 'react'
-import Image from 'next/image'
+import { useState } from 'react'
 
 interface WCCategory { id: number; name: string; slug: string }
 interface WCImage { id: number; src: string; alt: string }
@@ -45,11 +44,8 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState('')
-  const [activeTab, setActiveTab] = useState<'general' | 'description' | 'images'>('general')
-  const [uploading, setUploading] = useState(false)
-  const [uploadError, setUploadError] = useState('')
+  const [activeTab, setActiveTab] = useState<'general' | 'description'>('general')
   const [catSearch, setCatSearch] = useState('')
-  const fileRef = useRef<HTMLInputElement>(null)
 
   function set<K extends keyof typeof form>(key: K, value: typeof form[K]) {
     setForm(prev => ({ ...prev, [key]: value }))
@@ -60,29 +56,6 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
     set('category_ids', form.category_ids.includes(id)
       ? form.category_ids.filter(x => x !== id)
       : [...form.category_ids, id])
-  }
-
-  async function uploadImage(file: File) {
-    setUploading(true); setUploadError('')
-    const fd = new FormData(); fd.append('file', file)
-    const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
-    const data = await res.json()
-    if (!res.ok) {
-      setUploadError(data.error ?? 'Грешка при качване')
-    } else {
-      const newImg: WCImage = { id: Date.now(), src: data.url, alt: file.name.replace(/\.[^.]+$/, '') }
-      set('images', [...form.images, newImg])
-    }
-    setUploading(false)
-  }
-
-  function removeImage(idx: number) { set('images', form.images.filter((_, i) => i !== idx)) }
-  function moveToMain(idx: number) {
-    if (idx === 0) return
-    const imgs = [...form.images]
-    const [img] = imgs.splice(idx, 1)
-    imgs.unshift(img)
-    set('images', imgs)
   }
 
   async function save() {
@@ -127,7 +100,6 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
   const tabs = [
     { key: 'general' as const, label: 'Основни' },
     { key: 'description' as const, label: 'Описание' },
-    { key: 'images' as const, label: `Снимки${form.images.length ? ` (${form.images.length})` : ''}` },
   ]
 
   return (
@@ -293,78 +265,6 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
             rows={22} placeholder="Пълно описание (HTML е позволен)..."
             className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gray-400 focus:ring-2 focus:ring-gray-100 transition-all resize-y font-mono"
           />
-        </div>
-      )}
-
-      {/* Images */}
-      {activeTab === 'images' && (
-        <div className="space-y-5">
-          <div
-            className="border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center hover:border-[#C8A96E]/40 hover:bg-[#C8A96E]/5 transition-all cursor-pointer group"
-            onClick={() => fileRef.current?.click()}
-            onDragOver={e => e.preventDefault()}
-            onDrop={e => { e.preventDefault(); const f = e.dataTransfer.files[0]; if (f) uploadImage(f) }}
-          >
-            <input ref={fileRef} type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
-              className="hidden"
-              onChange={e => { const f = e.target.files?.[0]; if (f) uploadImage(f); e.target.value = '' }}
-            />
-            {uploading ? (
-              <div className="flex items-center justify-center gap-2">
-                <div className="w-4 h-4 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
-                <p className="text-sm text-gray-500">Качване...</p>
-              </div>
-            ) : (
-              <>
-                <div className="w-10 h-10 rounded-xl bg-gray-100 group-hover:bg-[#C8A96E]/10 flex items-center justify-center mx-auto mb-3 transition-colors">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-gray-400 group-hover:text-[#C8A96E] transition-colors"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                </div>
-                <p className="text-sm text-gray-600">Провлачи снимка или <span className="text-gray-900 font-medium underline">избери файл</span></p>
-                <p className="text-xs text-gray-400 mt-1">JPG, PNG, WebP, GIF · макс. 10 MB</p>
-              </>
-            )}
-          </div>
-          {uploadError && <p className="text-sm text-red-500">{uploadError}</p>}
-
-          {form.images.length > 0 ? (
-            <div>
-              <p className="text-xs text-gray-400 mb-3">
-                Първата снимка е главна · hover за опции
-              </p>
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-                {form.images.map((img, i) => (
-                  <div key={img.id} className="relative aspect-square rounded-xl overflow-hidden bg-gray-100 group ring-2 ring-transparent hover:ring-gray-300 transition-all">
-                    <Image src={img.src} alt={img.alt || product.name} fill className="object-cover" sizes="150px" unoptimized />
-                    {i === 0 && (
-                      <div className="absolute top-1.5 left-1.5 bg-[#C8A96E] text-white text-[10px] font-medium rounded-md px-1.5 py-0.5 leading-tight">
-                        Главна
-                      </div>
-                    )}
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center gap-2">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
-                        {i !== 0 && (
-                          <button onClick={() => moveToMain(i)}
-                            className="w-8 h-8 rounded-lg bg-white/90 hover:bg-white text-gray-700 flex items-center justify-center transition-colors"
-                            title="Направи главна">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                          </button>
-                        )}
-                        <button onClick={() => removeImage(i)}
-                          className="w-8 h-8 rounded-lg bg-red-500/90 hover:bg-red-500 text-white flex items-center justify-center transition-colors"
-                          title="Премахни">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="text-center py-6">
-              <p className="text-sm text-gray-400">Няма снимки</p>
-            </div>
-          )}
         </div>
       )}
 

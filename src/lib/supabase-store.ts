@@ -90,3 +90,9 @@ export async function deleteCategory(id: number): Promise<void> {
   const { error } = await sb.from('categories').delete().eq('id', id)
   if (error) throw new Error(error.message)
 }
+
+export async function deleteProduct(id: number): Promise<void> {
+  const sb = getSupabaseAdmin()
+  const { error } = await sb.from('products').delete().eq('id', id)
+  if (error) throw new Error(error.message)
+}
