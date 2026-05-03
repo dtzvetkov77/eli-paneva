@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Dark warm background -->
+  <rect width="32" height="32" rx="5" fill="#1C1917"/>
+
+  <!-- Thin gold top rule -->
+  <line x1="7" y1="8" x2="25" y2="8" stroke="#C8A96E" stroke-width="0.8"/>
+
+  <!-- Е letter (geometric serif construction) -->
+  <!-- Vertical stem -->
+  <rect x="9" y="10" width="2.2" height="12" fill="#C8A96E"/>
+  <!-- Top bar -->
+  <rect x="9" y="10" width="12" height="2" fill="#C8A96E"/>
+  <!-- Middle bar -->
+  <rect x="9" y="15" width="9.5" height="1.8" fill="#C8A96E"/>
+  <!-- Bottom bar -->
+  <rect x="9" y="20" width="12" height="2" fill="#C8A96E"/>
+
+  <!-- Thin gold bottom rule -->
+  <line x1="7" y1="24" x2="25" y2="24" stroke="#C8A96E" stroke-width="0.8"/>
+</svg>

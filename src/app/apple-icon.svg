@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <!-- Background -->
+  <rect width="180" height="180" rx="28" fill="#1C1917"/>
+
+  <!-- Top rule -->
+  <line x1="38" y1="44" x2="142" y2="44" stroke="#C8A96E" stroke-width="4"/>
+
+  <!-- Е letter — geometric serif construction -->
+  <!-- Vertical stem -->
+  <rect x="48" y="55" width="13" height="70" fill="#C8A96E"/>
+  <!-- Top bar -->
+  <rect x="48" y="55" width="72" height="12" fill="#C8A96E"/>
+  <!-- Middle bar -->
+  <rect x="48" y="84" width="56" height="11" fill="#C8A96E"/>
+  <!-- Bottom bar -->
+  <rect x="48" y="113" width="72" height="12" fill="#C8A96E"/>
+
+  <!-- Bottom rule -->
+  <line x1="38" y1="136" x2="142" y2="136" stroke="#C8A96E" stroke-width="4"/>
+</svg>

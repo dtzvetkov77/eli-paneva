@@ -66,7 +66,7 @@ export default function CartDrawer() {
                   {/* Thumbnail */}
                   <div className="w-16 h-16 rounded-xl overflow-hidden bg-(--bg-warm) shrink-0 relative">
                     {item.image ? (
-                      <Image src={item.image} alt={item.name} fill className="object-cover" sizes="64px" />
+                      <Image src={item.image} alt={item.name} fill className="object-cover" sizes="64px" unoptimized />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
                         <span className="font-serif text-xl text-(--sage)/30">Е</span>
