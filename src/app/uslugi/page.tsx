@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Услуги',
-  description: 'Системни констелации, PSYCH-K®, лични консултации, МАК карти и медитации с Ели Панева в София.',
+  description: 'Системни констелации, PSYCH-K®, лични консултации, МАК карти и работа с ограничаващи убеждения с Ели Панева в София.',
 }
 
 export default function ServicesPage() {

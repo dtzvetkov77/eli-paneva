@@ -107,6 +107,10 @@ h1, h2, h3, h4, h5 {
 .prose a:hover { color: var(--sage-hover); }
 .prose img { border-radius: 12px; }
 
+/* ─── Hide scrollbar utility ────────────────────── */
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
 /* ─── TipTap editor ──────────────────────────────── */
 .tiptap p.is-editor-empty:first-child::before {
   content: attr(data-placeholder);
