@@ -11,6 +11,7 @@ interface WCProduct {
   status: string; featured: boolean; stock_status: string
   images: WCImage[]; categories: WCCategory[]
   audio_url?: string
+  audio_urls?: string[]
 }
 
 interface Props { product: WCProduct; allCategories: WCCategory[]; isNew?: boolean }
@@ -42,7 +43,9 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
     featured: product.featured,
     category_ids: product.categories.map(c => c.id),
     images: product.images,
-    audio_url: product.audio_url ?? '',
+    audio_urls: product.audio_urls?.length
+      ? product.audio_urls
+      : product.audio_url ? [product.audio_url] : [],
   })
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
@@ -55,6 +58,7 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
   const [audioError, setAudioError] = useState('')
   const fileRef = useRef<HTMLInputElement>(null)
   const audioRef = useRef<HTMLInputElement>(null)
+  const MAX_AUDIO = 3
 
   function set<K extends keyof typeof form>(key: K, value: typeof form[K]) {
     setForm(prev => ({ ...prev, [key]: value }))
@@ -96,6 +100,7 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
   async function uploadAudio(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0]
     if (!file) return
+    if (form.audio_urls.length >= MAX_AUDIO) { setAudioError(`Максимум ${MAX_AUDIO} аудио файла`); return }
     setAudioUploading(true); setAudioError('')
     try {
       const fd = new FormData()
@@ -103,9 +108,13 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
       const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
       const d = await res.json()
       if (!res.ok) { setAudioError(d.error ?? 'Грешка при качване'); return }
-      set('audio_url', d.url)
+      set('audio_urls', [...form.audio_urls, d.url])
     } catch { setAudioError('Мрежова грешка') }
     finally { setAudioUploading(false); if (audioRef.current) audioRef.current.value = '' }
+  }
+
+  function removeAudio(index: number) {
+    set('audio_urls', form.audio_urls.filter((_, i) => i !== index))
   }
 
   async function save() {
@@ -121,7 +130,7 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
           ...form,
           regular_price: eurToBgn(form.regular_price),
           sale_price: eurToBgn(form.sale_price),
-          audio_url: form.audio_url || null,
+          audio_urls: form.audio_urls.length ? form.audio_urls : null,
         }),
       })
       if (!res.ok) {
@@ -184,9 +193,11 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
             }`}
           >
             {t.label}
-            {t.key === 'media' && (form.images.length > 0 || form.audio_url) && (
+            {t.key === 'media' && (form.images.length > 0 || form.audio_urls.length > 0) && (
               <span className="ml-1.5 text-xs text-[#C8A96E]">
-                {form.images.length > 0 && form.audio_url ? '🖼+🎵' : form.images.length > 0 ? form.images.length : '♪'}
+                {form.images.length > 0 && form.audio_urls.length > 0
+                  ? `🖼+🎵${form.audio_urls.length}`
+                  : form.images.length > 0 ? form.images.length : `🎵${form.audio_urls.length}`}
               </span>
             )}
           </button>
@@ -409,53 +420,55 @@ export default function ProductEditClient({ product, allCategories, isNew = fals
           {/* Audio section */}
           <div>
             <div className="flex items-center justify-between mb-3">
-              <label className="text-xs font-medium text-gray-500 uppercase tracking-wider">Аудио файл</label>
-              {!form.audio_url && (
+              <label className="text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Аудио файлове ({form.audio_urls.length}/{MAX_AUDIO})
+              </label>
+              {form.audio_urls.length < MAX_AUDIO && (
                 <button
                   onClick={() => audioRef.current?.click()}
                   disabled={audioUploading}
                   className="flex items-center gap-1.5 text-xs text-gray-600 border border-gray-200 rounded-lg px-3 py-1.5 hover:border-gray-400 hover:text-gray-900 transition-all disabled:opacity-50"
                 >
-                  {audioUploading ? (
-                    <div className="w-3 h-3 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
-                  ) : (
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                  )}
-                  {audioUploading ? 'Качване...' : 'Качи аудио'}
+                  {audioUploading
+                    ? <div className="w-3 h-3 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
+                    : <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  }
+                  {audioUploading ? 'Качване...' : 'Добави аудио'}
                 </button>
               )}
               <input ref={audioRef} type="file" accept="audio/*" className="hidden" onChange={uploadAudio} />
             </div>
             {audioError && <p className="text-xs text-red-500 mb-2">{audioError}</p>}
-            {form.audio_url ? (
-              <div className="border border-gray-200 rounded-xl p-4 bg-gray-50">
-                <audio controls src={form.audio_url} className="w-full h-9 mb-3" />
-                <div className="flex items-center justify-between gap-3">
-                  <p className="text-xs text-gray-400 truncate">{form.audio_url.split('/').pop()}</p>
-                  <div className="flex gap-2 shrink-0">
-                    <button
-                      onClick={() => audioRef.current?.click()}
-                      className="text-xs text-gray-500 border border-gray-200 rounded-lg px-2.5 py-1 hover:border-gray-400 transition-colors"
-                    >
-                      Замени
-                    </button>
-                    <button
-                      onClick={() => set('audio_url', '')}
-                      className="text-xs text-red-500 border border-red-200 rounded-lg px-2.5 py-1 hover:bg-red-50 transition-colors"
-                    >
-                      Премахни
-                    </button>
+
+            {/* Existing audio files */}
+            {form.audio_urls.length > 0 && (
+              <div className="space-y-2 mb-3">
+                {form.audio_urls.map((url, i) => (
+                  <div key={i} className="border border-gray-200 rounded-xl p-3 bg-gray-50">
+                    <audio controls src={url} className="w-full h-9 mb-2" />
+                    <div className="flex items-center justify-between gap-3">
+                      <p className="text-xs text-gray-400 truncate">{url.split('/').pop()}</p>
+                      <button
+                        onClick={() => removeAudio(i)}
+                        className="text-xs text-red-500 border border-red-200 rounded-lg px-2.5 py-1 hover:bg-red-50 transition-colors shrink-0"
+                      >
+                        Премахни
+                      </button>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ) : (
+            )}
+
+            {/* Drop zone when empty */}
+            {form.audio_urls.length === 0 && (
               <button
                 onClick={() => audioRef.current?.click()}
                 className="w-full border-2 border-dashed border-gray-200 rounded-xl py-8 flex flex-col items-center gap-2 text-gray-400 hover:border-gray-300 hover:text-gray-500 transition-all"
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
                 <span className="text-sm">Кликни за да качиш аудио</span>
-                <span className="text-xs">MP3, WAV, OGG, AAC, FLAC</span>
+                <span className="text-xs">MP3, WAV, OGG, AAC, FLAC · макс. 3 файла</span>
               </button>
             )}
           </div>

@@ -12,8 +12,14 @@ const MAX_IMAGE_SIZE = 10 * 1024 * 1024
 const MAX_AUDIO_SIZE = 100 * 1024 * 1024
 
 async function ensureAudioBucket(sb: ReturnType<typeof getSupabaseAdmin>) {
-  // Ignore all errors — bucket may already exist; real failures surface on upload
+  // Try create — ignore error if already exists
   await sb.storage.createBucket(AUDIO_BUCKET, {
+    public: true,
+    allowedMimeTypes: AUDIO_TYPES,
+    fileSizeLimit: MAX_AUDIO_SIZE,
+  })
+  // Always enforce public + allowed MIME types (in case bucket was created manually as private)
+  await sb.storage.updateBucket(AUDIO_BUCKET, {
     public: true,
     allowedMimeTypes: AUDIO_TYPES,
     fileSizeLimit: MAX_AUDIO_SIZE,

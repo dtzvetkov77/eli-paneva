@@ -123,12 +123,19 @@ export default async function ProductPage({ params }: Props) {
               />
             )}
 
-            {product.audio_url && (
-              <div className="mb-8 border border-(--border) rounded-2xl p-4 bg-(--bg-warm)">
-                <p className="text-xs uppercase tracking-[0.15em] text-(--text-muted) mb-3">Аудио преглед</p>
-                <audio controls src={product.audio_url} className="w-full" />
-              </div>
-            )}
+            {(() => {
+              const urls = product.audio_urls?.length
+                ? product.audio_urls
+                : product.audio_url ? [product.audio_url] : []
+              return urls.length > 0 ? (
+                <div className="mb-8 border border-(--border) rounded-2xl p-4 bg-(--bg-warm) space-y-3">
+                  <p className="text-xs uppercase tracking-[0.15em] text-(--text-muted)">Аудио преглед</p>
+                  {urls.map((url, i) => (
+                    <audio key={i} controls src={url} className="w-full" />
+                  ))}
+                </div>
+              ) : null
+            })()}
 
             <AddToCartButton product={product} />
 
