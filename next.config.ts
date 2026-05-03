@@ -15,7 +15,8 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https://elipaneva.com https://*.wp.com https://*.googleapis.com https://*.gstatic.com https://*.google.com https://*.public.blob.vercel.storage https://*.supabase.co",
       "frame-src https://www.google.com https://maps.google.com https://www.google.com/maps/",
-      "connect-src 'self' https://elipaneva.com https://*.googleapis.com",
+      "media-src 'self' https://*.supabase.co",
+      "connect-src 'self' https://elipaneva.com https://*.googleapis.com https://*.supabase.co",
     ].join('; '),
   },
 ]
