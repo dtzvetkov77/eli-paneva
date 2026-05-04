@@ -96,3 +96,38 @@ export async function deleteProduct(id: number): Promise<void> {
   const { error } = await sb.from('products').delete().eq('id', id)
   if (error) throw new Error(error.message)
 }
+
+// ─── Blog ────────────────────────────────────────────
+import type { BlogPost } from './blog'
+
+export async function readBlogPosts(): Promise<BlogPost[]> {
+  try {
+    const sb = getSupabaseAdmin()
+    const { data, error } = await sb.from('blog_posts').select('data').order('created_at', { ascending: false })
+    if (error || !data?.length) return []
+    return data.map(r => r.data as BlogPost)
+  } catch { return [] }
+}
+
+export async function readBlogPost(id: string): Promise<BlogPost | null> {
+  try {
+    const sb = getSupabaseAdmin()
+    const { data, error } = await sb.from('blog_posts').select('data').eq('id', id).single()
+    if (error || !data) return null
+    return data.data as BlogPost
+  } catch { return null }
+}
+
+export async function writeBlogPost(post: BlogPost): Promise<void> {
+  const sb = getSupabaseAdmin()
+  const { error } = await sb
+    .from('blog_posts')
+    .upsert({ id: post.id, data: post }, { onConflict: 'id' })
+  if (error) throw new Error(error.message)
+}
+
+export async function deleteBlogPost(id: string): Promise<void> {
+  const sb = getSupabaseAdmin()
+  const { error } = await sb.from('blog_posts').delete().eq('id', id)
+  if (error) throw new Error(error.message)
+}
