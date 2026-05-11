@@ -31,11 +31,22 @@ export default async function MacKartiPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': 'https://elipaneva.com/mac-karti#service',
     name: 'МАК карти — Метафорични асоциативни карти',
-    description: 'Индивидуални сесии, обучения и продукти с метафорични асоциативни карти.',
-    provider: { '@type': 'Person', name: 'Ели Панева', url: 'https://elipaneva.com' },
+    serviceType: 'МАК карти',
+    description: 'Индивидуални сесии, обучения и продукти с метафорични асоциативни карти с Ели Панева в София.',
+    provider: { '@type': 'Person', '@id': 'https://elipaneva.com/#person', name: 'Ели Панева', url: 'https://elipaneva.com' },
     url: 'https://elipaneva.com/mac-karti',
-    areaServed: { '@type': 'City', name: 'София' },
+    areaServed: [
+      { '@type': 'City', name: 'София' },
+      { '@type': 'Country', name: 'България' },
+    ],
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      url: 'https://elipaneva.com/kontakti',
+      seller: { '@type': 'Person', name: 'Ели Панева' },
+    },
   }
 
   return (

@@ -65,7 +65,7 @@ export default function HeroSection() {
 
             <h1
               className="font-serif text-(--text-dark) font-normal leading-[1.1] mb-5"
-              style={{ fontSize: 'clamp(2rem, 4.5vw, 4rem)' }}
+              style={{ fontSize: 'clamp(1.6rem, 3.2vw, 2.75rem)' }}
             >
               Освободи вътрешните блокажи<br />и създай живот с повече<br /><em className="text-(--sage)">лекота, яснота и увереност</em>
             </h1>

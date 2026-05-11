@@ -1,4 +1,5 @@
 import StructuredData from '@/components/ui/StructuredData'
+import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import { SOCIAL_LINKS, SOCIAL_SCHEMA_URLS } from '@/lib/social-links'
 import type { Metadata } from 'next'
 
@@ -36,10 +37,21 @@ export default function ContactPage() {
     openingHours: ['Mo-Fr 09:00-18:00'],
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Начало', item: 'https://elipaneva.com' },
+      { '@type': 'ListItem', position: 2, name: 'Контакти', item: 'https://elipaneva.com/kontakti' },
+    ],
+  }
+
   return (
     <div className="pt-16">
       <StructuredData data={localBusinessSchema} />
+      <StructuredData data={breadcrumbSchema} />
       <div className="max-w-7xl mx-auto px-6 py-10">
+        <Breadcrumbs crumbs={[{ label: 'Начало', href: '/' }, { label: 'Контакти' }]} />
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Contact info */}
           <div>

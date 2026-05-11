@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt?.slice(0, 160) || '',
+    alternates: { canonical: `https://elipaneva.com/blog/${slug}` },
     openGraph: {
       type: 'article',
       publishedTime: post.date,
@@ -38,10 +39,13 @@ export default async function BlogPostPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
+    description: post.excerpt?.slice(0, 160) || '',
     datePublished: post.date,
-    author: { '@type': 'Person', name: 'Ели Панева' },
-    publisher: { '@type': 'Person', name: 'Ели Панева' },
-    image: post.coverImage || undefined,
+    dateModified: post.date,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://elipaneva.com/blog/${post.slug}` },
+    author: { '@type': 'Person', '@id': 'https://elipaneva.com/#person', name: 'Ели Панева', url: 'https://elipaneva.com' },
+    publisher: { '@type': 'Person', '@id': 'https://elipaneva.com/#person', name: 'Ели Панева' },
+    image: post.coverImage ? { '@type': 'ImageObject', url: post.coverImage } : undefined,
     url: `https://elipaneva.com/blog/${post.slug}`,
   }
 

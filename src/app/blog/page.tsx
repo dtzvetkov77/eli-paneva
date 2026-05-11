@@ -1,11 +1,22 @@
 import { getPosts } from '@/lib/blog'
 import Link from 'next/link'
 import Image from 'next/image'
+import StructuredData from '@/components/ui/StructuredData'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Блог',
-  description: 'Статии за личностно развитие, системни констелации, тревожност, стрес и вътрешна трансформация.',
+  description: 'Статии за личностно развитие, системни констелации, МАК карти, тревожност и вътрешна трансформация от Ели Панева — холистичен консултант в София.',
+  alternates: { canonical: 'https://elipaneva.com/blog' },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Начало', item: 'https://elipaneva.com' },
+    { '@type': 'ListItem', position: 2, name: 'Блог', item: 'https://elipaneva.com/blog' },
+  ],
 }
 
 export const revalidate = 60
@@ -15,6 +26,7 @@ export default async function BlogPage() {
 
   return (
     <div className="pt-16">
+      <StructuredData data={breadcrumbSchema} />
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-12">
           <span className="text-xs uppercase tracking-[0.2em] text-(--gold) font-medium block mb-4">Блог</span>

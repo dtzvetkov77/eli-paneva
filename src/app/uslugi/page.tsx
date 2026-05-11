@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import SectionHeader from '@/components/ui/SectionHeader'
 import Button from '@/components/ui/Button'
+import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import StructuredData from '@/components/ui/StructuredData'
 import { services } from '@/data/services'
 import type { Metadata } from 'next'
@@ -8,6 +9,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Услуги',
   description: 'Системни констелации, PSYCH-K®, лични консултации, МАК карти и работа с ограничаващи убеждения с Ели Панева в София.',
+  alternates: { canonical: 'https://elipaneva.com/uslugi' },
 }
 
 export default function ServicesPage() {
@@ -27,10 +29,21 @@ export default function ServicesPage() {
     })),
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Начало', item: 'https://elipaneva.com' },
+      { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://elipaneva.com/uslugi' },
+    ],
+  }
+
   return (
     <div className="pt-16">
       <StructuredData data={serviceListSchema} />
+      <StructuredData data={breadcrumbSchema} />
       <div className="max-w-7xl mx-auto px-6 py-16">
+        <Breadcrumbs crumbs={[{ label: 'Начало', href: '/' }, { label: 'Услуги' }]} />
         <SectionHeader
           eyebrow="Услуги"
           title="Как мога да ви подкрепя по пътя към вътрешна промяна"

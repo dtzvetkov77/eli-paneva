@@ -1,6 +1,7 @@
 import { SOCIAL_SCHEMA_URLS } from '@/lib/social-links'
 import Button from '@/components/ui/Button'
 import StructuredData from '@/components/ui/StructuredData'
+import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Link from 'next/link'
 import Image from 'next/image'
 import { services } from '@/data/services'
@@ -81,14 +82,25 @@ export default function AboutPage() {
     sameAs: SOCIAL_SCHEMA_URLS,
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Начало', item: 'https://elipaneva.com' },
+      { '@type': 'ListItem', position: 2, name: 'За мен', item: 'https://elipaneva.com/za-men' },
+    ],
+  }
+
   return (
     <div className="pt-16">
       <StructuredData data={personSchema} />
+      <StructuredData data={breadcrumbSchema} />
 
       {/* Hero */}
       <section className="bg-(--bg-warm) py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
+            <Breadcrumbs crumbs={[{ label: 'Начало', href: '/' }, { label: 'За мен' }]} />
             <span className="text-xs uppercase tracking-[0.22em] text-(--gold) font-medium block mb-6">За мен</span>
             <h1 className="font-serif text-5xl md:text-6xl text-(--text-dark) font-normal leading-[1.05] mb-8">
               Ели Панева

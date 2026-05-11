@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/checkout/'],
+        disallow: ['/api/', '/admin/', '/checkout/'],
       },
     ],
     sitemap: 'https://elipaneva.com/sitemap.xml',

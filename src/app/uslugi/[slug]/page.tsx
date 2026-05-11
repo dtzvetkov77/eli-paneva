@@ -68,9 +68,20 @@ export default async function ServicePage({ params }: Props) {
 
   const otherServices = services.filter(s => s.slug !== slug).slice(0, 4)
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Начало', item: 'https://elipaneva.com' },
+      { '@type': 'ListItem', position: 2, name: 'Услуги', item: 'https://elipaneva.com/uslugi' },
+      { '@type': 'ListItem', position: 3, name: service.title, item: `https://elipaneva.com/uslugi/${service.slug}` },
+    ],
+  }
+
   return (
     <div className="pt-16">
       <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Breadcrumbs crumbs={[
           { label: 'Начало', href: '/' },
