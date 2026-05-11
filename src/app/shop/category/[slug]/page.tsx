@@ -1,5 +1,7 @@
 import { getProductsByCategory, getCategories } from '@/lib/woocommerce'
 import ProductCard from '@/components/shop/ProductCard'
+import StructuredData from '@/components/ui/StructuredData'
+import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -68,17 +70,50 @@ export default async function CategoryPage({ params }: Props) {
          c.name.toLowerCase() !== 'uncategorized'
   )
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Начало', item: 'https://elipaneva.com' },
+      { '@type': 'ListItem', position: 2, name: 'Магазин', item: 'https://elipaneva.com/shop' },
+      { '@type': 'ListItem', position: 3, name: displayName, item: `https://elipaneva.com/shop/category/${slug}` },
+    ],
+  }
+
+  const itemListSchema = products.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: displayName,
+    url: `https://elipaneva.com/shop/category/${slug}`,
+    numberOfItems: products.length,
+    itemListElement: products.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Product',
+        name: p.name,
+        url: `https://elipaneva.com/shop/${p.slug}`,
+        image: p.images[0]?.src,
+        offers: {
+          '@type': 'Offer',
+          price: parseFloat(p.price) > 0 ? parseFloat(p.price).toFixed(2) : undefined,
+          priceCurrency: 'BGN',
+          availability: p.stock_status === 'instock' ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+        },
+      },
+    })),
+  } : null
+
   return (
     <div className="pt-16">
+      <StructuredData data={breadcrumbSchema} />
+      {itemListSchema && <StructuredData data={itemListSchema} />}
       <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* Breadcrumbs */}
-        <nav className="flex items-center gap-2 text-sm text-(--text-muted) mb-8">
-          <Link href="/" className="hover:text-(--sage)">Начало</Link>
-          <span>/</span>
-          <Link href="/shop" className="hover:text-(--sage)">Магазин</Link>
-          <span>/</span>
-          <span className="text-(--text-dark)">{displayName}</span>
-        </nav>
+        <Breadcrumbs crumbs={[
+          { label: 'Начало', href: '/' },
+          { label: 'Магазин', href: '/shop' },
+          { label: displayName },
+        ]} />
 
         {/* Category nav */}
         {visibleCategories.length > 0 && (

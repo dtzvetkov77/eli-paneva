@@ -25,13 +25,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const product = await getProduct(slug)
     if (!product) return {}
     const desc = product.short_description.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 155)
+    const price = parseFloat(product.price) || 0
     return {
       title: product.name,
-      description: desc,
+      description: desc || `${product.name} — продукт от Ели Панева. Системни констелации, МАК карти и инструменти за трансформация.`,
       alternates: { canonical: `https://elipaneva.com/shop/${slug}` },
       openGraph: {
-        images: product.images[0] ? [{ url: product.images[0].src }] : [],
+        title: product.name,
+        description: desc,
+        images: product.images[0]
+          ? [{ url: product.images[0].src, width: 800, height: 800, alt: product.images[0].alt || product.name }]
+          : [],
       },
+      other: price > 0 ? {
+        'product:price:amount': String(price),
+        'product:price:currency': 'BGN',
+      } : {},
     }
   } catch {
     return {}
@@ -54,34 +63,49 @@ export default async function ProductPage({ params }: Props) {
   const eur = bgnToEur(price)
   const regularEur = bgnToEur(regularPrice)
 
+  const availability = product.stock_status === 'instock'
+    ? 'https://schema.org/InStock'
+    : 'https://schema.org/OutOfStock'
+
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
+    '@id': `https://elipaneva.com/shop/${product.slug}#product`,
     name: product.name,
-    description: product.short_description.replace(/<[^>]+>/g, ''),
-    image: product.images.map(i => i.src),
+    description: product.short_description.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim(),
+    image: product.images.map(i => ({ '@type': 'ImageObject', url: i.src, name: i.alt || product.name })),
     sku: String(product.id),
+    url: `https://elipaneva.com/shop/${product.slug}`,
     brand: { '@type': 'Brand', name: 'Ели Панева' },
     offers: {
       '@type': 'Offer',
-      price: eur.toFixed(2),
-      priceCurrency: 'EUR',
-      availability: product.stock_status === 'instock'
-        ? 'https://schema.org/InStock'
-        : 'https://schema.org/OutOfStock',
+      price: price > 0 ? price.toFixed(2) : undefined,
+      priceCurrency: 'BGN',
+      priceSpecification: price > 0 ? [
+        { '@type': 'UnitPriceSpecification', price: price.toFixed(2), priceCurrency: 'BGN' },
+        { '@type': 'UnitPriceSpecification', price: eur.toFixed(2), priceCurrency: 'EUR' },
+      ] : undefined,
+      availability,
       itemCondition: 'https://schema.org/NewCondition',
       url: `https://elipaneva.com/shop/${product.slug}`,
-      seller: {
-        '@type': 'Organization',
-        name: 'Ели Панева',
-        url: 'https://elipaneva.com',
-      },
+      seller: { '@type': 'Person', '@id': 'https://elipaneva.com/#person', name: 'Ели Панева', url: 'https://elipaneva.com' },
     },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Начало', item: 'https://elipaneva.com' },
+      { '@type': 'ListItem', position: 2, name: 'Магазин', item: 'https://elipaneva.com/shop' },
+      { '@type': 'ListItem', position: 3, name: product.name, item: `https://elipaneva.com/shop/${product.slug}` },
+    ],
   }
 
   return (
     <div className="pt-16">
       <StructuredData data={productSchema} />
+      <StructuredData data={breadcrumbSchema} />
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Breadcrumbs crumbs={[
           { label: 'Начало', href: '/' },
